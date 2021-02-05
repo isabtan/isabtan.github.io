@@ -104,6 +104,7 @@ color: #F4F1EB;
   left: 198px;
   top: 47px;
   overflow-y: scroll;
+    overflow-x: hidden;
 }
 #shit::-webkit-scrollbar {
     display: none;
