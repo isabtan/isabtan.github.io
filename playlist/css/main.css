@@ -1,0 +1,103 @@
+html, body, div, span, applet, object,
+ iframe, h1, h2, h3, h4, h5, h6, p,
+ blockquote, pre, a, abbr, acronym,
+ address, big, cite, code, del, dfn,
+ em, font, ins, kbd, q, s, samp, small,
+ strike, sub, var, dl, dd, dt, ul, ol,
+ li, fieldset, form, table, caption, tbody, 
+ tfoot, thead, tr, th, td, header, section,
+ footer, article, details {
+ padding: 0; margin: 0;
+   border: 0; outline: 0; font-family: inherit;
+   font-style: inherit; font-size: 100%;
+   font-weight: inherit; vertical-align: baseline; 
+ }
+
+ @font-face {
+  font-family: time;
+  src: url(timesnow-light.ttf);
+}
+@font-face {
+ font-family: suisse;
+ src: url(suissemono-bold.ttf);
+}
+
+body{
+  transition: background-color 3s ease;
+  background: #e0e0e0;
+  -webkit-transition: background-color 3s ease-out;
+  -moz-transition: background-color 3s ease-out;
+  -o-transition: background-color 3s ease-out;
+  transition: background-color 3s ease-out;
+}
+
+body:hover{
+  background: #000000;
+}
+a:hover{
+color: #DEFF11;
+}
+
+#name{
+  position: fixed;
+  width: 188px;
+  height: 14px;
+  left: 626px;
+  top: 32px;
+  z-index: 5;
+  font-family: suisse;
+  font-style: normal;
+  font-size: 19px;
+  line-height: 91.5%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #141E22;
+}
+.space{
+
+}
+#songs{
+  position: fixed;
+width: 1537px;
+height: 544px;
+left: -49px;
+top: 36px;
+
+font-family: time;
+font-style: normal;
+font-weight: normal;
+font-size: 249px;
+line-height: 99.5%;
+text-align: center;
+letter-spacing: -0.12em;
+-webkit-transition: all 3s ease;
+-moz-transition: all 3s ease;
+-o-transition: all 3s ease;
+transition: all 3s ease;
+cursor: pointer
+text-transform: capitalize;
+
+color: #141E22;
+}
+
+#songs:hover{
+  width: 1537px;
+height: 544px;
+left: -36px;
+top: 36px;
+letter-spacing: 0.08em;
+}
+
+#one{
+  position: fixed;
+  left: 752px;
+  top: 249px;
+
+}
+
+#two{
+  position: fixed;
+  left: 615px;
+  top: 498px;
+}
