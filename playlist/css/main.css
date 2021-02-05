@@ -58,12 +58,6 @@ color: #DEFF11;
 
 }
 #songs{
-  letter-spacing: -0.12em;
-  -webkit-transition: all 3s ease;
-  -moz-transition: all 3s ease;
-  -o-transition: all 3s ease;
-  transition: all 3s ease;
-  cursor: pointer
   position: fixed;
 width: 1537px;
 height: 544px;
@@ -77,11 +71,17 @@ font-size: 249px;
 line-height: 99.5%;
 text-align: center;
 text-transform: capitalize;
-
+letter-spacing: -0.12em;
+-webkit-transition: all 3s ease;
+-moz-transition: all 3s ease;
+-o-transition: all 3s ease;
+transition: all 3s ease;
+cursor: pointer
 color: #141E22;
 }
 
 #songs:hover{
+  color: #141E22;
   width: 1537px;
 height: 544px;
 left: -36px;
