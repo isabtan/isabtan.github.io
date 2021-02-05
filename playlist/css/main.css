@@ -34,9 +34,7 @@ body{
 body:hover{
   background: #000000;
 }
-a:hover{
-color: #DEFF11;
-}
+
 
 #name{
   position: fixed;
@@ -54,16 +52,14 @@ color: #DEFF11;
   text-transform: uppercase;
   color: #141E22;
 }
-.space{
 
-}
 #songs{
   position: fixed;
 width: 1537px;
 height: 544px;
 left: -49px;
 top: 36px;
-
+color: #141E22;
 font-family: time;
 font-style: normal;
 font-weight: normal;
@@ -77,7 +73,6 @@ letter-spacing: -0.12em;
 -o-transition: all 3s ease;
 transition: all 3s ease;
 cursor: pointer
-color: #141E22;
 }
 
 #songs:hover{
