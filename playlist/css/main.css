@@ -68,10 +68,10 @@ line-height: 99.5%;
 text-align: center;
 text-transform: capitalize;
 letter-spacing: -0.12em;
--webkit-transition: all 3s ease;
--moz-transition: all 3s ease;
--o-transition: all 3s ease;
-transition: all 3s ease;
+-webkit-transition: letter-spacing 3s ease;
+-moz-transition: letter-spacing 3s ease;
+-o-transition: letter-spacing 3s ease;
+transition: letter-spacing 3s ease;
 cursor: pointer
 }
 
