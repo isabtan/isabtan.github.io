@@ -236,6 +236,14 @@ letter-spacing: 0.03em;
 text-transform: uppercase;
 }
 
+.fire{
+  width: 1000px;
+  height: 690px;
+
+}
+
+
+
 #footer{
   position: absolute;
 width: 1440px;
