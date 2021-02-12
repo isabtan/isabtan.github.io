@@ -13,7 +13,7 @@ html, body, div, span, applet, object,
    font-weight: inherit; vertical-align: baseline; 
  }
 
-@font-face {
+ @font-face {
   font-family: time;
   src: url(timesnow-light.ttf);
 }
