@@ -1,0 +1,451 @@
+html, body, div, span, applet, object,
+ iframe, h1, h2, h3, h4, h5, h6, p,
+ blockquote, pre, a, abbr, acronym,
+ address, big, cite, code, del, dfn,
+ em, font, ins, kbd, q, s, samp, small,
+ strike, sub, var, dl, dd, dt, ul, ol,
+ li, fieldset, form, table, caption, tbody, 
+ tfoot, thead, tr, th, td, header, section,
+ footer, article, details {
+ padding: 0; margin: 0;
+   border: 0; outline: 0; font-family: inherit;
+   font-style: inherit; font-size: 100%;
+   font-weight: inherit; vertical-align: baseline; 
+ }
+
+ @font-face {
+   font-family: time;
+   src: url(timesnow-light.ttf);
+ }
+ @font-face {
+  font-family: suisse;
+  src: url(suissemono-bold.ttf);
+ }
+ @font-face {
+  font-family: srisakdi;
+  src: url(Srisakdi-Regular.ttf);
+ }
+
+body{
+background-color: #15191A;
+}
+
+#line{
+  position: fixed;
+  width: 1315px;
+  height: 0px;
+  left: 62px;
+  top: 82px;
+  border: 1px solid #DFDDDA;
+}
+#name{
+  position: fixed;
+  width: 188px;
+  height: 14px;
+  left: 626px;
+  top: 34px;
+  z-index: 5;
+  font-family: suisse;
+  font-style: normal;
+  font-size: 19px;
+  line-height: 91.5%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #DFDDDA;
+}
+
+.shit{
+position: absolute;
+width: 1164px;
+height: 820px;
+left: 80px;
+top: 0px;
+overflow-y: scroll;
+  overflow-x: hidden;
+}
+.shit::-webkit-scrollbar {
+  display: none;
+}
+
+#title{
+position: absolute;
+width: 1009px;
+height: 77px;
+left: 0px;
+top: 7px;
+
+font-family: time;
+font-style: normal;
+font-weight: normal;
+font-size: 50px;
+line-height: 151%;
+letter-spacing: 0.015em;
+text-transform: capitalize;
+
+color: #DFDDDA;
+}
+
+p{
+  position: absolute;
+  font-family: time;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 136.5%;
+  letter-spacing: 0.005em;
+  color: #DFDDDA;
+}
+
+#p1{
+width: 848px;
+height: 716px;
+left: 3px;
+top: 93px;
+}
+#p2{
+width: 549px;
+height: 75px;
+left: 365px;
+top: 1943px;
+}
+
+#basil{
+width: 450px;
+height: 75px;
+left: 81px;
+top: 2107px;
+align-items: flex-end;
+}
+.thai{
+  position: absolute;
+  font-family: srisakdi;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 390px;
+  line-height: 98.5%;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  letter-spacing: -0.005em;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #DFDDDA;
+}
+#basil2{
+  width: 555px;
+height: 384px;
+left: 383px;
+top: 2334px;
+}
+
+.sub{
+  position: absolute;
+  font-family: suisse;
+font-style: normal;
+font-size: 20px;
+line-height: 136.5%;
+display: flex;
+align-items: flex-end;
+text-align: center;
+letter-spacing: 0.005em;
+text-transform: uppercase;
+color: #DFDDDA;
+}
+#basil3{
+width: 191px;
+height: 30px;
+left: 544px;
+top: 2848px;
+}
+
+#whisper{
+  width: 450px;
+  height: 75px;
+  left: 81px;
+  top: 2966px;
+align-items: flex-end;
+}
+#whisper2{
+  width: 856px;
+  height: 384px;
+  left: 233px;
+  top: 3232px;
+}
+#whisper3{
+  width: 191px;
+  height: 30px;
+  left: 544px;
+  top: 3612px;
+align-items: flex-end;
+}
+
+#monkey{
+  width: 450px;
+  height: 75px;
+  left: 81px;
+  top: 3731px;
+align-items: flex-end;
+}
+#monkey2{
+  width: 417px;
+  height: 384px;
+  left: 452px;
+  top: 3837px;
+}
+#monkey3{
+  width: 191px;
+  height: 30px;
+  left: 544px;
+  top: 4217px;
+align-items: flex-end;
+}
+
+#p3 {
+  width: 781px;
+  height: 743px;
+  left: 3px;
+  top: 4482px;
+}
+#p4{
+  width: 1083px;
+height: 132px;
+left: 81px;
+top: 5300px;
+}
+
+#boy{
+  width: 450px;
+  height: 75px;
+  left: 81px;
+  top: 5530px;
+align-items: flex-end;
+}
+#boy2{
+  width: 930px;
+  height: 384px;
+  left: 188px;
+  top: 5634px;
+}
+#boy3{
+  width: 222px;
+  height: 54px;
+  left: 542px;
+  top: 6020px;
+align-items: flex-end;
+}
+
+#guy{
+  width: 450px;
+  height: 75px;
+  left: 81px;
+  top: 6195px;
+align-items: flex-end;
+}
+#guy2{
+  width: 422px;
+  height: 384px;
+  left: 447px;
+  top: 6299px;
+}
+#guy3{
+  width: 183px;
+  height: 54px;
+  left: 562px;
+  top: 6685px;
+align-items: flex-end;
+}
+
+#group{
+  width: 450px;
+  height: 75px;
+  left: 81px;
+  top: 6823px;
+align-items: flex-end;
+}
+#group2{
+  width: 537px;
+  height: 384px;
+  left: 385px;
+  top: 6886px;
+}
+#group3{
+  width: 79px;
+  height: 54px;
+  left: 614px;
+  top: 7405px;
+align-items: flex-end;
+}
+
+#buff{
+  width: 179px;
+  height: 75px;
+  left: 81px;
+  top: 7580px;
+}
+#buff2{
+  width: 673px;
+  height: 255px;
+  left: 317px;
+  top: 7626px;
+}
+#buff3{
+  width: 430px;
+  height: 54px;
+  left: 438px;
+  top: 7912px;
+align-items: flex-end;
+}
+
+#p5{
+  width: 781px;
+height: 477px;
+left: 3px;
+top: 8240px;
+}
+#p6{
+  width: 974px;
+height: 68px;
+left: 135px;
+top: 8816px;
+}
+
+#no{
+  width: 450px;
+  height: 75px;
+  left: 81px;
+  top: 9004px;
+}
+#no2{
+  width: 193px;
+  height: 255px;
+  left: 557px;
+  top: 9140px;
+  align-items: center;
+text-align: center;
+}
+#no3{
+  width: 26px;
+  height: 27px;
+  left: 640px;
+  top: 9455px;
+align-items: flex-end;
+}
+
+#how{
+  width: 253px;
+  height: 75px;
+  left: 81px;
+  top: 9558px;
+}
+#how2{
+  width: 673px;
+  height: 255px;
+  left: 317px;
+  top: 9748px;
+  align-items: center;
+text-align: center;
+}
+#how3{
+  width: 92px;
+  height: 27px;
+  left: 607px;
+  top: 10068px;
+align-items: flex-end;
+}
+
+#del{
+  width: 204px;
+  height: 68px;
+  left: 81px;
+  top: 10193px;
+}
+#del2{
+  width: 673px;
+  height: 255px;
+  left: 367px;
+  top: 10369px;
+  align-items: center;
+text-align: center;
+}
+#del3{
+  width: 53px;
+  height: 27px;
+  left: 627px;
+  top: 10689px;
+align-items: flex-end;
+}
+
+#sau{
+  width: 484px;
+  height: 75px;
+  left: 81px;
+  top: 10797px;
+}
+#sau2{
+  width: 794px;
+  height: 349px;
+  left: 256px;
+  top: 11100px;
+text-align: center;
+}
+#sau3{
+  width: 79px;
+  height: 27px;
+  left: 614px;
+  top: 11486px;
+align-items: flex-end;
+}
+
+#thx{
+  width: 450px;
+  height: 75px;
+  left: 81px;
+  top: 11589px;
+}
+#thx2{
+  width: 859px;
+  height: 384px;
+  left: 252px;
+  top: 11717px;
+  text-align: center;
+}
+#thx3{
+  width: 131px;
+  height: 27px;
+  left: 588px;
+  top: 12101px;
+  align-items: flex-end;
+  text-align: center;
+}
+
+#gl{
+  width: 450px;
+  height: 75px;
+  left: 81px;
+  top: 12240px;
+}
+#gl2{
+  width: 929px;
+height: 349px;
+left: 295px;
+top: 12449px;
+  text-align: center;
+}
+#gl3{
+  width: 79px;
+  height: 27px;
+  left: 614px;
+  top: 12841px;
+
+  align-items: flex-end;
+  text-align: center;
+}
+#end{
+position: absolute;
+width: 829px;
+height: 73px;
+left: 252px;
+top: 12880px;
+
+background: #151919;
+}
