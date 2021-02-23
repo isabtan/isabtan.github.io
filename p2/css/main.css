@@ -84,6 +84,31 @@ h1{
 
 
 
+@media only screen
+    and (min-device-width : 375px)
+    and (min-device-height : 740px)
+    and (-webkit-device-pixel-ratio : 3) {
+      #start{
+        margin-left: 15vw;
+        margin-top: 13.8vh;
+
+        font-size: 6.93vw;
+        line-height: 173%;
+        letter-spacing: -0.03em;
+        word-spacing: 2vw;
+      }
+      .large{
+        display: none;
+      }
+      .xs{
+        display: none;
+      }
+      .md{
+        display: block;
+      }
+    }
+
+
 /* Portrait */
 @media only screen
   and (min-device-width: 375px)
@@ -131,27 +156,3 @@ h1{
     #001216 65.58%, #00090B 78.83%, #000000 101.25%);
   }
 }
-
-@media only screen
-    and (min-device-width : 375px)
-    and (min-device-height : 740px)
-    and (-webkit-device-pixel-ratio : 3) {
-      #start{
-        margin-left: 15vw;
-        margin-top: 13.8vh;
-
-        font-size: 6.93vw;
-        line-height: 173%;
-        letter-spacing: -0.03em;
-        word-spacing: 2vw;
-      }
-      .large{
-        display: none;
-      }
-      .xs{
-        display: none;
-      }
-      .md{
-        display: block;
-      }
-    }
