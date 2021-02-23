@@ -99,10 +99,12 @@ h1{
     text-shadow: 0px 0px 0.5px #253538;
   }
   #author{
+    position: fixed;
     margin-top: 6.16vh;
     margin-left: 17.5vw;
   }
   #book{
+    position: fixed;
     margin-bottom: 7vh;
     margin-left: 7.5vw;
 
@@ -146,10 +148,12 @@ h1{
       text-shadow: 0px 0px 0.5px #253538;
     }
     #author{
+      position: fixed;
       margin-top: 6.16vh;
       margin-left: 17.5vw;
     }
     #book{
+      position: fixed;
       margin-bottom: 7vh;
       margin-left: 7.5vw;
 
