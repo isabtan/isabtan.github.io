@@ -149,12 +149,12 @@ h1{
     }
     #author{
       position: fixed;
-      margin-top: 6.16vh;
+      margin-top: 4vh;
       margin-left: 17.5vw;
     }
     #book{
       position: fixed;
-      margin-bottom: 7vh;
+      margin-top: 2vh;
       margin-left: 7.5vw;
 
       word-spacing: 5.3vw;
@@ -170,10 +170,10 @@ h1{
       display: block;
     }
     #start{
-      margin-left: 14vw;
-      margin-top: 10.5vh;
+      margin-left: 19vw;
+      margin-top: 14vh;
 
-      font-size: 6.93vw;
+      font-size: 6vw;
       line-height: 168.5%;
       letter-spacing: -0.03em;
       word-spacing: 2vw;
