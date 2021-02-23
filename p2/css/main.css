@@ -87,23 +87,22 @@ h1{
 /* Portrait */
 @media only screen
   and (min-device-width: 375px)
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
+  and (max-device-width: 667px)
   and (orientation: portrait){
   .title{
     font-size: 8vw;
     line-height: 101.5%;
     letter-spacing:  -0.015em;
-    word-spacing: 5vw;
+    word-spacing: 4.5vw;
 
     text-shadow: 0px 0px 0.5px #253538;
   }
   #author{
-    margin-top: 6.4vw;
+    margin-top: 6.16vh;
     margin-left: 17.5vw;
   }
   #book{
-    margin-top: 162.6vw;
+    margin-bottom: 7vh;
     margin-left: 7.5vw;
 
     word-spacing: 5.3vw;
@@ -112,28 +111,47 @@ h1{
     display: none;
   }
   .xs{
-    display:block;
+    display: block;
   }
   .md{
     display: none;
   }
   #start{
-    margin-left: 9.5vw;
-    margin-top: 25vw;
+    margin-left: 9.6vw;
+    margin-top: 14vh;
 
     font-size: 6.93vw;
     line-height: 168.5%;
     letter-spacing: -0.03em;
     word-spacing: 2vw;
   }
+  #grad{
+    background: linear-gradient(180deg, #FFFFFF 2.87%, rgba(232, 235, 235, 0) 13.65%, rgba(226, 229, 230, 0) 44.59%, rgba(144, 154, 156, 0.36379) 46.92%,
+     rgba(23, 44, 48, 0.898031) 48.8%, #001A20 49.29%, #001418 52.4%,
+    #001216 65.58%, #00090B 78.83%, #000000 101.25%);
+  }
 }
 
-/* --------------------- iPhone X --------------------- */
-/* Portrait */
 @media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 812px)
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) {
+    and (device-width : 375px)
+    and (device-height : 812px)
+    and (-webkit-device-pixel-ratio : 3) {
+      #start{
+        margin-left: 15vw;
+        margin-top: 13.8vh;
 
-}
+        font-size: 6.93vw;
+        line-height: 173%;
+        letter-spacing: -0.03em;
+        word-spacing: 2vw;
+      }
+      .large{
+        display: none;
+      }
+      .xs{
+        display: none;
+      }
+      .md{
+        display: block;
+      }
+    }
