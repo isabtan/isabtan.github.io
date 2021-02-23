@@ -88,7 +88,7 @@ h1{
 /* Portrait */
 @media only screen
   and (min-device-width: 375px)
-  and (max-device-width: 667px)
+  and (max-device-height: 739.99px)
   and (orientation: portrait){
   .title{
     font-size: 8vw;
