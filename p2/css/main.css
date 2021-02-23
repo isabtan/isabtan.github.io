@@ -170,12 +170,12 @@ h1{
       display: block;
     }
     #start{
-      margin-left: 19vw;
-      margin-top: 14vh;
+      margin-left: 16vw;
+      margin-top: 15vh;
 
       font-size: 6vw;
-      line-height: 168.5%;
-      letter-spacing: -0.03em;
+      line-height: 178%;
+      letter-spacing: 0em;
       word-spacing: 2vw;
     }
   }
