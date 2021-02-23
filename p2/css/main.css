@@ -122,16 +122,12 @@ h1{
   #start{
     margin-left: 9.6vw;
     margin-top: 13vh;
+    margin-bottom: 5vh;
 
     font-size: 6.93vw;
     line-height: 168.5%;
     letter-spacing: -0.03em;
     word-spacing: 2vw;
-  }
-  #grad{
-    background: linear-gradient(180deg, #FFFFFF 2.87%, rgba(232, 235, 235, 0) 13.65%, rgba(226, 229, 230, 0) 44.59%, rgba(144, 154, 156, 0.36379) 46.92%,
-     rgba(23, 44, 48, 0.898031) 48.8%, #001A20 49.29%, #001418 52.4%,
-    #001216 65.58%, #00090B 78.83%, #000000 101.25%);
   }
 }
 
