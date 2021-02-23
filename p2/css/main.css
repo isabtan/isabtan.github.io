@@ -137,6 +137,25 @@ h1{
   and (min-device-height: 740px)
   and (max-device-height: 900px)
   and (orientation: portrait){
+    .title{
+      font-size: 8vw;
+      line-height: 101.5%;
+      letter-spacing:  -0.015em;
+      word-spacing: 4.5vw;
+
+      text-shadow: 0px 0px 0.5px #253538;
+    }
+    #author{
+      margin-top: 6.16vh;
+      margin-left: 17.5vw;
+    }
+    #book{
+      margin-bottom: 7vh;
+      margin-left: 7.5vw;
+
+      word-spacing: 5.3vw;
+    }
+
     .large{
       display: none;
     }
@@ -148,7 +167,7 @@ h1{
     }
     #start{
       margin-left: 14vw;
-      margin-top: 14vh;
+      margin-top: 12vh;
 
       font-size: 6.93vw;
       line-height: 168.5%;
