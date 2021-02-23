@@ -134,7 +134,7 @@ h1{
 
 @media only screen
     and (min-device-width : 375px)
-    and (min-device-height : 750px)
+    and (min-device-height : 740px)
     and (-webkit-device-pixel-ratio : 3) {
       #start{
         margin-left: 15vw;
