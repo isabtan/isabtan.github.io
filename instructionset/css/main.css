@@ -1,0 +1,59 @@
+body{
+  background:  #eaeaea;
+}
+
+body:hover{
+background: #641200;
+transition: 2s ease-in;
+
+}
+body:hover div{
+color: #FF2E00;
+transition: 2s ease-in;
+
+}
+
+div{
+  position: fixed;
+  display: inline;
+  width: 100vw;
+  text-align: center;
+  font-family: Times;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 17.361vw;
+  line-height: 19.9vw;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.065em;
+
+  color: #171717;
+}
+
+#t1{
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+#t1:hover{
+  letter-spacing: -0.265em;
+  transition: 2.5s ease-out;
+}
+
+#t2{
+  top: 17.569vw;
+  text-align: center;
+}
+#t2:hover{
+  letter-spacing: -0.265em;
+  transition: 2.5s ease-out;
+}
+
+#t3{
+  top: 35.138vw;
+  text-align: center;
+}
+#t3:hover{
+  letter-spacing: -0.265em;
+  transition: 2.5s ease-out;
+}

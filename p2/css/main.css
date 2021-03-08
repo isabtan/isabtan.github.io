@@ -27,7 +27,7 @@ q::after {
   display: block;
 }
 .xs{
-  display:none;
+  display: none;
 }
 .md{
   display: none;
@@ -511,7 +511,7 @@ p{
 /* Portrait */
 @media only screen
   and (min-device-height: 568px)
-  and (max-device-height: 739.99px)
+  and (max-device-height: 739.9px)
   and (orientation: portrait){
   .title{
     font-size: 8vw;
@@ -557,7 +557,7 @@ p{
 
 @media only screen
   and (min-device-height: 740px)
-  and (max-device-height: 800px)
+  and (max-device-height: 815px)
   and (orientation: portrait){
     .title{
       font-size: 8vw;
@@ -593,7 +593,7 @@ p{
       margin-left: 16vw;
       margin-top: 15vh;
 
-      font-size: 6vw;
+      font-size: 7vw;
       line-height: 178%;
       letter-spacing: 0em;
       word-spacing: 2vw;
