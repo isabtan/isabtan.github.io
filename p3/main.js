@@ -84,3 +84,30 @@ function showCoins() {
     document.body.append(coinImage);
   });
 }
+//dots
+
+//vietnam dots
+function filterByViet(event) {
+  let dots = document.querySelectorAll('.vt');
+  dots.forEach(function (dot){
+    if (dot.dataset.country == event.target.dataset.country) {
+      dot.style.fill = 'black';
+    } else {
+      dot.style.fill = 'white';
+    }
+  });
+}
+document.querySelector('#l-vt').addEventListener('click', filterByViet);
+
+//thailand dots
+function filterByThai(event) {
+  let dots = document.querySelectorAll('.th');
+  dots.forEach(function (dot){
+    if (dot.dataset.country == event.target.dataset.country) {
+      dot.style.fill = 'black';
+    } else {
+      dot.style.fill = 'white';
+    }
+  });
+}
+document.querySelector('#l-th').addEventListener('click', filterByThai);
