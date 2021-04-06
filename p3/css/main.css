@@ -2,93 +2,123 @@ body{
   background: #000000;
 }
 
-@-webkit-keyframes scale-in-center {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-}
-@keyframes scale-in-center {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
+@font-face {
+ font-family: knif;
+ src: url(knif-mono.woff2);
 }
 
+q {
+  quotes: "“" "”" "‘" "’";
+}
+q::before {
+    content: open-quote;
+}
+q::after {
+    content: close-quote;
+}
 
-.c{
-  margin: 0 auto;
+::selection {
+    color: #4b4b4b;
+    text-shadow: none;
+    background: transparent;
+}
+text::selection {
+    fill: #4b4b4b;
+    text-shadow: none;
+    background: transparent;
+}
+
+h2::selection {
+    color: #cecece;
+    text-shadow: none;
+    background: transparent;
+}
+
+h1{
+font-family: "IBM Plex Mono", monospace;
+font-weight: 500;
+font-size: 0.75rem;
+line-height: 145.4%;
+letter-spacing: 0.04em;
+color: #ffffff;
+}
+h3{
+font-family: "knif", times;
+font-weight: 300;
+font-size: 0.75rem;
+line-height: 150%;
+letter-spacing: -0.005em;
+color: #ffffff;
+}
+p{
+/*  position: fixed;
+  left: 87.78%;
+  right: 5.21%;
+  top: 86.83%;
+  bottom: 2.44%;*/
+
+font-family: "knif", times;
+font-weight: 300;
+font-size: 0.75rem;
+line-height: 150%;
+letter-spacing: -0.005em;
+color: #ffffff;
+text-align: center;
+}
+h2{
+font-family: "IBM Plex Mono", monospace;
+font-weight: 400;
+display: table;
+font-size: 0.6875rem;
+letter-spacing: 0.1%;
+text-transform: uppercase;
+text-align: center;
+
+color: #000000;
+background-color: #ffffff;
+
+margin: 0px auto 0px auto;
+padding: 4.5px 7px 4.5px 7px;
+}
+#info{
+  position: fixed;
+font-family: "knif", times;
+font-weight: 300;
+font-size: 0.75rem;
+line-height: 150%;
+letter-spacing: -0.005em;
+color: #ffffff;
+
+margin-top: 88vh;
+margin-left: 76.6%;
+}
+img{
+  width: 17.5vw;
+  height: 17.5vw;
+  overflow: hidden;
   border-radius: 50%;
-
-	animation: scale-in-center 0.4s ease-in both;
 }
 
-#main{
+.txt{
   position: fixed;
-  width: 94px;
-  height: 94px;
-  margin-left: 673px;
-  margin-top: 335px;
-  background-color: #ffffff;
-  animation-timing-function: 0.3s;
+  margin-left: 1.3vw;
 }
 
-#out{
-  position: fixed;
-  width: 768px;
-  height: 820px;
-  margin-left: 335.16px;
-  margin-top: -0.04px;
-	        animation: fade-in 0.6s ease-in both;
+#sitetitle{
+margin-top: 1.5vh;
 }
-#text{
-  position: fixed;
-  width: 769px;
-  height: 820px;
-  margin-left: 335.1px;
-  margin-top: -0.04px;
-  animation: fade-in 0.4s ease-in both;
-  animation-delay: 1s;
+#sitedes{
+margin-top: 3.9vh;
 }
-#dot{
-  position: fixed;
-  width: 769px;
-  height: 820px;
-  margin-left: 335.1px;
-  margin-top: -0.04px;
-  z-index: -10;
-
-  animation: fade-in 0.4s ease-in both;
-  animation-delay: 1.5s;
+#sitebtm{
+margin-top: 92.3vh;
 }
 
-
-
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.cls-4:hover{
+  fill: white;
+  cursor: pointer;
 }
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+
+.cls-3{
+  cursor: pointer;
 }
