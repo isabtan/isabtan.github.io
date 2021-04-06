@@ -84,16 +84,3 @@ function showCoins() {
     document.body.append(coinImage);
   });
 }
-
-function vietnam() {
-  let allCoins = coinCountry.querySelectorAll('p');
-  allCoins.forEach(function (coin){
-    if (coinCountry.dataset.country.startsWith('V')){
-      coinCountry.style.display = 'block';
-    } else {
-      coinCountry.style.display = 'none';
-    }
-  });
-}
-
-document.querySelector('#viet1').addEventListener('click', vietnam);
