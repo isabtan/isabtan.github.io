@@ -84,8 +84,10 @@ function showCoins() {
     document.body.append(coinImage);
   });
 }
-//dots
 
+
+
+//dots
 //vietnam dots
 function filterByViet(event) {
   let dots = document.querySelectorAll('.vt');
@@ -97,7 +99,7 @@ function filterByViet(event) {
     }
   });
 }
-document.querySelector('#l-vt').addEventListener('click', filterByViet);
+document.querySelector('#rc-vt-2').addEventListener('click', filterByViet);
 
 //thailand dots
 function filterByThai(event) {
@@ -110,4 +112,69 @@ function filterByThai(event) {
     }
   });
 }
-document.querySelector('#l-th').addEventListener('click', filterByThai);
+document.querySelector('#rc-th-2').addEventListener('click', filterByThai);
+
+//singapore dots
+function filterBySg(event) {
+  let dots = document.querySelectorAll('.sg');
+  dots.forEach(function (dot){
+    if (dot.dataset.country == event.target.dataset.country) {
+      dot.style.fill = 'black';
+    } else {
+      dot.style.fill = 'white';
+    }
+  });
+}
+document.querySelector('#rc-sg-2').addEventListener('click', filterBySg);
+
+//philippines dots
+function filterByPh(event) {
+  let dots = document.querySelectorAll('.ph');
+  dots.forEach(function (dot){
+    if (dot.dataset.country == event.target.dataset.country) {
+      dot.style.fill = 'black';
+    } else {
+      dot.style.fill = 'white';
+    }
+  });
+}
+document.querySelector('#rc-ph-2').addEventListener('click', filterByPh);
+
+//malaysia dots
+function filterByMy(event) {
+  let dots = document.querySelectorAll('.my');
+  dots.forEach(function (dot){
+    if (dot.dataset.country == event.target.dataset.country) {
+      dot.style.fill = 'black';
+    } else {
+      dot.style.fill = 'white';
+    }
+  });
+}
+document.querySelector('#rc-my-2').addEventListener('click', filterByMy);
+
+//laos dots
+function filterByLaos(event) {
+  let dots = document.querySelectorAll('.laos');
+  dots.forEach(function (dot){
+    if (dot.dataset.country == event.target.dataset.country) {
+      dot.style.fill = 'black';
+    } else {
+      dot.style.fill = 'white';
+    }
+  });
+}
+document.querySelector('#rc-laos-2').addEventListener('click', filterByLaos);
+
+//indonesia dots
+function filterByInd(event) {
+  let dots = document.querySelectorAll('.ind');
+  dots.forEach(function (dot){
+    if (dot.dataset.country == event.target.dataset.country) {
+      dot.style.fill = 'black';
+    } else {
+      dot.style.fill = 'white';
+    }
+  });
+}
+document.querySelector('#rc-ind-2').addEventListener('click', filterByInd);
