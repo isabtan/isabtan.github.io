@@ -173,26 +173,26 @@ document.querySelector('#_2020').addEventListener('click', filterByYear);
 //
 // DOTS - INDIVIDUAL
 //
-let dotFilter = '';
-function selectDot(event) {
-  let sdots = document.querySelectorAll('#dot2');
-  // was the same dot clicked?
-  if (dotFilter == event.target.getElementById('dot2')){
-    sdots.forEach(function (sdot){
-      sdot.classList.remove('highlight');
-    })
-    dotFilter = ''
-  } else {
-    // store currently filtered year
-    dotFilter = event.target.getElementById('dot2');
-    // display year sdots
-    sdots.forEach(function (sdot){
-      if (sdot.getElementById('dot2') == dotFilter) {
-        sdot.classList.add('highlight');
-      } else {
-        sdot.classList.remove('highlight');
-      }
-    });
-  }
-}
-document.addEventListener('click', selectDot);
+// let dotFilter = '';
+// function selectDot(event) {
+//   let sdots = document.querySelectorAll('#dot2');
+//   // was the same dot clicked?
+//   if (dotFilter == event.target.getElementById('dot2')){
+//     sdots.forEach(function (sdot){
+//       sdot.classList.remove('highlight');
+//     })
+//     dotFilter = ''
+//   } else {
+//     // store currently filtered year
+//     dotFilter = event.target.getElementById('dot2');
+//     // display year sdots
+//     sdots.forEach(function (sdot){
+//       if (sdot.getElementById('dot2') == dotFilter) {
+//         sdot.classList.add('highlight');
+//       } else {
+//         sdot.classList.remove('highlight');
+//       }
+//     });
+//   }
+// }
+// document.addEventListener('click', selectDot);
