@@ -124,6 +124,12 @@ margin-top: 92.3vh;
   transition: 0.25s ease-in-out;
 }
 
+.cls-3:active{
+  fill: #4b4b4b;
+  stroke: #4b4b4b;
+  transition: 0.1s ease-out;
+}
+
 .cls-3.highlight{
   fill: white;
 }
@@ -137,6 +143,10 @@ margin-top: 92.3vh;
 }
 .yes:hover{
   fill: #4b4b4b;
+}
+
+.years:hover{
+  fill:#4b4b4b;
 }
 
 #no1{

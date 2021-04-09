@@ -131,7 +131,7 @@ document.querySelector('#rc-brunei-2').addEventListener('click', filterByCountry
 
 let yearFilter = '';
 function filterByYear(event) {
-  let ydots = document.querySelectorAll('.cls-3');
+  let ydots = document.querySelectorAll('.ydot');
   // was the same country clicked?
   if (yearFilter == event.target.dataset.year){
     ydots.forEach(function (ydot){
@@ -169,282 +169,30 @@ document.querySelector('#_2010').addEventListener('click', filterByYear);
 document.querySelector('#_2015').addEventListener('click', filterByYear);
 document.querySelector('#_2020').addEventListener('click', filterByYear);
 
-/*
-//vietnam dots
-function filterByViet(event) {
-  let dots = document.querySelectorAll('.vt');
-  dots.forEach(function (dot){
-    if (dot.dataset.country == event.target.dataset.country) {
-      dot.style.fill = 'black';
-    } else {
-      dot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#rc-vt-2').addEventListener('click', filterByViet);
-
-//thailand dots
-function filterByThai(event) {
-  let dots = document.querySelectorAll('.th');
-  dots.forEach(function (dot){
-    if (dot.dataset.country == event.target.dataset.country) {
-      dot.style.fill = 'black';
-    } else {
-      dot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#rc-th-2').addEventListener('click', filterByThai);
-
-//singapore dots
-function filterBySg(event) {
-  let dots = document.querySelectorAll('.sg');
-  dots.forEach(function (dot){
-    if (dot.dataset.country == event.target.dataset.country) {
-      dot.style.fill = 'black';
-    } else {
-      dot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#rc-sg-2').addEventListener('click', filterBySg);
-
-//philippines dots
-function filterByPh(event) {
-  let dots = document.querySelectorAll('.ph');
-  dots.forEach(function (dot){
-    if (dot.dataset.country == event.target.dataset.country) {
-      dot.style.fill = 'black';
-    } else {
-      dot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#rc-ph-2').addEventListener('click', filterByPh);
-
-//malaysia dots
-function filterByMy(event) {
-  let dots = document.querySelectorAll('.my');
-  dots.forEach(function (dot){
-    if (dot.dataset.country == event.target.dataset.country) {
-      dot.style.fill = 'black';
-    } else {
-      dot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#rc-my-2').addEventListener('click', filterByMy);
-
-//laos dots
-function filterByLaos(event) {
-  let dots = document.querySelectorAll('.laos');
-  dots.forEach(function (dot){
-    if (dot.dataset.country == event.target.dataset.country) {
-      dot.style.fill = 'black';
-    } else {
-      dot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#rc-laos-2').addEventListener('click', filterByLaos);
-
-//indonesia dots
-function filterByInd(event) {
-  let dots = document.querySelectorAll('.ind');
-  dots.forEach(function (dot){
-    if (dot.dataset.country == event.target.dataset.country) {
-      dot.style.fill = 'black';
-    } else {
-      dot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#rc-ind-2').addEventListener('click', filterByInd);
-
-//timor-leste dots
-function filterByTl(event) {
-  let dots = document.querySelectorAll('.tl');
-  dots.forEach(function (dot){
-    if (dot.dataset.country == event.target.dataset.country) {
-      dot.style.fill = 'black';
-    } else {
-      dot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#rc-tl-2').addEventListener('click', filterByTl);
-
-//cambodia dots
-function filterByCam(event) {
-  let dots = document.querySelectorAll('.cam');
-  dots.forEach(function (dot){
-    if (dot.dataset.country == event.target.dataset.country) {
-      dot.style.fill = 'black';
-    } else {
-      dot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#rc-cam-2').addEventListener('click', filterByCam);
-
-//burma/myanmar dots
-function filterByBur(event) {
-  let dots = document.querySelectorAll('.bur');
-  dots.forEach(function (dot){
-    if (dot.dataset.country == event.target.dataset.country) {
-      dot.style.fill = 'black';
-    } else {
-      dot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#rc-bur-2').addEventListener('click', filterByBur);
-
-//brunei dots
-function filterByBr(event) {
-  let dots = document.querySelectorAll('.br');
-  dots.forEach(function (dot){
-    if (dot.dataset.country == event.target.dataset.country) {
-      dot.style.fill = 'black';
-    } else {
-      dot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#rc-brunei-2').addEventListener('click', filterByBr);
-
 
 //
-//YEAR
+// DOTS - INDIVIDUAL
 //
-
-//1950
-function filterByY1950(event) {
-  let ydots = document.querySelectorAll('.y1950');
-  ydots.forEach(function (ydot){
-    if (ydot.dataset.country == event.target.dataset.country) {
-      ydot.style.fill = 'black';
-    } else {
-      ydot.style.fill = 'white';
-    }
-  });
+let dotFilter = '';
+function selectDot(event) {
+  let sdots = document.querySelectorAll('#dot2');
+  // was the same dot clicked?
+  if (dotFilter == event.target.getElementById('dot2')){
+    sdots.forEach(function (sdot){
+      sdot.classList.remove('highlight');
+    })
+    dotFilter = ''
+  } else {
+    // store currently filtered year
+    dotFilter = event.target.getElementById('dot2');
+    // display year sdots
+    sdots.forEach(function (sdot){
+      if (sdot.getElementById('dot2') == dotFilter) {
+        sdot.classList.add('highlight');
+      } else {
+        sdot.classList.remove('highlight');
+      }
+    });
+  }
 }
-document.querySelector('#_1950').addEventListener('click', filterByY1950);
-
-//1955
-function filterByY1955(event) {
-  let ydots = document.querySelectorAll('.y1955');
-  ydots.forEach(function (ydot){
-    if (ydot.dataset.country == event.target.dataset.country) {
-      ydot.style.fill = 'black';
-    } else {
-      ydot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#_1955').addEventListener('click', filterByY1955);
-
-//1965
-function filterByY1965(event) {
-  let ydots = document.querySelectorAll('.y1965');
-  ydots.forEach(function (ydot){
-    if (ydot.dataset.country == event.target.dataset.country) {
-      ydot.style.fill = 'black';
-    } else {
-      ydot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#_1965').addEventListener('click', filterByY1965);
-
-//1970
-function filterByY1970(event) {
-  let ydots = document.querySelectorAll('.y1970');
-  ydots.forEach(function (ydot){
-    if (ydot.dataset.country == event.target.dataset.country) {
-      ydot.style.fill = 'black';
-    } else {
-      ydot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#_1970').addEventListener('click', filterByY1970);
-
-//1975
-function filterByY1975(event) {
-  let ydots = document.querySelectorAll('.y1975');
-  ydots.forEach(function (ydot){
-    if (ydot.dataset.country == event.target.dataset.country) {
-      ydot.style.fill = 'black';
-    } else {
-      ydot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#_1975').addEventListener('click', filterByY1975);
-
-//1980
-function filterByY1980(event) {
-  let ydots = document.querySelectorAll('.y1980');
-  ydots.forEach(function (ydot){
-    if (ydot.dataset.country == event.target.dataset.country) {
-      ydot.style.fill = 'black';
-    } else {
-      ydot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#_1980').addEventListener('click', filterByY1980);
-
-//1985
-function filterByY1985(event) {
-  let ydots = document.querySelectorAll('.y1985');
-  ydots.forEach(function (ydot){
-    if (ydot.dataset.country == event.target.dataset.country) {
-      ydot.style.fill = 'black';
-    } else {
-      ydot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#_1985').addEventListener('click', filterByY1985);
-
-//1990
-function filterByY1990(event) {
-  let ydots = document.querySelectorAll('.y1990');
-  ydots.forEach(function (ydot){
-    if (ydot.dataset.country == event.target.dataset.country) {
-      ydot.style.fill = 'black';
-    } else {
-      ydot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#_1990').addEventListener('click', filterByY1990);
-
-//1995
-function filterByY1995(event) {
-  let ydots = document.querySelectorAll('.y1995');
-  ydots.forEach(function (ydot){
-    if (ydot.dataset.country == event.target.dataset.country) {
-      ydot.style.fill = 'black';
-    } else {
-      ydot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#_1995').addEventListener('click', filterByY1995);
-
-//2000
-function filterByY2000(event) {
-  let ydots = document.querySelectorAll('.y2000');
-  ydots.forEach(function (ydot){
-    if (ydot.dataset.country == event.target.dataset.country) {
-      ydot.style.fill = 'black';
-    } else {
-      ydot.style.fill = 'white';
-    }
-  });
-}
-document.querySelector('#_2000').addEventListener('click', filterByY2000);
-*/
+document.addEventListener('click', selectDot);
