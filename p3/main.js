@@ -96,11 +96,13 @@ function filterByCountry(event) {
   document.querySelectorAll('.ring').forEach(item=>{
     item.classList.remove('selected-ring')
     })
-  document.querySelector(`.ring#${event.target.dataset.country.toLowerCase()}`).classList.add('selected-ring');
+  // document.querySelector(`.ring#${event.target.dataset.country.toLowerCase()}`).classList.add('selected-ring');
 
   let dots = document.querySelectorAll('.cls-3');
   // was the same country clicked?
   if (countryFilter == event.target.dataset.country){
+    document.querySelector(`.ring#${event.target.dataset.country.toLowerCase()}`).classList.remove('selected-ring');
+
     dots.forEach(function (dot){
       dot.classList.remove('highlight');
     })
@@ -111,6 +113,7 @@ function filterByCountry(event) {
     // display country dots
     dots.forEach(function (dot){
       if (dot.dataset.country == countryFilter) {
+        document.querySelector(`.ring#${event.target.dataset.country.toLowerCase()}`).classList.add('selected-ring');
         dot.classList.add('highlight');
       } else {
         dot.classList.remove('highlight');
@@ -166,23 +169,26 @@ function filterByYear(event) {
     });
   }
 }
+document.querySelectorAll('[data-year]').forEach((filter) => {
+  filter.addEventListener('click', filterByYear);
+});
 
-document.querySelector('#_1940').addEventListener('click', filterByYear);
-document.querySelector('#_1945').addEventListener('click', filterByYear);
-document.querySelector('#_1950').addEventListener('click', filterByYear);
-document.querySelector('#_1955').addEventListener('click', filterByYear);
-document.querySelector('#_1965').addEventListener('click', filterByYear);
-document.querySelector('#_1970').addEventListener('click', filterByYear);
-document.querySelector('#_1975').addEventListener('click', filterByYear);
-document.querySelector('#_1980').addEventListener('click', filterByYear);
-document.querySelector('#_1985').addEventListener('click', filterByYear);
-document.querySelector('#_1990').addEventListener('click', filterByYear);
-document.querySelector('#_1995').addEventListener('click', filterByYear);
-document.querySelector('#_2000').addEventListener('click', filterByYear);
-document.querySelector('#_2005').addEventListener('click', filterByYear);
-document.querySelector('#_2010').addEventListener('click', filterByYear);
-document.querySelector('#_2015').addEventListener('click', filterByYear);
-document.querySelector('#_2020').addEventListener('click', filterByYear);
+// document.querySelector('#_1940').addEventListener('click', filterByYear);
+// document.querySelector('#_1945').addEventListener('click', filterByYear);
+// document.querySelector('#_1950').addEventListener('click', filterByYear);
+// document.querySelector('#_1955').addEventListener('click', filterByYear);
+// document.querySelector('#_1965').addEventListener('click', filterByYear);
+// document.querySelector('#_1970').addEventListener('click', filterByYear);
+// document.querySelector('#_1975').addEventListener('click', filterByYear);
+// document.querySelector('#_1980').addEventListener('click', filterByYear);
+// document.querySelector('#_1985').addEventListener('click', filterByYear);
+// document.querySelector('#_1990').addEventListener('click', filterByYear);
+// document.querySelector('#_1995').addEventListener('click', filterByYear);
+// document.querySelector('#_2000').addEventListener('click', filterByYear);
+// document.querySelector('#_2005').addEventListener('click', filterByYear);
+// document.querySelector('#_2010').addEventListener('click', filterByYear);
+// document.querySelector('#_2015').addEventListener('click', filterByYear);
+// document.querySelector('#_2020').addEventListener('click', filterByYear);
 
 
 //
