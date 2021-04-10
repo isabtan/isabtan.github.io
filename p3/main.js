@@ -87,11 +87,17 @@ function showCoins() {
 
 
 //
-//DOTS - COUNTRY
+//LABEL SELECT DOTS - COUNTRY
 //
 
 let countryFilter = '';
 function filterByCountry(event) {
+  console.log(event)
+  document.querySelectorAll('.ring').forEach(item=>{
+    item.classList.remove('selected-ring')
+    })
+  document.querySelector(`.ring#${event.target.dataset.country.toLowerCase()}`).classList.add('selected-ring');
+
   let dots = document.querySelectorAll('.cls-3');
   // was the same country clicked?
   if (countryFilter == event.target.dataset.country){
@@ -112,25 +118,34 @@ function filterByCountry(event) {
     });
   }
 }
-document.querySelector('#rc-vt-2').addEventListener('click', filterByCountry);
-document.querySelector('#rc-th-2').addEventListener('click', filterByCountry);
-document.querySelector('#rc-sg-2').addEventListener('click', filterByCountry);
-document.querySelector('#rc-ph-2').addEventListener('click', filterByCountry);
-document.querySelector('#rc-my-2').addEventListener('click', filterByCountry);
-document.querySelector('#rc-laos-2').addEventListener('click', filterByCountry);
-document.querySelector('#rc-ind-2').addEventListener('click', filterByCountry);
-document.querySelector('#rc-tl-2').addEventListener('click', filterByCountry);
-document.querySelector('#rc-cam-2').addEventListener('click', filterByCountry);
-document.querySelector('#rc-bur-2').addEventListener('click', filterByCountry);
-document.querySelector('#rc-brunei-2').addEventListener('click', filterByCountry);
+document.querySelectorAll('[data-country]').forEach((filter) => {
+  filter.addEventListener('click', filterByCountry);
+});
+// document.querySelector('#rc-vt-2').addEventListener('click', filterByCountry);
+// document.querySelector('#rc-th-2').addEventListener('click', filterByCountry);
+// document.querySelector('#rc-sg-2').addEventListener('click', filterByCountry);
+// document.querySelector('#rc-ph-2').addEventListener('click', filterByCountry);
+// document.querySelector('#rc-my-2').addEventListener('click', filterByCountry);
+// document.querySelector('#rc-laos-2').addEventListener('click', filterByCountry);
+// document.querySelector('#rc-ind-2').addEventListener('click', filterByCountry);
+// document.querySelector('#rc-tl-2').addEventListener('click', filterByCountry);
+// document.querySelector('#rc-cam-2').addEventListener('click', filterByCountry);
+// document.querySelector('#rc-bur-2').addEventListener('click', filterByCountry);
+// document.querySelector('#rc-brunei-2').addEventListener('click', filterByCountry);
 
 
 //
-//DOTS - YEAR
+//LABEL SELECT DOTS - YEAR
 //
 
 let yearFilter = '';
 function filterByYear(event) {
+  // console.log(event)
+  // document.querySelectorAll('.ring').forEach(item=>{
+  //   item.classList.remove('selected-ring')
+  //   })
+  // document.querySelector(`.ring#${event.target.dataset.year.toLowerCase()}`).classList.add('selected-ring');
+
   let ydots = document.querySelectorAll('.ydot');
   // was the same country clicked?
   if (yearFilter == event.target.dataset.year){

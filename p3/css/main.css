@@ -152,8 +152,12 @@ margin-top: 92.3vh;
 #no1{
   cursor: ;
 }
+
 .ring{
 stroke-dasharray: 3 4;
+}
+.selected-ring{
+stroke-dasharray: 0;
 }
 
 .cls-4:hover{
