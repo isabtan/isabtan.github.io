@@ -142,40 +142,40 @@ document.querySelectorAll('[data-country]').forEach((filter) => {
 //
 
 let yearFilter = '';
+
 function filterByYear(event) {
-  console.log(event)
-  document.querySelectorAll('.yring').forEach(item=>{
-    item.classList.remove('selected-ring')
-    })
+	console.log(event)
+	document.querySelectorAll('.yring').forEach(item => {
+		item.classList.remove('selected-ring')
+	})
 
-  let ydots = document.querySelectorAll('.ydot');
-  // was the same country clicked?
-  if (yearFilter == event.target.dataset.year){
-    document.querySelector(`.yring#${event.target.dataset.year.toLowerCase()}`).classList.remove('selected-ring');
+	let ydots = document.querySelectorAll('.ydot');
+	// was the same country clicked?
+	if (yearFilter == event.target.dataset.year) {
+		document.querySelector(`.yring#${event.target.dataset.year.toLowerCase()}`).classList.remove('selected-ring');
 
-    ydots.forEach(function (ydot){
-      ydot.classList.remove('highlight');
-    })
-    yearFilter = ''
-  } else {
-    // store currently filtered year
-    yearFilter = event.target.dataset.year;
-    // display year ydots
-    ydots.forEach(function (ydot){
-      if (ydot.dataset.year == yearFilter) {
-        document.querySelector(`.yring#${event.target.dataset.year.toLowerCase()}`).classList.add('selected-ring');
+		ydots.forEach(function(ydot) {
+			ydot.classList.remove('highlight');
+		})
+		yearFilter = ''
+	} else {
+		// store currently filtered year
+		yearFilter = event.target.dataset.year;
+		// display year ydots
+		ydots.forEach(function(ydot) {
+			if (ydot.dataset.year == yearFilter) {
+				document.querySelector(`.yring#${event.target.dataset.year.toLowerCase()}`).classList.add('selected-ring');
 
-        ydot.classList.add('highlight');
-      } else {
-        ydot.classList.remove('highlight');
-      }
-    });
-  }
+				ydot.classList.add('highlight');
+			} else {
+				ydot.classList.remove('highlight');
+			}
+		});
+	}
 }
 document.querySelectorAll('[data-year]').forEach((filter) => {
-  filter.addEventListener('click', filterByYear);
+	filter.addEventListener('click', filterByYear);
 });
-
 // document.querySelector('#_1940').addEventListener('click', filterByYear);
 // document.querySelector('#_1945').addEventListener('click', filterByYear);
 // document.querySelector('#_1950').addEventListener('click', filterByYear);
@@ -197,26 +197,38 @@ document.querySelectorAll('[data-year]').forEach((filter) => {
 //
 // DOTS - INDIVIDUAL
 //
-// let dotFilter = '';
-// function selectDot(event) {
-//   let sdots = document.querySelectorAll('#dot2');
-//   // was the same dot clicked?
-//   if (dotFilter == event.target.getElementById('dot2')){
-//     sdots.forEach(function (sdot){
-//       sdot.classList.remove('highlight');
-//     })
-//     dotFilter = ''
-//   } else {
-//     // store currently filtered year
-//     dotFilter = event.target.getElementById('dot2');
-//     // display year sdots
-//     sdots.forEach(function (sdot){
-//       if (sdot.getElementById('dot2') == dotFilter) {
-//         sdot.classList.add('highlight');
-//       } else {
-//         sdot.classList.remove('highlight');
-//       }
-//     });
-//   }
+// let countryFilter = '';
+//
+// function filterByDot(event) {
+// 	console.log(event)
+// 	document.querySelectorAll('.ring').forEach(item => {
+// 		item.classList.remove('selected-ring')
+// 	})
+// 	// document.querySelector(`.ring#${event.target.dataset.country.toLowerCase()}`).classList.add('selected-ring');
+//
+// 	let sdots = document.querySelectorAll('.sdot');
+// 	// was the same country clicked?
+// 	if (countryFilter == event.target.dataset.country) {
+// 		document.querySelector('.ring').classList.remove('selected-ring');
+//
+// 		sdots.forEach(function(sdot) {
+// 			sdot.classList.remove('highlight');
+// 		})
+// 		countryFilter = ''
+// 	} else {
+// 		// store currently filtered country
+// 		countryFilter = event.target.dataset.country;
+// 		// display country sdots
+// 		sdots.forEach(function(sdot) {
+// 			if (sdot.dataset.country == countryFilter) {
+// 				document.querySelector('.ring').classList.add('selected-ring');
+// 				sdot.classList.add('highlight');
+// 			} else {
+// 				sdot.classList.remove('highlight');
+// 			}
+// 		});
+// 	}
 // }
-// document.addEventListener('click', selectDot);
+// document.querySelectorAll('.sdot').forEach((filter) => {
+// 	filter.addEventListener('click', filterByDot);
+// });
