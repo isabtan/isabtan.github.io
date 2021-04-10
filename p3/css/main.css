@@ -159,6 +159,9 @@ stroke-dasharray: 3 4;
 .selected-ring{
 stroke-dasharray: 0;
 }
+/* .selected-ringy{
+stroke-dasharray: 0;
+} */
 
 .cls-4:hover{
   opacity: 0.75;
@@ -168,4 +171,5 @@ stroke-dasharray: 0;
 
 svg{
   margin-top: 0.5%;
+  margin-left: -1%;
 }
