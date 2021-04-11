@@ -152,7 +152,7 @@ function filterByYear(event) {
 	let ydots = document.querySelectorAll('.ydot');
 	// was the same country clicked?
 	if (yearFilter == event.target.dataset.year) {
-		document.querySelectorAll('.ring').forEach((ring) => ring.classList.remove('selected-ring'));
+		document.querySelectorAll(`.ring[data-year~="${event.target.dataset.year}"]`).forEach((ring) => ring.classList.remove('selected-ring'));
 
 		ydots.forEach(function(ydot) {
 			ydot.classList.remove('highlight');
@@ -164,7 +164,7 @@ function filterByYear(event) {
 		// display year ydots
 		ydots.forEach(function(ydot) {
 			if (ydot.dataset.year == yearFilter) {
-				document.querySelectorAll('.ring').forEach((ring) => ring.classList.add('selected-ring'));
+				document.querySelectorAll(`.ring[data-year~="${event.target.dataset.year}"]`).forEach((ring) => ring.classList.add('selected-ring'));
 
 				ydot.classList.add('highlight');
 			} else {
