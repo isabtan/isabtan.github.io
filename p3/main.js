@@ -145,14 +145,14 @@ let yearFilter = '';
 
 function filterByYear(event) {
 	console.log(event)
-	document.querySelectorAll('.yring').forEach(item => {
+	document.querySelectorAll('.ring').forEach(item => {
 		item.classList.remove('selected-ring')
 	})
 
 	let ydots = document.querySelectorAll('.ydot');
 	// was the same country clicked?
 	if (yearFilter == event.target.dataset.year) {
-		document.querySelector(`.yring#${event.target.dataset.year.toLowerCase()}`).classList.remove('selected-ring');
+		document.querySelectorAll('.ring').forEach((ring) => ring.classList.remove('selected-ring'));
 
 		ydots.forEach(function(ydot) {
 			ydot.classList.remove('highlight');
@@ -164,7 +164,7 @@ function filterByYear(event) {
 		// display year ydots
 		ydots.forEach(function(ydot) {
 			if (ydot.dataset.year == yearFilter) {
-				document.querySelector(`.yring#${event.target.dataset.year.toLowerCase()}`).classList.add('selected-ring');
+				document.querySelectorAll('.ring').forEach((ring) => ring.classList.add('selected-ring'));
 
 				ydot.classList.add('highlight');
 			} else {
@@ -173,7 +173,7 @@ function filterByYear(event) {
 		});
 	}
 }
-document.querySelectorAll('[data-year]').forEach((filter) => {
+document.querySelectorAll('#l-year').forEach((filter) => {
 	filter.addEventListener('click', filterByYear);
 });
 // document.querySelector('#_1940').addEventListener('click', filterByYear);
