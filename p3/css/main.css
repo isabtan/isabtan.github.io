@@ -82,10 +82,12 @@ h2{
 }
 
 
-#actual{
+/* #actual{
   font-size: 0.6rem;
   padding: 0.8px 2.8px 0.8px 2.8px;
-}
+
+  display: none;
+} */
 
 #info{
   position: fixed;
@@ -183,7 +185,6 @@ margin-top: 92.3vh;
 }
 .selected-ring{
   stroke-dasharray: 0;
-  transition: 0.05s ease-out;
   z-index: 88888;
 }
 
@@ -196,10 +197,13 @@ margin-top: 92.3vh;
 
 svg{
   position: fixed;
-  margin-top: 0.3%;
+  margin-top: -0.25%;
   margin-left: -1%;
   z-index: 88888;
   /* overflow: hidden; */
+}
+
+.coin-container{
 }
 
 
@@ -217,10 +221,13 @@ svg{
   justify-content: center;
   position: fixed;
 
+  display: flex;
+}
+.coin-currency{
   display: none;
 }
-.coinname.active{
-  display: flex;
+.coin-currency.active{
+  display: block;
 }
 
 .coininfo{
@@ -228,12 +235,36 @@ svg{
   left: 88%;
   top: 88.95%;
   bottom: 2.44%;
+}
 
+.coin-year{
   display: none;
 }
-.coininfo.active{
+.coin-year.active{
   display: block;
 }
+
+.coin-country{
+  display: none;
+}
+.coin-country.active{
+  display: block;
+}
+
+.coin-size{
+  display: none;
+}
+.coin-size.active{
+  display: block;
+}
+
+.coin-mass{
+  display: none;
+}
+.coin-mass.active{
+  display: block;
+}
+
 
 .coinzoom{
   /* position: fixed; */
@@ -242,12 +273,15 @@ svg{
   left: 80.4%;
   right: 1.88%;
   top: 4.2%;
+}
 
+.coin-zoompic{
   display: none;
 }
-.coinzoom.active{
+.coin-zoompic.active{
   display: block;
 }
+
 
 .coinmain{
   margin: 0;
@@ -259,9 +293,11 @@ svg{
 
   top: 40vh;
   left: 45vw;
+}
 
+.coin-main{
   display: none;
 }
-.coinmain.active{
+.coin-main.active{
   display: block;
 }

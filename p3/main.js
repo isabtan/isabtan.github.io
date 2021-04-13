@@ -72,21 +72,25 @@ function showCoins() {
     document.querySelector(".coininfo").append(coinDes);
 
     var coinYear = document.createElement("p");
+    coinYear.classList.add("coin-year");
     coinYear.innerText = coin.fields.year;
     coinYear.dataset.year = coin.fields.year;
     coinDes.append(coinYear);
 
     var coinCountry = document.createElement("p");
+    coinCountry.classList.add("coin-country");
     coinCountry.innerText = coin.fields.country;
     coinCountry.dataset.country = coin.fields.country;
     coinDes.append(coinCountry);
 
     var coinSize = document.createElement("p");
+    coinSize.classList.add("coin-size");
     coinSize.innerText = coin.fields.diameter_mm;
     coinSize.dataset.size = coin.fields.diameter_mm;
     coinDes.append(coinSize);
 
     var coinMass = document.createElement("p");
+    coinMass.classList.add("coin-mass");
     coinMass.innerText = coin.fields.weight_g;
     coinMass.dataset.mass = coin.fields.weight_g;
     coinDes.append(coinMass);
@@ -95,34 +99,45 @@ function showCoins() {
 //ZOOMED PIC - top right, large
 //creating a new div container
     var coinZoom = document.createElement("div");
-    coinZoom.classList.add("coin-zoompic");
+    coinZoom.classList.add("coin-zoom");
     document.querySelector(".coinzoom").append(coinZoom);
 
     var coinImage = document.createElement("img");
+    coinImage.classList.add("coin-zoompic");
     coinImage.src = coin.fields.image[0].url;
 
     coinZoom.append(coinImage);
 
   //MAIN PIC - inside, actual size
       var coinMain = document.createElement("div");
-      coinMain.classList.add("coin-mainpic");
+      coinMain.classList.add("coin-main");
       document.querySelector(".coinmain").append(coinMain);
 
       var coinImageMain = document.createElement("img");
+      coinImage.classList.add("coin-mainpic");
       coinImageMain.src = coin.fields.imagemain[0].url;
-      //Mark Beasley 9:42 AM you would put this in your loop where you're creating your elements to add to your page
       coinImageMain.style.width = `${coin.fields.diameter}mm`;
       coinImageMain.style.height = `${coin.fields.diameter}mm`;
       coinMain.append(coinImageMain);
 
-      //DANA KIMS DEMO
+
+      // let coins = [...]; // our airtable data
+      // // when a dot is clicked:
       // document.querySelectorAll('.cls-3').addEventListener("click", function(event) {
-      // coinCointainer.classList.toggle("active");
-      // coinDes.classList.toggle("active");
-      // coinZoom.classList.toggle("active");
-      // coinMain.classList.toggle("active");
+    //  8:51 those bottom two lines would be put into your event listener for the dots
+      //   let selectedDot = coins.find(coin => coin.fields.currency== event.target.dataset.main);
+      //   console.log(selectedDot, 'was selected');
+      // }
+
+      // coinContainer.addEventListener("click", function(){
+      //   console.log(event)
+      //   coinCurrency.classList.toggle("active");
+      //   coinDes.classList.toggle("active");
+      // })
   });
 }
+
+
 
 //
 //LABEL SELECT DOTS - COUNTRY
@@ -207,6 +222,8 @@ document.querySelectorAll('#l-year').forEach((filter) => {
 ////////
 ///TEST SHOW DOTS
 ///////
+
+
 
     // function showMain(event) {
     //
