@@ -99,52 +99,30 @@ function showCoins() {
     document.querySelector(".coinzoom").append(coinZoom);
 
     var coinImage = document.createElement("img");
-    coinImage.src = coin.fields.image[0].url, coin.fields.imagemain[0].url;
-    // coinImage.style.width = `${coin.fields.diameter}mm`;
-    // coinImage.style.height = `${coin.fields.diameter}mm`;
+    coinImage.src = coin.fields.image[0].url;
+
     coinZoom.append(coinImage);
 
-    //MAIN PIC - inside, actual size
-        var coinMain = document.createElement("div");
-        coinMain.classList.add("coin-mainpic");
-        document.querySelector(".coinmain").append(coinMain);
+  //MAIN PIC - inside, actual size
+      var coinMain = document.createElement("div");
+      coinMain.classList.add("coin-mainpic");
+      document.querySelector(".coinmain").append(coinMain);
 
-        var coinImageMain = document.createElement("img");
-        coinImageMain.src = coin.fields.imagemain[0].url;
-        //Mark Beasley 9:42 AM you would put this in your loop where you're creating your elements to add to your page
-        coinImageMain.style.width = `${coin.fields.diameter}mm`;
-        coinImageMain.style.height = `${coin.fields.diameter}mm`;
-        coinMain.append(coinImageMain);
+      var coinImageMain = document.createElement("img");
+      coinImageMain.src = coin.fields.imagemain[0].url;
+      //Mark Beasley 9:42 AM you would put this in your loop where you're creating your elements to add to your page
+      coinImageMain.style.width = `${coin.fields.diameter}mm`;
+      coinImageMain.style.height = `${coin.fields.diameter}mm`;
+      coinMain.append(coinImageMain);
+
+      //DANA KIMS DEMO
+      // document.querySelectorAll('.cls-3').addEventListener("click", function(event) {
+      // coinCointainer.classList.toggle("active");
+      // coinDes.classList.toggle("active");
+      // coinZoom.classList.toggle("active");
+      // coinMain.classList.toggle("active");
   });
 }
-
-
-//   // dot.addEventListener("click", function(){
-//   //   coinYear.classList.toggle("active");
-//   // })
-// function showCoins (){
-//   console.log("showCoins()", coin);
-//
-//   const coinDetail = document.getElementById("coinname");
-//
-//   // populate the template with the data in the provided book
-//     coinDetail.getElementsByClassName("title")[0].innerText = coin.fields.currency;
-//
-//     const dot = document.getElementsByClassName("ydot");
-//   const bookSpines = dot.getElementsByClassName("active");
-//   for (const bookSpine of bookSpines) {
-//     bookSpine.classList.remove("active");
-//   }
-//   // ...and set it on the one just clicked
-//   div.classList.add("active");
-//
-//   // reveal the detail element, we only really need this the first time
-//   // but its not hurting to do it more than once
-//   bookDetail.classList.remove("hidden");
-// }
-//
-
-
 
 //
 //LABEL SELECT DOTS - COUNTRY
@@ -226,9 +204,25 @@ document.querySelectorAll('#l-year').forEach((filter) => {
 	filter.addEventListener('click', filterByYear);
 });
 
+////////
+///TEST SHOW DOTS
+///////
 
-//
-//
-//SELECT INDIVIDUAL DOTS
-// dana kim demo
-//
+    // function showMain(event) {
+    //
+    //   console.log(event)
+    //   if (event.target.dataset.show).classList.toggle('active');
+
+    //   //associate name
+
+    //       coinCurrency.dataset.show = coin.fields.currency;
+    //       coinYear.dataset.show = coin.fields.year;
+    //       coinCountry.dataset.show = coin.fields.country;
+    //       coinSize.dataset.show = coin.fields.diameter_mm;
+    //       coinMass.dataset.show = coin.fields.weight_g;
+    //       coinImage.dataset.show = coin.fields.image;
+    //       coinImageMain.dataset.show = coin.fields.imagemain;
+    //     }
+    //   }
+    //
+    // document.querySelectorAll('.cls-3').addEventListener('click', showMain);
