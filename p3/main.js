@@ -54,36 +54,96 @@ function showCoins() {
   console.log("showCoins()");
   coins.forEach((coin) => {
 
+    //creating a new div container
+    var coinContainer = document.createElement("div");
+    coinContainer.classList.add("coin-container");
+    document.querySelector(".coinname").append(coinContainer);
+
+    // coin title/currency/name to coin container
     var coinCurrency = document.createElement("h2");
+    coinCurrency.classList.add("coin-currency");
     coinCurrency.innerText = coin.fields.currency;
-    coinCurrency.dataset.currency = coin.fields.currency;
-    document.body.append(coinCurrency);
+    coinContainer.append(coinCurrency);
+
+
+    //creating a new div container
+    var coinDes = document.createElement("div");
+    coinDes.classList.add("coin-des");
+    document.querySelector(".coininfo").append(coinDes);
 
     var coinYear = document.createElement("p");
     coinYear.innerText = coin.fields.year;
     coinYear.dataset.year = coin.fields.year;
-    document.body.append(coinYear);
+    coinDes.append(coinYear);
 
     var coinCountry = document.createElement("p");
     coinCountry.innerText = coin.fields.country;
     coinCountry.dataset.country = coin.fields.country;
-    document.body.append(coinCountry);
+    coinDes.append(coinCountry);
 
     var coinSize = document.createElement("p");
     coinSize.innerText = coin.fields.diameter_mm;
     coinSize.dataset.size = coin.fields.diameter_mm;
-    document.body.append(coinSize);
+    coinDes.append(coinSize);
 
     var coinMass = document.createElement("p");
     coinMass.innerText = coin.fields.weight_g;
     coinMass.dataset.mass = coin.fields.weight_g;
-    document.body.append(coinMass);
+    coinDes.append(coinMass);
+
+
+//ZOOMED PIC - top right, large
+//creating a new div container
+    var coinZoom = document.createElement("div");
+    coinZoom.classList.add("coin-zoompic");
+    document.querySelector(".coinzoom").append(coinZoom);
 
     var coinImage = document.createElement("img");
-    coinImage.src = coin.fields.image[0].url;
-    document.body.append(coinImage);
+    coinImage.src = coin.fields.image[0].url, coin.fields.imagemain[0].url;
+    // coinImage.style.width = `${coin.fields.diameter}mm`;
+    // coinImage.style.height = `${coin.fields.diameter}mm`;
+    coinZoom.append(coinImage);
+
+    //MAIN PIC - inside, actual size
+        var coinMain = document.createElement("div");
+        coinMain.classList.add("coin-mainpic");
+        document.querySelector(".coinmain").append(coinMain);
+
+        var coinImageMain = document.createElement("img");
+        coinImageMain.src = coin.fields.imagemain[0].url;
+        //Mark Beasley 9:42 AM you would put this in your loop where you're creating your elements to add to your page
+        coinImageMain.style.width = `${coin.fields.diameter}mm`;
+        coinImageMain.style.height = `${coin.fields.diameter}mm`;
+        coinMain.append(coinImageMain);
   });
 }
+
+
+//   // dot.addEventListener("click", function(){
+//   //   coinYear.classList.toggle("active");
+//   // })
+// function showCoins (){
+//   console.log("showCoins()", coin);
+//
+//   const coinDetail = document.getElementById("coinname");
+//
+//   // populate the template with the data in the provided book
+//     coinDetail.getElementsByClassName("title")[0].innerText = coin.fields.currency;
+//
+//     const dot = document.getElementsByClassName("ydot");
+//   const bookSpines = dot.getElementsByClassName("active");
+//   for (const bookSpine of bookSpines) {
+//     bookSpine.classList.remove("active");
+//   }
+//   // ...and set it on the one just clicked
+//   div.classList.add("active");
+//
+//   // reveal the detail element, we only really need this the first time
+//   // but its not hurting to do it more than once
+//   bookDetail.classList.remove("hidden");
+// }
+//
+
 
 
 //
@@ -124,17 +184,6 @@ function filterByCountry(event) {
 document.querySelectorAll('[data-country]').forEach((filter) => {
   filter.addEventListener('click', filterByCountry);
 });
-// document.querySelector('#rc-vt-2').addEventListener('click', filterByCountry);
-// document.querySelector('#rc-th-2').addEventListener('click', filterByCountry);
-// document.querySelector('#rc-sg-2').addEventListener('click', filterByCountry);
-// document.querySelector('#rc-ph-2').addEventListener('click', filterByCountry);
-// document.querySelector('#rc-my-2').addEventListener('click', filterByCountry);
-// document.querySelector('#rc-laos-2').addEventListener('click', filterByCountry);
-// document.querySelector('#rc-ind-2').addEventListener('click', filterByCountry);
-// document.querySelector('#rc-tl-2').addEventListener('click', filterByCountry);
-// document.querySelector('#rc-cam-2').addEventListener('click', filterByCountry);
-// document.querySelector('#rc-bur-2').addEventListener('click', filterByCountry);
-// document.querySelector('#rc-brunei-2').addEventListener('click', filterByCountry);
 
 
 //
@@ -176,59 +225,10 @@ function filterByYear(event) {
 document.querySelectorAll('#l-year').forEach((filter) => {
 	filter.addEventListener('click', filterByYear);
 });
-// document.querySelector('#_1940').addEventListener('click', filterByYear);
-// document.querySelector('#_1945').addEventListener('click', filterByYear);
-// document.querySelector('#_1950').addEventListener('click', filterByYear);
-// document.querySelector('#_1955').addEventListener('click', filterByYear);
-// document.querySelector('#_1965').addEventListener('click', filterByYear);
-// document.querySelector('#_1970').addEventListener('click', filterByYear);
-// document.querySelector('#_1975').addEventListener('click', filterByYear);
-// document.querySelector('#_1980').addEventListener('click', filterByYear);
-// document.querySelector('#_1985').addEventListener('click', filterByYear);
-// document.querySelector('#_1990').addEventListener('click', filterByYear);
-// document.querySelector('#_1995').addEventListener('click', filterByYear);
-// document.querySelector('#_2000').addEventListener('click', filterByYear);
-// document.querySelector('#_2005').addEventListener('click', filterByYear);
-// document.querySelector('#_2010').addEventListener('click', filterByYear);
-// document.querySelector('#_2015').addEventListener('click', filterByYear);
-// document.querySelector('#_2020').addEventListener('click', filterByYear);
 
 
 //
-// DOTS - INDIVIDUAL
 //
-// let countryFilter = '';
+//SELECT INDIVIDUAL DOTS
+// dana kim demo
 //
-// function filterByDot(event) {
-// 	console.log(event)
-// 	document.querySelectorAll('.ring').forEach(item => {
-// 		item.classList.remove('selected-ring')
-// 	})
-// 	// document.querySelector(`.ring#${event.target.dataset.country.toLowerCase()}`).classList.add('selected-ring');
-//
-// 	let sdots = document.querySelectorAll('.sdot');
-// 	// was the same country clicked?
-// 	if (countryFilter == event.target.dataset.country) {
-// 		document.querySelector('.ring').classList.remove('selected-ring');
-//
-// 		sdots.forEach(function(sdot) {
-// 			sdot.classList.remove('highlight');
-// 		})
-// 		countryFilter = ''
-// 	} else {
-// 		// store currently filtered country
-// 		countryFilter = event.target.dataset.country;
-// 		// display country sdots
-// 		sdots.forEach(function(sdot) {
-// 			if (sdot.dataset.country == countryFilter) {
-// 				document.querySelector('.ring').classList.add('selected-ring');
-// 				sdot.classList.add('highlight');
-// 			} else {
-// 				sdot.classList.remove('highlight');
-// 			}
-// 		});
-// 	}
-// }
-// document.querySelectorAll('.sdot').forEach((filter) => {
-// 	filter.addEventListener('click', filterByDot);
-// });
