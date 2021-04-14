@@ -301,3 +301,38 @@ svg{
 .coin-main.active{
   display: block;
 }
+
+    /*         iPad         */
+@media (max-width: 1365px){
+  svg{
+    transform: scale(1.25);
+    margin-top: 6.25%;
+    margin-left: -9%;
+  }
+
+
+  h1{
+    font-size: 1.03rem;
+  }
+  h3{
+    font-size: 1.02rem;
+    line-height: 140%;
+    letter-spacing: -0.005em;
+  }
+  h2{
+    font-size: 1.03rem;
+    letter-spacing: 0.1%;
+  }
+  p{
+    font-size: 1.02rem;
+    line-height: 150%;
+  }
+  #info{
+    font-size: 1.02rem;
+    line-height: 140%;
+    letter-spacing: -0.005em;
+    margin-left: 74%;
+  }
+
+
+}

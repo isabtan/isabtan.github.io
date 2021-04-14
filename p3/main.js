@@ -39,7 +39,7 @@ function gotAllCoins(err) {
   showCoins();
 }
 
-
+let coins = [...];
 // just loop through the books and console.log them
 function consoleLogCoins() {
   console.log("consoleLogCoins()");
@@ -59,11 +59,11 @@ function showCoins() {
     coinContainer.classList.add("coin-container");
     document.querySelector(".coinname").append(coinContainer);
 
-    // coin title/currency/name to coin container
-    var coinCurrency = document.createElement("h2");
-    coinCurrency.classList.add("coin-currency");
-    coinCurrency.innerText = coin.fields.currency;
-    coinContainer.append(coinCurrency);
+        // coin title/currency/name to coin container
+        var coinCurrency = document.createElement("h2");
+        coinCurrency.classList.add("coin-currency");
+        coinCurrency.innerText = coin.fields.currency;
+        coinContainer.append(coinCurrency);
 
 
     //creating a new div container
@@ -71,29 +71,29 @@ function showCoins() {
     coinDes.classList.add("coin-des");
     document.querySelector(".coininfo").append(coinDes);
 
-    var coinYear = document.createElement("p");
-    coinYear.classList.add("coin-year");
-    coinYear.innerText = coin.fields.year;
-    coinYear.dataset.year = coin.fields.year;
-    coinDes.append(coinYear);
+        var coinYear = document.createElement("p");
+        coinYear.classList.add("coin-year");
+        coinYear.innerText = coin.fields.year;
+        coinYear.dataset.year = coin.fields.year;
+        coinDes.append(coinYear);
 
-    var coinCountry = document.createElement("p");
-    coinCountry.classList.add("coin-country");
-    coinCountry.innerText = coin.fields.country;
-    coinCountry.dataset.country = coin.fields.country;
-    coinDes.append(coinCountry);
+        var coinCountry = document.createElement("p");
+        coinCountry.classList.add("coin-country");
+        coinCountry.innerText = coin.fields.country;
+        coinCountry.dataset.country = coin.fields.country;
+        coinDes.append(coinCountry);
 
-    var coinSize = document.createElement("p");
-    coinSize.classList.add("coin-size");
-    coinSize.innerText = coin.fields.diameter_mm;
-    coinSize.dataset.size = coin.fields.diameter_mm;
-    coinDes.append(coinSize);
+        var coinSize = document.createElement("p");
+        coinSize.classList.add("coin-size");
+        coinSize.innerText = coin.fields.diameter_mm;
+        coinSize.dataset.size = coin.fields.diameter_mm;
+        coinDes.append(coinSize);
 
-    var coinMass = document.createElement("p");
-    coinMass.classList.add("coin-mass");
-    coinMass.innerText = coin.fields.weight_g;
-    coinMass.dataset.mass = coin.fields.weight_g;
-    coinDes.append(coinMass);
+        var coinMass = document.createElement("p");
+        coinMass.classList.add("coin-mass");
+        coinMass.innerText = coin.fields.weight_g;
+        coinMass.dataset.mass = coin.fields.weight_g;
+        coinDes.append(coinMass);
 
 
 //ZOOMED PIC - top right, large
@@ -102,40 +102,32 @@ function showCoins() {
     coinZoom.classList.add("coin-zoom");
     document.querySelector(".coinzoom").append(coinZoom);
 
-    var coinImage = document.createElement("img");
-    coinImage.classList.add("coin-zoompic");
-    coinImage.src = coin.fields.image[0].url;
+        var coinImage = document.createElement("img");
+        coinImage.classList.add("coin-zoompic");
+        coinImage.src = coin.fields.image[0].url;
 
-    coinZoom.append(coinImage);
+        coinZoom.append(coinImage);
 
   //MAIN PIC - inside, actual size
       var coinMain = document.createElement("div");
       coinMain.classList.add("coin-main");
       document.querySelector(".coinmain").append(coinMain);
 
-      var coinImageMain = document.createElement("img");
-      coinImage.classList.add("coin-mainpic");
-      coinImageMain.src = coin.fields.imagemain[0].url;
-      coinImageMain.style.width = `${coin.fields.diameter}mm`;
-      coinImageMain.style.height = `${coin.fields.diameter}mm`;
-      coinMain.append(coinImageMain);
-
-
-      // let coins = [...]; // our airtable data
-      // // when a dot is clicked:
-      // document.querySelectorAll('.cls-3').addEventListener("click", function(event) {
-    //  8:51 those bottom two lines would be put into your event listener for the dots
-      //   let selectedDot = coins.find(coin => coin.fields.currency== event.target.dataset.main);
-      //   console.log(selectedDot, 'was selected');
-      // }
-
-      // coinContainer.addEventListener("click", function(){
-      //   console.log(event)
-      //   coinCurrency.classList.toggle("active");
-      //   coinDes.classList.toggle("active");
-      // })
+          var coinImageMain = document.createElement("img");
+          coinImage.classList.add("coin-mainpic");
+          coinImageMain.src = coin.fields.imagemain[0].url;
+          coinImageMain.style.width = `${coin.fields.diameter}mm`;
+          coinImageMain.style.height = `${coin.fields.diameter}mm`;
+          coinMain.append(coinImageMain);
   });
 }
+document.querySelectorAll('.cls-3').forEach((filter) => {
+	filter.addEventListener('click', showMain);
+
+  // when a dot is clicked:
+  let selectedDot = coins.find(coin => coin.fields.year == event.target.dataset.year && coin.fields.country == event.target.dataset.country);
+  console.log(selectedDot, 'was selected');
+});
 
 
 
@@ -218,28 +210,3 @@ function filterByYear(event) {
 document.querySelectorAll('#l-year').forEach((filter) => {
 	filter.addEventListener('click', filterByYear);
 });
-
-////////
-///TEST SHOW DOTS
-///////
-
-
-
-    // function showMain(event) {
-    //
-    //   console.log(event)
-    //   if (event.target.dataset.show).classList.toggle('active');
-
-    //   //associate name
-
-    //       coinCurrency.dataset.show = coin.fields.currency;
-    //       coinYear.dataset.show = coin.fields.year;
-    //       coinCountry.dataset.show = coin.fields.country;
-    //       coinSize.dataset.show = coin.fields.diameter_mm;
-    //       coinMass.dataset.show = coin.fields.weight_g;
-    //       coinImage.dataset.show = coin.fields.image;
-    //       coinImageMain.dataset.show = coin.fields.imagemain;
-    //     }
-    //   }
-    //
-    // document.querySelectorAll('.cls-3').addEventListener('click', showMain);
