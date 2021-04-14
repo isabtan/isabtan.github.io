@@ -39,7 +39,7 @@ function gotAllCoins(err) {
   showCoins();
 }
 
-let coins = [...];
+
 // just loop through the books and console.log them
 function consoleLogCoins() {
   console.log("consoleLogCoins()");
@@ -119,15 +119,24 @@ function showCoins() {
           coinImageMain.style.width = `${coin.fields.diameter}mm`;
           coinImageMain.style.height = `${coin.fields.diameter}mm`;
           coinMain.append(coinImageMain);
+
+    //click
+      document.querySelectorAll(`.cls-3[data-detail~="${event.target.dataset.detail}"]`).addEventListener("click", () => {
+
+        let selectedDot = coins.find(coin => coin.fields.year == event.target.dataset.year && coin.fields.country == event.target.dataset.country);
+        console.log(selectedDot, 'was selected');
+
+        coinCurrency.classList.add("active");
+        coinYear.classList.add("active");
+        coinCountry.classList.add("active");
+        coinSize.classList.add("active");
+        coinMass.classList.add("active");
+        coinImage.classList.add("active");
+        coinImageMain.classList.add("active");
+      })
   });
 }
-document.querySelectorAll('.cls-3').forEach((filter) => {
-	filter.addEventListener('click', showMain);
 
-  // when a dot is clicked:
-  let selectedDot = coins.find(coin => coin.fields.year == event.target.dataset.year && coin.fields.country == event.target.dataset.country);
-  console.log(selectedDot, 'was selected');
-});
 
 
 

@@ -303,9 +303,9 @@ svg{
 }
 
     /*         iPad         */
-@media (max-width: 1365px){
+@media (max-width: 1366px){
   svg{
-    transform: scale(1.25);
+    transform: scale(1.2);
     margin-top: 6.25%;
     margin-left: -9%;
   }
@@ -334,5 +334,34 @@ svg{
     margin-left: 74%;
   }
 
+}
 
+@media (max-width: 1080px){
+  svg{
+    transform: scale(1.2);
+    margin-top: 6.25%;
+    margin-left: -9%;
+  }
+
+
+  h1{
+    font-size: 0.8rem;
+  }
+  h3{
+    font-size: 0.8rem;
+    line-height: 140%;
+    letter-spacing: -0.005em;
+  }
+  h2{
+    font-size: 0.8rem;
+    letter-spacing: 0.1%;
+  }
+  p{
+    font-size: 0.8rem;
+    line-height: 150%;
+  }
+  #info{
+    font-size: 0.8rem;
+    margin-left: 72%;
+  }
 }
