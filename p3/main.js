@@ -142,37 +142,37 @@ function showCoins() {
   });
 }
 
-//after airtable and added class to coins (Mckayla session)
-//
-// $(document).ready(function(){
-//   $('#d-vt1').on('click', function(){
-//     $('#this-specific-coin').css('display', 'block');
-//   });
-// });
-//
-// <script>
-//     function addClass() {
-//         var v = document.getElementById("p");
-//         v.className += "addCSS";
-//     }
-// </script>
+        //after airtable and added class to coins (Mckayla session)
+        //
+        // $(document).ready(function(){
+        //   $('#d-vt1').on('click', function(){
+        //     $('#this-specific-coin').css('display', 'block');
+        //   });
+        // });
+        //
+        // <script>
+        //     function addClass() {
+        //         var v = document.getElementById("p");
+        //         v.className += "addCSS";
+        //     }
+        // </script>
 
-// //click try again
-// function showDetail(event) {
-//   if (event.target.document.querySelector(`.cls-3[data-detail~="${event.target.dataset.detail}"]`)) {
-//       let selectedDot = coins.find(function (item) {
-//         if (coin.fields.currency == event.target.dataset.detail) {
-//           return true;
-//         }
-//       });
-//
-//     coinCurrency.classList.add('active');
-//   }
-// }
-//
-// function closeDetail() {
-//   coinCurrency.classList.remove('active');
-// }
+        // //click try again
+        // function showDetail(event) {
+        //   if (event.target.document.querySelector(`.cls-3[data-detail~="${event.target.dataset.detail}"]`)) {
+        //       let selectedDot = coins.find(function (item) {
+        //         if (coin.fields.currency == event.target.dataset.detail) {
+        //           return true;
+        //         }
+        //       });
+        //
+        //     coinCurrency.classList.add('active');
+        //   }
+        // }
+        //
+        // function closeDetail() {
+        //   coinCurrency.classList.remove('active');
+        // }
 
 
 

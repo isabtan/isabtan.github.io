@@ -342,8 +342,6 @@ svg{
     margin-top: 6.25%;
     margin-left: -9%;
   }
-
-
   h1{
     font-size: 0.8rem;
   }
@@ -365,3 +363,117 @@ svg{
     margin-left: 72%;
   }
 }
+
+    /*         Mobile        */
+    @media (max-width: 600px){
+      body{
+        margin: 0;
+        padding: 2%;
+      }
+      .centersvg{
+        width: 100%;
+        height: 48.5vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+        svg{
+          transform: scale(1.75);
+          padding: 0;
+          margin-top: 0;
+          margin-left: 0;
+          position: relative;
+        }
+
+      .centertitle{
+        margin: 0;
+        width: 100%;
+        height: 17.5vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+        h1{
+          font-size: 0.9375rem;
+        }
+          #sitetitle{
+            margin: 0;
+            top: 2%;
+          }
+        h3{
+          font-size: 0.9375rem;
+          line-height: 140%;
+          letter-spacing: -0.06em;
+          text-align: center;
+        }
+          #sitedes{
+            margin: 0;
+            top: 4.3%;
+          }
+        h2{
+          font-size: 0.9375rem;
+          letter-spacing: 0%;
+        }
+        p{
+          font-size: 0.9375rem;
+          line-height: 140%;
+        }
+
+      /* .centermain{
+        margin: 0;
+        width: 100%;
+        height: 41mm;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      } */
+        .coinmain{
+          position: relative;
+          left: 0;
+          top: 50%;
+          margin: 0;
+          width: 100vw;
+          height: 41mm;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+          .coin-main{
+            margin: 0;
+            width: 100%;
+            height: 41mm;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          }
+
+      .coininfo{
+        position: relative;
+        margin: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 102px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+
+      #sitebtm{
+        display: none;
+      }
+      #info{
+        display: none;
+      }
+      .coinzoom{
+        display: none;
+      }
+    }
