@@ -140,7 +140,7 @@ function showCoins() {
       //   coin.dataset.detail = coin.fields.currency;
       // })
 
-          document.querySelectorAll(`.cls-3[data-year="${coin.fields.year}"][data-country~="${coin.fields.country}"]`) => {
+          document.querySelectorAll(`.cls-3[data-year="${coin.fields.year}"][data-country~="${coin.fields.country}"]`).forEach((dot) => {
     	dot.addEventListener("click", (event) => {
         coinCurrency.classList.add("active");
           coinYear.classList.add("active");
@@ -149,6 +149,9 @@ function showCoins() {
           coinMass.classList.add("active");
           coinImage.classList.add("active");
           coinImageMain.classList.add("active");
+
+          // associate year
+          coin.dataset.detail = coin.fields.currency;
     	});
     });
   });
@@ -247,7 +250,7 @@ function filterByYear(event) {
 	let ydots = document.querySelectorAll('.ydot');
 	// was the same country clicked?
       //(Math.round(Number(ydot.dataset.year) / 5 * 5) == yearFilter)
-	if (Math.round(Number(ydot.dataset.year) / 5 * 5) == yearFilter) {
+	if (yearFilter == event.target.dataset.year) {
 		document.querySelectorAll(`.ring[data-year~="${event.target.dataset.year}"]`).forEach((ring) => ring.classList.remove('selected-ring'));
 
 		ydots.forEach(function(ydot) {
@@ -259,7 +262,7 @@ function filterByYear(event) {
 		yearFilter = event.target.dataset.year;
 		// display year ydots
 		ydots.forEach(function(ydot) {
-			if (ydot.dataset.year == yearFilter) {
+			if (Math.round(Number(ydot.dataset.year) / 5 * 5) == yearFilter) {
 				document.querySelectorAll(`.ring[data-year~="${event.target.dataset.year}"]`).forEach((ring) => ring.classList.add('selected-ring'));
 
 				ydot.classList.add('highlight');
