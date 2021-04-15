@@ -4,29 +4,21 @@ body{
 width: 100vw;
 height: 100vh;
   background: radial-gradient(89.52% 79.45% at 50% 20.55%, rgba(249, 248, 254, 0.88) 0%, rgba(231, 223, 233, 0.88) 100%);
-  overflow: hidden;
 }
 
 @font-face {
  font-family: title;
  src: url(mtr.woff);
 }
-
-.textmid{
-  position: fixed;
-  width: 100vw;
-  margin-top: 31.5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .text{
   margin: 0;
-  margin-left: -1%;
   position: fixed;
+  width: 1428px;
+  height: 187px;
+  top: 656px;
 
   font-family: title;
-font-size: 10.7638vw;
+font-size: 155px;
 text-align: center;
 letter-spacing: -0.06em;
 
@@ -42,7 +34,6 @@ height: 85%;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 .start{
