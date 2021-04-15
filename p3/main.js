@@ -1,6 +1,7 @@
 console.log("Heyy")
 
 let Airtable = require("airtable");
+// let coins = [...];
 console.log(Airtable);
 
 // use the airtable library to get a letiable that represents one of our bases
@@ -120,8 +121,9 @@ function showCoins() {
           coinImageMain.style.height = `${coin.fields.diameter}mm`;
           coinMain.append(coinImageMain);
 
-    //click
-      document.querySelectorAll(`.cls-3[data-detail~="${event.target.dataset.detail}"]`).addEventListener("click", () => {
+    // //click
+      document.querySelector(`.cls-3[data-detail~="${event.target.dataset.detail}"]`).addEventListener("click", function() {
+        console.log('hi');
 
         let selectedDot = coins.find(coin => coin.fields.year == event.target.dataset.year && coin.fields.country == event.target.dataset.country);
         console.log(selectedDot, 'was selected');
@@ -133,9 +135,44 @@ function showCoins() {
         coinMass.classList.add("active");
         coinImage.classList.add("active");
         coinImageMain.classList.add("active");
+
+        // associate year
+        coin.dataset.detail = coin.fields.currency;
       })
   });
 }
+
+//after airtable and added class to coins (Mckayla session)
+//
+// $(document).ready(function(){
+//   $('#d-vt1').on('click', function(){
+//     $('#this-specific-coin').css('display', 'block');
+//   });
+// });
+//
+// <script>
+//     function addClass() {
+//         var v = document.getElementById("p");
+//         v.className += "addCSS";
+//     }
+// </script>
+
+// //click try again
+// function showDetail(event) {
+//   if (event.target.document.querySelector(`.cls-3[data-detail~="${event.target.dataset.detail}"]`)) {
+//       let selectedDot = coins.find(function (item) {
+//         if (coin.fields.currency == event.target.dataset.detail) {
+//           return true;
+//         }
+//       });
+//
+//     coinCurrency.classList.add('active');
+//   }
+// }
+//
+// function closeDetail() {
+//   coinCurrency.classList.remove('active');
+// }
 
 
 

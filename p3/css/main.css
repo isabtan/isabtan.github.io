@@ -267,7 +267,7 @@ svg{
 
 
 .coinzoom{
-  /* position: fixed; */
+  position: fixed;
   margin: 0;
   padding: 0;
   left: 80.4%;
@@ -302,7 +302,7 @@ svg{
   display: block;
 }
 
-    /*         iPad         */
+    /*         TESTTTT iPad         */
 @media (max-width: 1366px){
   svg{
     transform: scale(1.2);
