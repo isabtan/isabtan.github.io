@@ -1,0 +1,124 @@
+body{
+  margin: 0;
+  padding: 0;
+width: 100vw;
+height: 100vh;
+  background: radial-gradient(89.52% 79.45% at 50% 20.55%, rgba(249, 248, 254, 0.88) 0%, rgba(231, 223, 233, 0.88) 100%);
+}
+
+@font-face {
+ font-family: title;
+ src: url(mtr.woff);
+}
+.text{
+  margin: 0;
+  position: fixed;
+  width: 1428px;
+  height: 187px;
+  top: 656px;
+
+  font-family: title;
+font-size: 155px;
+text-align: center;
+letter-spacing: -0.06em;
+
+color: #000000;
+
+z-index: 888;
+}
+
+.cent{
+  position: fixed;
+  width: 100%;
+height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start{
+font-family: Arial;
+font-weight: bold;
+font-size: 18px;
+
+text-align: center;
+letter-spacing: -0.005em;
+
+color: #000000;
+
+z-index: 999999;
+
+animation: glow 4s ease-in-out infinite alternate;
+animation-delay: 1s;
+}
+.start:hover{
+  cursor: pointer;
+  text-shadow: 0px 0px 4px #000000;
+}
+
+div{
+  width: 575.1px;
+height: 575.1px;
+}
+
+.red{
+  top: 80px;
+  left: -563px;
+    background: radial-gradient(50% 50% at 50% 50%, #FF705A 26.64%, #E24929 69.05%, #DF4624 95.92%, #000000 100%, rgba(0, 0, 0, 0) 100%);
+}
+
+.red.go{
+animation: right 3.5s ease-out both;
+}
+
+.blue{
+  position: absolute;
+  left: 1325px;
+top: 80px;
+  background: radial-gradient(50% 50% at 50% 50%, #3378EF 26.64%, #2463CF 69.05%, #2463CF 95.92%, #000000 98.79%, rgba(0, 0, 0, 0) 100%);
+
+}
+.blue.go{
+animation: left 3.5s ease-out both;
+}
+
+@keyframes left {
+  0% {
+        transform: translateY(0) translateX(0);
+  }
+  98%{
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(2px);
+        transform: translateY(-55px) translateX(-1125px);
+        opacity: 60%;
+        width: 1200px;
+      height: 1200px;
+  }
+}
+
+@keyframes right {
+  0% {
+        transform: translateY(0) translateX(0);
+  }
+  98%{
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(2px);
+        transform: translateY(25px) translateX(200px);
+        width: 1200px;
+      height: 1200px;
+  }
+}
+
+@keyframes glow {
+  0% {
+text-shadow: 0px 0px 0px #000000;
+  }
+
+  100% {
+text-shadow: 0px 0px 2px #000000;
+  }
+}

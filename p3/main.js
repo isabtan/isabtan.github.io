@@ -122,23 +122,35 @@ function showCoins() {
           coinMain.append(coinImageMain);
 
     // //click
-      document.querySelector(`.cls-3[data-detail~="${event.target.dataset.detail}"]`).addEventListener("click", function() {
-        console.log('hi');
+      // document.querySelector(`.cls-3[data-detail~="${event.target.dataset.detail}"]`).addEventListener("click", function() {
+      //   console.log('hi');
+      //
+      //   let selectedDot = coins.find(coin => coin.fields.year == event.target.dataset.year && coin.fields.country == event.target.dataset.country);
+      //   console.log(selectedDot, 'was selected');
+      //
+      //   coinCurrency.classList.add("active");
+      //   coinYear.classList.add("active");
+      //   coinCountry.classList.add("active");
+      //   coinSize.classList.add("active");
+      //   coinMass.classList.add("active");
+      //   coinImage.classList.add("active");
+      //   coinImageMain.classList.add("active");
+      //
+      //   // associate year
+      //   coin.dataset.detail = coin.fields.currency;
+      // })
 
-        let selectedDot = coins.find(coin => coin.fields.year == event.target.dataset.year && coin.fields.country == event.target.dataset.country);
-        console.log(selectedDot, 'was selected');
-
+          document.querySelectorAll(`.cls-3[data-year="${coin.fields.year}"][data-country~="${coin.fields.country}"]`).forEach((dot) => {
+    	dot.addEventListener("click", (event) => {
         coinCurrency.classList.add("active");
-        coinYear.classList.add("active");
-        coinCountry.classList.add("active");
-        coinSize.classList.add("active");
-        coinMass.classList.add("active");
-        coinImage.classList.add("active");
-        coinImageMain.classList.add("active");
-
-        // associate year
-        coin.dataset.detail = coin.fields.currency;
-      })
+          coinYear.classList.add("active");
+          coinCountry.classList.add("active");
+          coinSize.classList.add("active");
+          coinMass.classList.add("active");
+          coinImage.classList.add("active");
+          coinImageMain.classList.add("active");
+    	});
+    });
   });
 }
 
@@ -212,7 +224,7 @@ function filterByCountry(event) {
     });
   }
 }
-document.querySelectorAll('[data-country]').forEach((filter) => {
+document.querySelectorAll('#countryclick').forEach((filter) => {
   filter.addEventListener('click', filterByCountry);
 });
 
@@ -220,6 +232,9 @@ document.querySelectorAll('[data-country]').forEach((filter) => {
 //
 //LABEL SELECT DOTS - YEAR
 //
+
+// Array.from(document.querySelectorAll(`.ydot`)).filter((dot) => Math.round(Number(dot.dataset.year) / 5 * 5) === DESIRED_YEAR)
+	// let ydots = document.querySelectorAll('.ydot');
 
 let yearFilter = '';
 
@@ -231,6 +246,7 @@ function filterByYear(event) {
 
 	let ydots = document.querySelectorAll('.ydot');
 	// was the same country clicked?
+      //(Math.round(Number(ydot.dataset.year) / 5 * 5) == yearFilter)
 	if (yearFilter == event.target.dataset.year) {
 		document.querySelectorAll(`.ring[data-year~="${event.target.dataset.year}"]`).forEach((ring) => ring.classList.remove('selected-ring'));
 
