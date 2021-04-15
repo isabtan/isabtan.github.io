@@ -140,7 +140,7 @@ function showCoins() {
       //   coin.dataset.detail = coin.fields.currency;
       // })
 
-          document.querySelectorAll(`.cls-3[data-year="${coin.fields.year}"][data-country~="${coin.fields.country}"]`).forEach((dot) => {
+          document.querySelectorAll(`.cls-3[data-year="${coin.fields.year}"][data-country~="${coin.fields.country}"]`) => {
     	dot.addEventListener("click", (event) => {
         coinCurrency.classList.add("active");
           coinYear.classList.add("active");
@@ -247,7 +247,7 @@ function filterByYear(event) {
 	let ydots = document.querySelectorAll('.ydot');
 	// was the same country clicked?
       //(Math.round(Number(ydot.dataset.year) / 5 * 5) == yearFilter)
-	if (yearFilter == event.target.dataset.year) {
+	if (Math.round(Number(ydot.dataset.year) / 5 * 5) == yearFilter) {
 		document.querySelectorAll(`.ring[data-year~="${event.target.dataset.year}"]`).forEach((ring) => ring.classList.remove('selected-ring'));
 
 		ydots.forEach(function(ydot) {
