@@ -142,18 +142,23 @@ function showCoins() {
 
           document.querySelectorAll(`.cls-3[data-year="${coin.fields.year}"][data-country~="${coin.fields.country}"]`).forEach((dot) => {
     	dot.addEventListener("click", (event) => {
-        coinCurrency.classList.add("active");
-          coinYear.classList.add("active");
-          coinCountry.classList.add("active");
-          coinSize.classList.add("active");
-          coinMass.classList.add("active");
-          coinImage.classList.add("active");
-          coinImageMain.classList.add("active");
+        coinCurrency.classList.toggle("active");
+          coinYear.classList.toggle("active");
+          coinCountry.classList.toggle("active");
+          coinSize.classList.toggle("active");
+          coinMass.classList.toggle("active");
+          coinImage.classList.toggle("active");
+          coinImageMain.classList.toggle("active");
+
+          //node.textContent = text
+          // coinCurrency.textContent = 'string';
+          // coinImageMain.textContent = 'string';
 
           // associate year
-          coin.dataset.detail = coin.fields.currency;
+          // coin.dataset.detail = coin.fields.currency;
     	});
     });
+
   });
 }
 
@@ -262,7 +267,7 @@ function filterByYear(event) {
 		yearFilter = event.target.dataset.year;
 		// display year ydots
 		ydots.forEach(function(ydot) {
-			if (Math.round(Number(ydot.dataset.year) / 5 * 5) == yearFilter) {
+			if (Math.round(Number(ydot.dataset.year) / 5) * 5 == yearFilter) {
 				document.querySelectorAll(`.ring[data-year~="${event.target.dataset.year}"]`).forEach((ring) => ring.classList.add('selected-ring'));
 
 				ydot.classList.add('highlight');

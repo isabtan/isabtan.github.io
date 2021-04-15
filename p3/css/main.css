@@ -295,10 +295,10 @@ svg{
   left: 45vw;
 }
 
-.coin-main{
+.coin-mainpic{
   display: none;
 }
-.coin-main.active{
+.coin-mainpic.active{
   display: block;
 }
 
