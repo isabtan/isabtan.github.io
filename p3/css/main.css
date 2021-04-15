@@ -372,7 +372,7 @@ svg{
       }
       .centersvg{
         width: 100%;
-        height: 48.5vh;
+        height: 54vh;
 
         display: flex;
         align-items: center;
@@ -381,7 +381,7 @@ svg{
         svg{
           transform: scale(1.75);
           padding: 0;
-          margin-top: 0;
+          margin-top: -1.2%;
           margin-left: 0;
           position: relative;
         }
@@ -389,7 +389,7 @@ svg{
       .centertitle{
         margin: 0;
         width: 100%;
-        height: 17.5vh;
+        height: 3.5vh;
 
         display: flex;
         align-items: center;
@@ -400,7 +400,6 @@ svg{
         }
           #sitetitle{
             margin: 0;
-            top: 2%;
           }
         h3{
           font-size: 0.9375rem;
@@ -408,13 +407,15 @@ svg{
           letter-spacing: -0.06em;
           text-align: center;
         }
-          #sitedes{
-            margin: 0;
-            top: 4.3%;
+          #sitebtm{
+            /* margin: 0;
+            top: 4.3%; */
+            display: none;
           }
         h2{
           font-size: 0.9375rem;
           letter-spacing: 0%;
+          padding: 3px 5.5px 3px 5.5px;
         }
         p{
           font-size: 0.9375rem;
@@ -435,7 +436,7 @@ svg{
           left: 0;
           top: 50%;
           margin: 0;
-          width: 100vw;
+          width: 100%;
           height: 41mm;
 
           display: flex;
@@ -465,9 +466,23 @@ svg{
         align-items: center;
         justify-content: center;
       }
+      .coinname{
+        width: 100%;
+        margin-top: 7px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+        .coin-currency{
+          display: block;
+        }
+        h2{
+
+        }
 
 
-      #sitebtm{
+      #sitedes{
         display: none;
       }
       #info{
