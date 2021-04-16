@@ -104,8 +104,8 @@ h2{
 
 
 img{
-  width: 17.5vw;
-  height: 17.5vw;
+  width: 22vw;
+  height: 22vw;
   /* overflow: hidden; */
   border-radius: 50%;
 }
@@ -235,6 +235,7 @@ svg{
   left: 88%;
   top: 88.95%;
   bottom: 2.44%;
+  z-index: 99999;
 }
 
 .coin-year{
@@ -270,7 +271,7 @@ svg{
   position: fixed;
   margin: 0;
   padding: 0;
-  left: 80.4%;
+  left: 76.3%;
   right: 1.88%;
   top: 4.2%;
 }
@@ -293,6 +294,8 @@ svg{
 
   top: 40vh;
   left: 45vw;
+  width: 40mm;
+  height: 40mm;
 }
 
 .coin-mainpic{
