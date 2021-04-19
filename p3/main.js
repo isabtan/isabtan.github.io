@@ -55,6 +55,7 @@ function consoleLogCoins() {
 // look through our airtable data, create elements
 function showCoins() {
   console.log("showCoins()");
+  let dotFilter = '';
   coins.forEach((coin) => {
 
     //creating a new div container
@@ -98,6 +99,11 @@ function showCoins() {
         coinMass.dataset.mass = coin.fields.weight_g;
         coinDes.append(coinMass);
 
+        var coinNumMob = document.createElement("h4");
+        coinNumMob.classList.add("coin-nummob");
+        coinMass.innerText = coin.fields.mobilenumber;
+        coinDes.append(coinNumMob);
+
 // this symbol: || = how js handles 'or'
 //ZOOMED PIC - top right, large
 //creating a new div container
@@ -123,14 +129,14 @@ function showCoins() {
           coinImageMain.style.height = `${coin.fields.diameter}mm`;
           coinMain.append(coinImageMain);
 
-////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////// MARK:
   document.querySelectorAll(`.cls-3[data-year="${coin.fields.year}"][data-country~="${coin.fields.country}"][data-currency="${coin.fields.currency}"]`).forEach((dot) => {
     dot.addEventListener("click", (event) => {
     // ... active coins loop here
         let activeCoins = document.querySelectorAll('.active');
         activeCoins.forEach((coin) => {
           coin.classList.remove('active');
-        })
+        })  //ricky: year, dot, and ring turns white when coin selected
         document.querySelectorAll('.selected-year').forEach((item) => {
           item.classList.remove('selected-year')
         });
@@ -140,7 +146,7 @@ function showCoins() {
         document.querySelectorAll('.ydot').forEach(function (dot){
           dot.classList.remove('highlight');
         })
-    if (activeCoins != event.target.dataset.currency) {
+    if (dotFilter != event.target.dataset.currency) {
       // ... add active class to coins here
           let yearCategory = document.querySelector(`.fill_year[data-year="${Math.floor(Number(event.target.dataset.year) / 5) * 5}"]`)
           yearCategory.classList.add('selected-year');
@@ -160,66 +166,14 @@ function showCoins() {
           coinImage.classList.add("active");
           coinImageMain.classList.add("active");
 
-      activeCoins = event.target.dataset.currency;
+      dotFilter = event.target.dataset.currency;
     } else {
-      // the else in this case is when activeCoins == event.target.dataset.currency
-      (activeCoins == event.target.dataset.currency);
-      activeCoins = ''; // clear our tracking variable
+      // the else in this case is when dotFilter == event.target.dataset.currency
+      dotFilter = ''; // clear our tracking variable
       // we don't have to do anything else since we've already removed `active` classes above...
     }
   });
 
-      // document.querySelectorAll(`.cls-3[data-year="${coin.fields.year}"][data-country~="${coin.fields.country}"][data-currency="${coin.fields.currency}"]`).forEach((dot) => {
-    	// // dot.addEventListener("click", (event) => {
-      //
-      //   //ricky: year, dot, and ring = white when coin selected
-      //       //active coins loop
-      //     let activeCoins = document.querySelectorAll('.active');
-      //     activeCoins.forEach((coin) => {
-      //       coin.classList.remove('active');
-      //     })
-      //
-      //       //selected year loop
-      //     document.querySelectorAll('.selected-year').forEach((item) => {
-      //       item.classList.remove('selected-year')
-      //     });
-      //       //select year labels to show selection
-      //     let yearCategory = document.querySelector(`.fill_year[data-year="${Math.floor(Number(event.target.dataset.year) / 5) * 5}"]`)
-      //     yearCategory.classList.add('selected-year');
-      //     yearFilter = yearCategory;
-      //
-      //
-      //       //selected ring loop
-      //     document.querySelectorAll('.selected-ring').forEach((item) => {
-      //       item.classList.remove('selected-ring')
-      //     });
-      //       //select rings to show selection/have full stroke
-      //     let countryCategory = document.querySelector(`.ring#${event.target.dataset.country.toLowerCase()}`)
-      //     countryCategory.classList.add('selected-ring');
-      //     countryFilter = countryCategory;
-      //
-      //       //selected dot loop
-      //     document.querySelectorAll('.ydot').forEach(function (dot){
-      //       dot.classList.remove('highlight');
-      //     })
-      //       //selected dot is white
-      //     event.target.classList.add('highlight');
-      //
-      //         //mark: wrap this inside conditional, so that it deselects
-      //       coinCurrency.classList.toggle("active");
-      //       coinYear.classList.toggle("active");
-      //       coinCountry.classList.toggle("active");
-      //       coinSize.classList.toggle("active");
-      //       coinMass.classList.toggle("active");
-      //       coinImage.classList.toggle("active");
-      //       coinImageMain.classList.toggle("active");
-      //
-      //
-      //     //node.textContent = text
-      //     coinCurrency.textContent = coin.fields.currency;
-      //     // coinImageMain.textContent = 'string';
-
-    	// });
     });
   });
 }
@@ -310,3 +264,14 @@ function filterByYear(event) {
 document.querySelectorAll('#l-year').forEach((filter) => {
 	filter.addEventListener('click', filterByYear);
 });
+
+
+//
+// MEDIA QUERY MOBILE TEST
+//
+
+// let mob = window.matchMedia('(max-width: 800px)');
+//
+// function mob(event) {
+//   console.log(hello);
+// }

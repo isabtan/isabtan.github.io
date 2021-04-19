@@ -4,6 +4,9 @@ body{
   margin: 0;
   /* overflow: hidden; */
 }
+
+/* RICKY XIE SENT shout out*/
+/* dont scale svg in media query */
 html {
     height: 100%;
 }
@@ -14,12 +17,11 @@ html {
     height: 100%;
 }
 .centersvg > svg {
-    height: 100%;
+    height: 96%;
 }
 
-/* dont scale svg in media query */
 
-
+/* TYPE */
 @font-face {
  font-family: knif;
  src: url(knif-mono.woff2);
@@ -45,13 +47,11 @@ text::selection {
     background: transparent;
 }
 
-h2::selection {
-    color: #cecece;
-    text-shadow: none;
-    background: transparent;
+h4{
+  display: none;
 }
 
-
+/* SITE TITLES*/
 h1{
   font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
@@ -69,7 +69,322 @@ h3{
   letter-spacing: -0.005em;
   color: #ffffff;
 }
+.title-mob{
+  display: none;
+}
 
+
+/* TEXT ANIMATION, SVG RINGS ANIMATION 0.047 */
+.zero{
+	-webkit-animation: appear 0.3s ease-out both;
+	        animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 0.1s;
+}
+.fst{
+	-webkit-animation: appear 0.3s ease-out both;
+	        animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 0.5s;
+}
+.sec{
+	-webkit-animation: appear 0.3s ease-out both;
+	        animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 0.6s;
+}
+.thd{
+	-webkit-animation: appear 0.3s ease-out both;
+	        animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 0.7s;
+}
+.fth{
+	-webkit-animation: appear 0.3s ease-out both;
+	        animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 0.8s;
+}
+
+#vietnam{
+  -webkit-animation: appear 0.3s ease-out both;
+          animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 1.2s;
+}
+    #l-vt{
+    -webkit-animation: appear 0.3s ease-out both;
+            animation: appear 0.3s ease-out both;
+            opacity: 0;
+            animation-delay: 1.4s;
+    }
+#thailand{
+  -webkit-animation: appear 0.3s ease-out both;
+          animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 1.3s;
+}
+    #l-th{
+    -webkit-animation: appear 0.3s ease-out both;
+            animation: appear 0.3s ease-out both;
+            opacity: 0;
+            animation-delay: 1.5s;
+    }
+#singapore{
+  -webkit-animation: appear 0.3s ease-out both;
+          animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 1.4s;
+
+}
+    #l-sg{
+    -webkit-animation: appear 0.3s ease-out both;
+            animation: appear 0.3s ease-out both;
+            opacity: 0;
+            animation-delay: 1.6s;
+    }
+#philippines{
+  -webkit-animation: appear 0.3s ease-out both;
+          animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 1.5s;
+}
+    #l-ph{
+    -webkit-animation: appear 0.3s ease-out both;
+            animation: appear 0.3s ease-out both;
+            opacity: 0;
+            animation-delay: 1.7s;
+    }
+#malaysia{
+  -webkit-animation: appear 0.3s ease-out both;
+          animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 1.6s;
+}
+    #l-my{
+    -webkit-animation: appear 0.3s ease-out both;
+            animation: appear 0.3s ease-out both;
+            opacity: 0;
+            animation-delay: 1.8s;
+    }
+#laos{
+  -webkit-animation: appear 0.3s ease-out both;
+          animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 1.7s;
+}
+    #l-laos{
+    -webkit-animation: appear 0.3s ease-out both;
+            animation: appear 0.3s ease-out both;
+            opacity: 0;
+            animation-delay: 1.9s;
+    }
+#indonesia{
+  -webkit-animation: appear 0.3s ease-out both;
+          animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 1.8s;
+}
+    #l-ind{
+    -webkit-animation: appear 0.3s ease-out both;
+            animation: appear 0.3s ease-out both;
+            opacity: 0;
+            animation-delay: 2s;
+    }
+#timor-leste{
+  -webkit-animation: appear 0.3s ease-out both;
+          animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 1.9s;
+}
+    #l-tl{
+    -webkit-animation: appear 0.3s ease-out both;
+            animation: appear 0.3s ease-out both;
+            opacity: 0;
+            animation-delay: 2.1s;
+    }
+#cambodia{
+  -webkit-animation: appear 0.3s ease-out both;
+          animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 2s;
+}
+    #l-cam{
+    -webkit-animation: appear 0.3s ease-out both;
+            animation: appear 0.3s ease-out both;
+            opacity: 0;
+            animation-delay: 2.2s;
+    }
+#myanmar{
+  -webkit-animation: appear 0.3s ease-out both;
+          animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 2.1s;
+}
+    #l-bur{
+    -webkit-animation: appear 0.3s ease-out both;
+            animation: appear 0.3s ease-out both;
+            opacity: 0;
+            animation-delay: 2.3s;
+    }
+#brunei{
+  -webkit-animation: appear 0.3s ease-out both;
+          animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 2.2s;
+}
+    #l-br{
+    -webkit-animation: appear 0.3s ease-out both;
+            animation: appear 0.3s ease-out both;
+            opacity: 0;
+            animation-delay: 2.4s;
+    }
+#_1920{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.2s;
+}
+#_1925{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.25s;
+}
+#_1930{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.3s;
+}
+#_1935{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.35s;
+}
+#_1940{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.4s;
+}
+#_1945{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.45s;
+}
+#_1950{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.5s;
+}
+#_1955{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.55s;
+}
+#_1960{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.6s;
+}
+#_1965{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.65s;
+}
+#_1970{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.7s;
+}
+#_1975{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.75s;
+}
+#_1980{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.8s;
+}
+#_1985{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.85s;
+}
+#_1990{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.9s;
+}
+#_1995{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 1.95s;
+}
+#_2000{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 2s;
+}
+#_2005{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 2.05s;
+}
+#_2010{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 2.1s;
+}
+#_2015{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 2.15s;
+}
+#_2020{
+-webkit-animation: appear 0.2s ease-out both;
+        animation: appear 0.2s ease-out both;
+        opacity: 0;
+        animation-delay: 2.2s;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* AIRTABLE TEXT, IMAGE, ANIMATION */
 p{
   font-family: "knif", times;
   font-weight: 300;
@@ -79,6 +394,9 @@ p{
   color: #ffffff;
   text-align: center;
   margin: 0;
+
+  -webkit-animation: fade 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation: fade 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 h2{
@@ -94,17 +412,60 @@ h2{
   background-color: #ffffff;
 
   margin: auto;
-  padding: 3px 5.5px 3px 5.5px;
+  padding: 2.5px 5.5px 2.5px 5.5px;
+
+  -webkit-animation: fade 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+h2::selection {
+    color: #cecece;
+    text-shadow: none;
+    background: transparent;
+}
+
+img{
+  width: 22vw;
+  height: 22vw;
+  /* overflow: hidden; */
+  border-radius: 50%;
+
+	-webkit-animation: fade 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 
-/* #actual{
-  font-size: 0.6rem;
-  padding: 0.8px 2.8px 0.8px 2.8px;
+/* SITE INFO */
+.txt{
+  position: fixed;
+  margin-left: 1.6vw;
+}
 
-  display: none;
-} */
-
+#sitetitle{
+margin-top: 2vh;
+}
+#sitedes{
+margin-top: 4.5vh;
+}
+#sitebtm{
+margin-top: 88.88vh;
+}
 #info{
   position: fixed;
   font-family: "knif", times;
@@ -114,39 +475,19 @@ h2{
   letter-spacing: -0.005em;
   color: #ffffff;
 
-  margin-top: 88vh;
+  margin-top: 88.88vh;
   margin-left: 77.5%;
 }
 
 
-img{
-  width: 22vw;
-  height: 22vw;
-  /* overflow: hidden; */
-  border-radius: 50%;
-}
-
-
-.txt{
-  position: fixed;
-  margin-left: 1.3vw;
-}
-
-
-#sitetitle{
-margin-top: 1.5vh;
-}
-#sitedes{
-margin-top: 4vh;
-}
-#sitebtm{
-margin-top: 92.3vh;
-}
-
-
+/* DOTS */
 .cls-3{
   z-index: 9999999;
   transition: 0.25s ease-in-out;
+  -webkit-animation: appear 0.4s ease-out both;
+          animation: appear 0.4s ease-out both;
+          opacity: 0;
+          animation-delay: 2.6s;
 }
 .cls-3:hover{
   fill: white;
@@ -167,6 +508,7 @@ margin-top: 92.3vh;
 }
 
 
+/* YEAR LABELS */
 .yes{
   cursor: pointer;
   display: table;
@@ -176,6 +518,7 @@ margin-top: 92.3vh;
 
 .selected-year{
   fill: #fff;
+  transition: 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000);
 }
 
 .fill_year:hover{
@@ -189,7 +532,7 @@ margin-top: 92.3vh;
 .selected-year ~ .num *{
   fill: #000000;
   stroke: #000000;
-  stroke-width: 0.25px;
+  stroke-width: 0.35px;
   z-index: 8888;
 }
 .fill_year:active{
@@ -203,6 +546,7 @@ margin-top: 92.3vh;
 }
 
 
+/* COUNTRY RINGS */
 .ring{
   stroke-dasharray: 3 4;
   z-index: 88888;
@@ -212,25 +556,28 @@ margin-top: 92.3vh;
   z-index: 88888;
 }
 
-
+/* COUNTRY RECTANGLE HOVER */
 .cls-4:hover{
   opacity: 0.65;
   cursor: pointer;
 }
 
 
+/* SVG CHARTTTTTTTTTTTTTTTTTTTTT */
 svg{
-  /* position: fixed; */
-  /* margin-top: -0.25%;
-  margin-left: -1%; */
-  z-index: 88888;
+  z-index: 8888;
+  -webkit-animation: appear 0.3s ease-out both;
+          animation: appear 0.3s ease-out both;
+          opacity: 0;
+          animation-delay: 1.1s;
   /* overflow: hidden; */
 }
 
-.coin-container{
-  z-index: 999999;
-}
 
+/* AIRTABLE COINTAINERS */
+.coin-container{
+  z-index: 99999999;
+}
 
 .coin-des{
   line-height: 150%;
@@ -238,8 +585,7 @@ svg{
 }
 .coinname{
   width: 100vw;
-  top: 57%;
-  left: 0.46%;
+  top: 56%;
 
   flex-direction: column;
   align-items: center;
@@ -247,11 +593,12 @@ svg{
   position: fixed;
 /* z-index: 999999; */
   display: flex;
+
 }
 .coin-currency{
   display: none;
   z-index: 999999;
-  /* left: -10%; */
+
 }
 .coin-currency.active{
   display: block;
@@ -259,9 +606,14 @@ svg{
 
 .coininfo{
   position: fixed;
-  left: 88%;
+  left: 85.2%;
   top: 88.95%;
   bottom: 2.44%;
+  width: 5.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 99999;
 }
 
@@ -316,8 +668,7 @@ svg{
   width: 100%;
   position: fixed;
   height: 40mm;
-top: 37.4vh;
-left: 0.4%;
+top: 36.6%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -343,188 +694,202 @@ left: 0.4%;
 .coin-mainpic.active{
   display: block;
 }
+      /* TOOLTIP */
+      /* #actual{
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 400;
+        display: none;
+        font-size: 0.5rem;
+        letter-spacing: 0.1%;
+        text-transform: uppercase;
+        text-align: center;
+        left: 100px;
 
-    /*         TESTTTT iPad         */
-@media (max-width: 1366px){
-  svg{
-    transform: scale(1.2);
-    margin-top: 6.25%;
-    margin-left: -9%;
-  }
+        color: #000000;
+        background-color: #ffffff;
+
+        margin: auto;
+        padding: 2.5px 5.5px 2.5px 5.5px;
+
+        -webkit-animation: fade 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                animation: fade 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      }
+
+      .coin-mainpic:hover ~ #actual{
+        display: table;
+      } */
 
 
-  h1{
-    font-size: 1.03rem;
-  }
-  h3{
-    font-size: 1.02rem;
-    line-height: 140%;
-    letter-spacing: -0.005em;
-  }
-  h2{
-    font-size: 1.03rem;
-    letter-spacing: 0.1%;
-  }
-  p{
-    font-size: 1.02rem;
-    line-height: 150%;
-  }
-  #info{
-    font-size: 1.02rem;
-    line-height: 140%;
-    letter-spacing: -0.005em;
-    margin-left: 74%;
-  }
 
-}
+/*         MEDIA QUERIES         */
+        /*         TESTTTT iPad         */
+    @media (max-width: 1366px){
+      h4{
+        display: none;
+      }
 
-@media (max-width: 1080px){
-  svg{
-    transform: scale(1.2);
-    margin-top: 6.25%;
-    margin-left: -9%;
-  }
-  h1{
-    font-size: 0.8rem;
-  }
-  h3{
-    font-size: 0.8rem;
-    line-height: 140%;
-    letter-spacing: -0.005em;
-  }
-  h2{
-    font-size: 0.8rem;
-    letter-spacing: 0.1%;
-  }
-  p{
-    font-size: 0.8rem;
-    line-height: 150%;
-  }
-  #info{
-    font-size: 0.8rem;
-    margin-left: 72%;
-  }
-}
+    }
 
-    /*         Mobile        */
-    @media (max-width: 600px){
+    /*         Mobile/ small ipads        */
+    @media (max-width: 800px){
       body{
+        background: #000000;
+        height: 100%;
         margin: 0;
-        padding: 2%;
       }
-      .centersvg{
-        width: 100%;
-        height: 54vh;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      html {
+          height: 100%;
       }
-        svg{
-          transform: scale(1.75);
-          padding: 0;
-          margin-top: -1.2%;
-          margin-left: 0;
-          position: relative;
-        }
 
+      .title-mob{
+        display: block;
+      }
       .centertitle{
         margin: 0;
-        width: 100%;
-        height: 3.5vh;
+        width: 100vw;
+        height: 17%;
 
         display: flex;
         align-items: center;
         justify-content: center;
+
+        z-index: 999999;
       }
         h1{
-          font-size: 0.9375rem;
+          font-size: 3.125rem;
+          line-height: 95%;
+          text-align: center;
+          z-index: 999999;
         }
           #sitetitle{
             margin: 0;
+            z-index: 999999;
           }
         h3{
-          font-size: 0.9375rem;
-          line-height: 140%;
-          letter-spacing: -0.06em;
+          margin: 0;
+          height: 20%;
+          font-size: 3.125rem;
+          line-height: 95%;
           text-align: center;
+          letter-spacing: -0.05em;
+          text-transform: uppercase;
+          z-index: 999999;
         }
-          #sitebtm{
-            /* margin: 0;
-            top: 4.3%; */
-            display: none;
-          }
-        h2{
-          font-size: 0.9375rem;
-          letter-spacing: 0%;
-          padding: 3px 5.5px 3px 5.5px;
+        .txt{
+          margin: 0;
         }
-        p{
-          font-size: 0.9375rem;
-          line-height: 140%;
+        #sitedes{
+          margin-top: 0;
+          bottom: 0%;
+        }
+        .alert{
+          position: fixed;
+          top: calc(50% - 3.1rem);
+          width: 100vw;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999999;
+        }
+        #mobilealert{
+          margin: 0;
+          height: 7%;
+          font-size: 1.5rem;
+          letter-spacing: -0.01em;
+          line-height: 100%;
+          z-index: 9999999;
         }
 
-      /* .centermain{
-        margin: 0;
-        width: 100%;
-        height: 41mm;
+        /* .coin-nummob{
+          display: table;
+          font-family: "IBM Plex Mono", monospace;
+          color: #000000;
+          font-size: 30rem;
+          padding: 1px 3.5px 1px 3.5px;
+          margin-inline-end: 0px;
+          font-weight: 400;
+          text-align: center;
+        background-color: #ffffff;
+        }
+        .coininfo{
+          margin-top: 10px;
+          margin-left: 20px;
+        } */
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      } */
-        .coinmain{
-          position: relative;
-          left: 0;
-          top: 50%;
+        .centermain{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin-bottom: 100px;
           margin: 0;
           width: 100%;
-          height: 41mm;
+          height: 100%;
 
           display: flex;
           align-items: center;
           justify-content: center;
         }
-          .coin-main{
-            margin: 0;
-            width: 100%;
-            height: 41mm;
+        .coinmain{
+          bottom: 0;
+          top: 0;
+          left: 0;
+          margin: 0;
+          width: 100%;
+          height: 100%;
 
-          display: flex;
+          display: grid;
+          grid-template-columns: repeat(2, 41mm);
           align-items: center;
-          justify-content: center;
-          }
+          grid-template-rows: repeat(3, 1fr;);
+          grid-column-gap: 5mm;
+          grid-row-gap: 8mm;
 
-      .coininfo{
-        position: relative;
-        margin: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        width: 100%;
-        height: 102px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .coinname{
-        width: 100%;
-        margin-top: 7px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-        .coin-currency{
-          display: block;
-        }
-        h2{
+          overflow-y: scroll;
 
         }
+            .coin-main{
+              height: 100%;
+
+            place-self: center;
+            }
+            .coin-mainpic{
+              display: block;
+              place-self: center;
+            }
 
 
-      #sitedes{
+      p{
+        display: none;
+      }
+      .title-desk{
+        display: none;
+      }
+      svg{
+        display: none;
+      }
+      .centersvg{
+        display: none;
+      }
+      .nomob{
+        display: none;
+      }
+      .coin-currency{
+        display: none;
+      }
+      .coin-year{
+        display: none;
+      }
+      .coin-country{
+        display: none;
+      }
+      .coin-size{
+        display: none;
+      }
+      .coin-mass{
+        display: none;
+      }
+      #sitebtm{
         display: none;
       }
       #info{
