@@ -99,10 +99,6 @@ function showCoins() {
         coinMass.dataset.mass = coin.fields.weight_g;
         coinDes.append(coinMass);
 
-        var coinNumMob = document.createElement("h4");
-        coinNumMob.classList.add("coin-nummob");
-        coinMass.innerText = coin.fields.mobilenumber;
-        coinDes.append(coinNumMob);
 
 // this symbol: || = how js handles 'or'
 //ZOOMED PIC - top right, large
@@ -122,12 +118,18 @@ function showCoins() {
       coinMain.classList.add("coin-main");
       document.querySelector(".coinmain").append(coinMain);
 
+          var coinNumMob = document.createElement("h4");
+          coinNumMob.classList.add("coin-nummob");
+          coinNumMob.innerText = coin.fields.mobilenumber;
+          coinMain.append(coinNumMob);
+
           var coinImageMain = document.createElement("img");
           coinImageMain.classList.add("coin-mainpic");
           coinImageMain.src = coin.fields.imagemain[0].url;
           coinImageMain.style.width = `${coin.fields.diameter}mm`;
           coinImageMain.style.height = `${coin.fields.diameter}mm`;
           coinMain.append(coinImageMain);
+
 
 //////////////////////////////////////////////////////// MARK:
   document.querySelectorAll(`.cls-3[data-year="${coin.fields.year}"][data-country~="${coin.fields.country}"][data-currency="${coin.fields.currency}"]`).forEach((dot) => {

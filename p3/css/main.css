@@ -18,6 +18,7 @@ html {
 }
 .centersvg > svg {
     height: 96%;
+    margin-left: -1%;
 }
 
 
@@ -455,10 +456,12 @@ img{
 .txt{
   position: fixed;
   margin-left: 1.6vw;
+  z-index: 999999;
 }
 
 #sitetitle{
 margin-top: 2vh;
+z-index: 999999;
 }
 #sitedes{
 margin-top: 4.5vh;
@@ -475,14 +478,14 @@ margin-top: 88.88vh;
   letter-spacing: -0.005em;
   color: #ffffff;
 
-  margin-top: 88.88vh;
+  bottom: 2.44%;
   margin-left: 77.5%;
 }
 
 
 /* DOTS */
 .cls-3{
-  z-index: 9999999;
+  z-index: 999999;
   transition: 0.25s ease-in-out;
   -webkit-animation: appear 0.4s ease-out both;
           animation: appear 0.4s ease-out both;
@@ -514,17 +517,20 @@ margin-top: 88.88vh;
   display: table;
   padding: 4.5px 7px 4.5px 7px;
   background-color: #000000;
+  z-index: 999999;
 }
 
 .selected-year{
   fill: #fff;
   transition: 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  z-index: 999999;
 }
 
 .fill_year:hover{
   cursor: pointer;
   fill: #fff;
   transition: 0.25s ease-in-out;
+  z-index: 999999;
 }
 .fill_year:hover ~ .num,
 .selected-year ~ .num,
@@ -533,11 +539,12 @@ margin-top: 88.88vh;
   fill: #000000;
   stroke: #000000;
   stroke-width: 0.35px;
-  z-index: 8888;
+  z-index: 999999;
 }
 .fill_year:active{
   fill: #4b4b4b;
   transition: 0.1s ease-out;
+  z-index: 999999;
 }
 
 .no:hover{
@@ -546,14 +553,15 @@ margin-top: 88.88vh;
 }
 
 
+
 /* COUNTRY RINGS */
 .ring{
   stroke-dasharray: 3 4;
-  z-index: 88888;
+  z-index: -10;
 }
 .selected-ring{
   stroke-dasharray: 0;
-  z-index: 88888;
+  z-index: -10;
 }
 
 /* COUNTRY RECTANGLE HOVER */
@@ -565,7 +573,7 @@ margin-top: 88.88vh;
 
 /* SVG CHARTTTTTTTTTTTTTTTTTTTTT */
 svg{
-  z-index: 8888;
+  /* z-index: 8888; */
   -webkit-animation: appear 0.3s ease-out both;
           animation: appear 0.3s ease-out both;
           opacity: 0;
@@ -576,28 +584,43 @@ svg{
 
 /* AIRTABLE COINTAINERS */
 .coin-container{
-  z-index: 99999999;
+  left: -1%
+  z-index: -100;
 }
 
 .coin-des{
   line-height: 150%;
   margin: 0;
 }
-.coinname{
-  width: 100vw;
-  top: 56%;
 
-  flex-direction: column;
+.centername{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  height: 2.8%;
+  bottom: 40.8%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: -100;
+  /* z-index: 888; */
+}
+.coinname{
+  width: 100%;
+  margin-left: -1%;
+
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
-  position: fixed;
+  z-index: -100;
+  /* position: fixed; */
 /* z-index: 999999; */
   display: flex;
 
 }
 .coin-currency{
   display: none;
-  z-index: 999999;
 
 }
 .coin-currency.active{
@@ -614,7 +637,6 @@ svg{
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 99999;
 }
 
 .coin-year{
@@ -668,14 +690,15 @@ svg{
   width: 100%;
   position: fixed;
   height: 40mm;
-top: 36.6%;
+  top: 36.6%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-
+  z-index: -100;
 }
 .coinmain{
   margin: 0;
+  margin-left: -1%;
   padding: 0;
   /* position: fixed; */
   display: flex;
@@ -683,7 +706,7 @@ top: 36.6%;
   justify-content: center;
 
   top: 37.4vh;
-  left: 45vw;
+  /* left: 45vw; */
   width: 40mm;
   height: 40mm;
 }
@@ -727,11 +750,23 @@ top: 36.6%;
       h4{
         display: none;
       }
+      .centermain{
+        top: 39%;
+      }
+      .centername{
+        bottom: 42%;
+      }
 
+      .coinzoom{
+        display: none;
+      }
+      .coin-zoom{
+        display: none;
+      }
     }
 
     /*         Mobile/ small ipads        */
-    @media (max-width: 800px){
+    @media (max-width: 790px){
       body{
         background: #000000;
         height: 100%;
@@ -764,6 +799,10 @@ top: 36.6%;
           #sitetitle{
             margin: 0;
             z-index: 999999;
+            -webkit-animation: appear 0.3s ease-out both;
+                    animation: appear 0.3s ease-out both;
+                    opacity: 0;
+                    animation-delay: 1s;
           }
         h3{
           margin: 0;
@@ -781,6 +820,10 @@ top: 36.6%;
         #sitedes{
           margin-top: 0;
           bottom: 0%;
+          -webkit-animation: appear 0.3s ease-out both;
+                  animation: appear 0.3s ease-out both;
+                  opacity: 0;
+                  animation-delay: 1.2s;
         }
         .alert{
           position: fixed;
@@ -801,21 +844,26 @@ top: 36.6%;
           z-index: 9999999;
         }
 
-        /* .coin-nummob{
-          display: table;
-          font-family: "IBM Plex Mono", monospace;
-          color: #000000;
-          font-size: 30rem;
-          padding: 1px 3.5px 1px 3.5px;
+        h4{
+          display: block;
+          font-family: "knif", times;
+          color: #ffffff;
+          font-size: 0.68rem;
           margin-inline-end: 0px;
           font-weight: 400;
           text-align: center;
-        background-color: #ffffff;
+          padding: 5px;
+        }
+        .coin-nummob{
+          margin: 0;
+          align-self: center;
+          justify-content: center;
+          margin: 0;
         }
         .coininfo{
           margin-top: 10px;
           margin-left: 20px;
-        } */
+        }
 
         .centermain{
           position: absolute;
@@ -830,6 +878,12 @@ top: 36.6%;
           align-items: center;
           justify-content: center;
         }
+        .mobnum-cont{
+          height: 19mm;
+          grid-column: 1/3;
+          grid-row: 1/1;
+
+        }
         .coinmain{
           bottom: 0;
           top: 0;
@@ -840,21 +894,30 @@ top: 36.6%;
 
           display: grid;
           grid-template-columns: repeat(2, 41mm);
-          align-items: center;
-          grid-template-rows: repeat(3, 1fr;);
-          grid-column-gap: 5mm;
+          align-items: flex-start;
+          justify-content: center;
+          grid-template-rows: repeat(3, 1fr);
+          grid-column-gap: 6mm;
           grid-row-gap: 8mm;
 
           overflow-y: scroll;
 
+          -webkit-animation: appear 0.4s ease-out both;
+                  animation: appear 0.4s ease-out both;
+                  opacity: 0;
+                  animation-delay: 2.2s;
         }
             .coin-main{
               height: 100%;
-
-            place-self: center;
+              display: flex;
+              flex-direction: column;
+              align-items: baseline;
+              justify-content: center;
             }
             .coin-mainpic{
               display: block;
+              margin-top: 1%;
+              /* margin-left: 20%; */
               place-self: center;
             }
 
