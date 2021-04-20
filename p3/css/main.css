@@ -20,12 +20,31 @@ html {
     height: 96%;
     margin-left: -1%;
 }
+a{
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover{
+  font-family: knifitalic;
+  color: #4b4b4b;
+}
+a:active{
+  color: #4b4b4b;
+}
+/* a:visited{
+  color: #ffffff;
+} */
+
 
 
 /* TYPE */
 @font-face {
  font-family: knif;
  src: url(knif-mono.woff2);
+}
+@font-face {
+ font-family: knifitalic;
+ src: url(knif-mono_italic.woff2);
 }
 q {
   quotes: "“" "”" "‘" "’";
@@ -65,10 +84,11 @@ h1{
 h3{
   font-family: "knif", times;
   font-weight: 300;
-  font-size: 0.8rem;
-  line-height: 150%;
-  letter-spacing: -0.005em;
+  font-size: 0.77rem;
+  line-height: 154%;
+  letter-spacing: 0.04em;
   color: #ffffff;
+  text-transform: uppercase;
 }
 .title-mob{
   display: none;
@@ -388,10 +408,11 @@ h3{
 /* AIRTABLE TEXT, IMAGE, ANIMATION */
 p{
   font-family: "knif", times;
+  text-transform: uppercase;
   font-weight: 300;
-  font-size: 0.8rem;
-  line-height: 150%;
-  letter-spacing: -0.005em;
+  font-size: 0.77rem;
+  line-height: 154%;
+  letter-spacing: 0.04em;
   color: #ffffff;
   text-align: center;
   margin: 0;
@@ -467,15 +488,16 @@ z-index: 999999;
 margin-top: 4.5vh;
 }
 #sitebtm{
-margin-top: 88.88vh;
+bottom: 1%;
 }
 #info{
   position: fixed;
   font-family: "knif", times;
+  text-transform: uppercase;
   font-weight: 300;
-  font-size: 0.8rem;
-  line-height: 150%;
-  letter-spacing: -0.005em;
+  font-size: 0.77rem;
+  line-height: 154%;
+  letter-spacing: 0.04em;
   color: #ffffff;
 
   bottom: 2.44%;
@@ -599,7 +621,7 @@ svg{
   width: 100%;
   position: fixed;
   height: 2.8%;
-  bottom: 40.8%;
+  bottom: 40.9%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -631,7 +653,7 @@ svg{
   position: fixed;
   left: 85.2%;
   top: 88.95%;
-  bottom: 2.44%;
+  bottom: 2.53%;
   width: 5.25rem;
 
   display: flex;
@@ -682,6 +704,9 @@ svg{
 }
 .coin-zoompic.active{
   display: block;
+  /* -webkit-animation: rotate 80s linear infinite;
+          animation: rotate 80s linear infinite;
+          animation-delay: 0.2s; */
 }
 
 .centermain{
@@ -716,6 +741,9 @@ svg{
 }
 .coin-mainpic.active{
   display: block;
+  -webkit-animation: rotate 50s linear infinite;
+          animation: rotate 50s linear infinite;
+          animation-delay: 0.3s;
 }
       /* TOOLTIP */
       /* #actual{
@@ -745,8 +773,21 @@ svg{
 
 
 /*         MEDIA QUERIES         */
-        /*         TESTTTT iPad         */
+        /*         iPad Pro        */
     @media (max-width: 1366px){
+      .txt{
+        margin-left: 2.2%;
+      }
+      .coininfo{
+        bottom: 0;
+        left: 88%;
+        margin-bottom: 0;
+        width: 5.5rem;
+      }
+      #info{
+        bottom: 2%;
+      }
+
       h4{
         display: none;
       }
@@ -765,9 +806,35 @@ svg{
       }
     }
 
+      /*         OLD iPads        */
+      @media (max-width: 1025px){
+        .txt{
+          margin-left: 3.5%;
+        }
+        #info{
+          margin-bottom: 3.55%;
+          bottom: 0%;
+          margin-left: 75%;
+        }
+        #sitebtm{
+          margin-bottom: 3.55%;
+          bottom: 0;
+        }
+        .centermain{
+          top: 42%;
+        }
+        .centername{
+          bottom: 43.9%;
+        }
+        .coininfo{
+          width: 5.5rem;
+        }
+      }
+
     /*         Mobile/ small ipads        */
     @media (max-width: 790px){
-      body{
+
+    body{
         background: #000000;
         height: 100%;
         margin: 0;
@@ -863,6 +930,7 @@ svg{
         .coininfo{
           margin-top: 10px;
           margin-left: 20px;
+
         }
 
         .centermain{
@@ -877,12 +945,18 @@ svg{
           display: flex;
           align-items: center;
           justify-content: center;
+
+          /* overflow: scroll; */
         }
         .mobnum-cont{
           height: 19mm;
           grid-column: 1/3;
           grid-row: 1/1;
-
+        }
+        .mob-footer{
+          height: 28mm;
+          grid-column: 1/3;
+          grid-row: 54/54;
         }
         .coinmain{
           bottom: 0;
@@ -900,15 +974,15 @@ svg{
           grid-column-gap: 6mm;
           grid-row-gap: 8mm;
 
-          overflow-y: scroll;
+          /* overflow-y: scroll; */
 
           -webkit-animation: appear 0.4s ease-out both;
                   animation: appear 0.4s ease-out both;
                   opacity: 0;
-                  animation-delay: 2.2s;
+                  animation-delay: 3.5s;
         }
             .coin-main{
-              height: 100%;
+              /* height: 100%; */
               display: flex;
               flex-direction: column;
               align-items: baseline;
@@ -919,46 +993,93 @@ svg{
               margin-top: 1%;
               /* margin-left: 20%; */
               place-self: center;
+
+            	-webkit-animation: rotate 15s linear infinite;
+            	        animation: rotate 15s linear infinite;
+
+              }
+
+              p{
+                display: none;
+              }
+              .title-desk{
+                display: none;
+              }
+              svg{
+                display: none;
+              }
+              .centersvg{
+                display: none;
+              }
+              .nomob{
+                display: none;
+              }
+              .coin-currency{
+                display: none;
+              }
+              .coin-year{
+                display: none;
+              }
+              .coin-country{
+                display: none;
+              }
+              .coin-size{
+                display: none;
+              }
+              .coin-mass{
+                display: none;
+              }
+              #sitebtm{
+                display: none;
+              }
+              #info{
+                display: none;
+              }
+              .coinzoom{
+                display: none;
+              }
             }
 
+          /* SMALLER PHONES */
+      @media (max-width: 374px){
+        #sitetitle{
+          margin-top: 0%;
+          font-size: 2.9rem;
+          letter-spacing: -0.01em;
+        }
+        #sitedes{
+          font-size: 2.9rem;
+          letter-spacing: -0.06em;
+          bottom: 3%;
+        }
+        .alert{
+          top: 36%;
+        }
 
-      p{
-        display: none;
       }
-      .title-desk{
-        display: none;
+
+
+}
+
+
+
+    @-webkit-keyframes rotate{
+      0% {
+        -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
       }
-      svg{
-        display: none;
+      100% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
       }
-      .centersvg{
-        display: none;
+    }
+    @keyframes rotate{
+      0% {
+        -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
       }
-      .nomob{
-        display: none;
-      }
-      .coin-currency{
-        display: none;
-      }
-      .coin-year{
-        display: none;
-      }
-      .coin-country{
-        display: none;
-      }
-      .coin-size{
-        display: none;
-      }
-      .coin-mass{
-        display: none;
-      }
-      #sitebtm{
-        display: none;
-      }
-      #info{
-        display: none;
-      }
-      .coinzoom{
-        display: none;
+      100% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
       }
     }
