@@ -3,16 +3,18 @@ let showPressed = document.querySelector(".show-pressed");
 let elements = {
   'a': {
    'audio': 'rainfall.mp3',
-   'video': 'img/rainfall.mov',
+   'video': 'img/rainfall.mp4',
  },
 };
 
 let input = document.querySelector('input');
 let audio = document.createElement('audio');
-let video = document.createElement('video');
+let video = document.querySelector('video');
+
+video.play();
 
 function keyEvent(event) {
-  if (event.key in Object.keys(elements)) {
+  if (event.key in elements) {
     audio.pause();
     video.pause();
     video.classList.remove(".active");
@@ -27,7 +29,6 @@ function keyEvent(event) {
 
   }
 }
-
 document.addEventListener('keyup', keyEvent);
 
 document.addEventListener("keyup", function(event){
