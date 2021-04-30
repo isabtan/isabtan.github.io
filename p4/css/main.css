@@ -53,16 +53,14 @@ text::selection {
 
 }
 
-img{
+video{
   margin: 0;
   top: 0;
-  /* mix-blend-mode: difference; */
-
   height: 100vh;
   width: 1.667vw;
   z-index: -10;
 }
-  img.active{
+  video.active{
     width: 100%;
   }
                       /* .vid-rain.full{
@@ -92,7 +90,7 @@ h1{
       margin-bottom: 0;
 
   display: table;
-  background-color: #fff;
+  background-color: #000;
   mix-blend-mode: difference;
   /* margin: auto; */
   padding-top: 0px;
@@ -117,7 +115,7 @@ h3{
       margin-bottom: 0;
 
   display: table;
-  background-color: #fff;
+  background-color: #000;
   mix-blend-mode: difference;
   padding-top: 3px;
   padding-left: 8px;
@@ -163,7 +161,7 @@ h2{
   text-transform: uppercase;
 
   display: table;
-  background-color: #fff;
+  background-color: #000;
   background-blend-mode: difference;
   padding-top: 20px;
   padding-left: 30px;
