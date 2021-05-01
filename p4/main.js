@@ -60,8 +60,6 @@ let video = document.querySelector('video');
 let name = document.querySelector('.des');
 let category = document.querySelector('.category');
 
-
-
 // document.addEventListener("mouseup", function(event){
 //   let data = elements;
 //   video.src = data.video;
@@ -88,18 +86,26 @@ let category = document.querySelector('.category');
 //   });
 // }
 
-function showNoises() {
-  videos.forEach(video => {
 
-    noiseVideos = document.createElement("video");
-    noiseVideos.classList.add("noise-videos");
-    document.querySelector(".videos").append(noiseVideos);
+  document.addEventListener('click', () => {
+  console.log('display videos');
 
-    window.addEventListener("click", function(event) {
-      video.play();
-    });
-  })
-}
+    video.play();
+})
+
+
+        // function showNoises() {
+        //   videos.forEach(video => {
+        //
+        //     noiseVideos = document.createElement("video");
+        //     noiseVideos.classList.add("noise-videos");
+        //     document.querySelector(".videos").append(noiseVideos);
+        //
+        //     window.addEventListener("click", function(event) {
+        //       video.play();
+        //     });
+        //   })
+        // }
 
 function keyEvent(event) {
   if (event.key in elements) {
