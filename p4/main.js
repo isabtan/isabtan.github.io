@@ -4,7 +4,7 @@ let elements = {
   'a': {
    'audio': 'rainfall.mp3',
    'video': 'img/rainfall.mp4',
-   // 'name': rainfall,
+   name: "rainfall",
    // 'category': white nose,
  },
    'b': {
@@ -57,36 +57,56 @@ let elements = {
 let input = document.querySelector('input');
 let audio = document.querySelector('audio');
 let video = document.querySelector('video');
-let name = document.querySelector('.des');
-let category = document.querySelector('.category');
-
-// document.addEventListener("mouseup", function(event){
-//   let data = elements;
-//   video.src = data.video;
-//   video.play();
-// })
-
-// var videos = [];
-
-// function showNoises() {
-//   console.log("showNoises()");
-//   videos.forEach(video => {
-
-    //
-    // var noiseContainer = document.createElement("div");
-    // noiseContainer.classList.add("noise-container");
-    // document.querySelector(".videos").append(noiseContainer);
-    //
-    //   var noiseVideos = document.createElement("video");
-    //   noiseVideos.classList.add("noise-video");
-    //   noiseVideos.src = data.video;
-    //   noiseContainer.append(noiseVideos);
-    //
-    //   noiseVideos.play();
-//   });
-// }
+// let name = document.querySelector('.des');
+// let category = document.querySelector('.category');
 
 
+                    // document.addEventListener("mouseup", function(event){
+                    //   let data = elements;
+                    //   video.src = data.video;
+                    //   video.play();
+                    // })
+                    //
+                    // var videos = [];
+                    //
+                    // function showNoises() {
+                    //   console.log("showNoises()");
+                    //   videos.forEach(video => {
+                    //
+                    //
+                    //     var noiseContainer = document.createElement("div");
+                    //     noiseContainer.classList.add("noise-container");
+                    //     document.querySelector(".videos").append(noiseContainer);
+                    //
+                    //       var noiseVideos = document.createElement("video");
+                    //       noiseVideos.classList.add("noise-video");
+                    //       noiseVideos.src = data.video;
+                    //       noiseContainer.append(noiseVideos);
+                    //
+                    //       noiseVideos.play();
+                    //   });
+                    // }
+
+
+
+
+// console.log(Object.getOwnPropertyNames(video));
+//
+// Object.getOwnPropertyNames(video));
+
+    // const noiseVideos = elements['video'];
+    // console.log(elements['video']);
+
+            //JUST TO TEST, PROPERTY ACCESSOR?
+  document.querySelector(".videos").src = elements['video'];
+
+
+
+// elements.display = "block";
+// document.querySelectorAll(video in elements);
+
+
+        //TEST1 ???
   document.addEventListener('click', () => {
   console.log('display videos');
 
@@ -121,6 +141,8 @@ function keyEvent(event) {
     video.play();
     video.classList.add("active");
 
+    document.querySelector(".category").classList.add("cactive");
+    document.querySelector(".category").innerText = elements['name'];
     // category = data.category;
     // category.innerTextr = category;
 
