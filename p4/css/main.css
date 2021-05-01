@@ -60,6 +60,7 @@ video{
   width: 1.667vw;
   z-index: -10;
   object-fit: fill;
+  display: block;
 }
   video.active{
     width: 100%;
@@ -131,7 +132,7 @@ h3{
       padding-left: 6px;
       display: none;
     }
-        .category.active{
+        .category.cactive{
           display: block;
         }
     .volume{
@@ -159,7 +160,7 @@ h2{
   line-height: 0.76;
   color: #e8eed9;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 
   display: table;
   background-color: #000;
