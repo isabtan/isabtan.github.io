@@ -4,6 +4,7 @@ body{
 }
 html {
     height: 100%;
+    padding: 0;
 }
 
 .center-letter{
@@ -31,24 +32,26 @@ q::after {
 }
 
 ::selection {
-    color: #ff1e00;
+    color: #fff;
     text-shadow: none;
     background: transparent;
 }
 text::selection {
-    fill: #ff1e00;
+    fill: #fff;
     text-shadow: none;
     background: transparent;
 }
 
 /* test */
-.videos{
+.video-container{
   margin: 0;
   top: 0;
   position: fixed;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(60, auto);
+  grid-auto-rows: 1;
+  /* align-items: flex-start;
+  justify-content: flex-start; */
   z-index: -10;
 
 }
@@ -64,6 +67,7 @@ video{
 }
   video.active{
     width: 100%;
+    transition: 0.1s ease-out;
   }
                       /* .vid-rain.full{
                         width: 100%;
@@ -84,46 +88,57 @@ h1{
   font-size: 12.2rem;
   letter-spacing: -0.025em;
   line-height: 0.76;
-  color: #e8eed9;
+  color: #ff1e00;
   text-align: left;
+  margin: 0;
+  mix-blend-mode: difference;
   margin-left: 0.8%;
   margin-top: 0.8%;
       margin-right: 0;
       margin-bottom: 0;
+  z-index: -5;
+  position: fixed;
 
-  display: table;
-  background-color: #000;
-  mix-blend-mode: difference;
+
+  /* display: table; */
+  /* background-color: #fff;
+  mix-blend-mode: difference; */
   /* margin: auto; */
-  padding-top: 0px;
+  /* padding-top: 0px;
   padding-left: 4px;
   padding-right: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 12px; */
 }
-/* h3 > background-color{
-  mix-blend-mode: difference;
-} */
-
+    
 h3{
   font-family: sohne;
   font-size: 1.2rem;
   letter-spacing: 0.05em;
-  color: #e8eed9;
+  color: #ff1e00;
   text-transform: uppercase;
   text-align: left;
   margin-left: 0.8%;
   margin-top: 0.8%;
       margin-right: 0;
       margin-bottom: 0;
+  position: fixed;
 
-  display: table;
-  background-color: #000;
+  /* display: table; */
+  /* background-color: #fff; */
   mix-blend-mode: difference;
   padding-top: 3px;
   padding-left: 8px;
   padding-right: 5px;
   padding-bottom: 4px;
 }
+
+
+    .des{
+      position: fixed;
+      mix-blend-mode: difference;
+      z-index: -5;
+      margin-top: 11.8%;
+    }
     .category{
       position: fixed;
       margin: 0;
@@ -158,13 +173,13 @@ h2{
   font-size: 12.2rem;
   letter-spacing: -0.025em;
   line-height: 0.76;
-  color: #e8eed9;
+  color: #ff1e00;
   text-align: center;
   /* text-transform: uppercase; */
 
-  display: table;
-  background-color: #000;
-  background-blend-mode: difference;
+  /* display: table;
+  background-color: #fff;
+  mix-blend-mode: difference; */
   padding-top: 20px;
   padding-left: 30px;
   padding-right: 30px;
@@ -172,22 +187,37 @@ h2{
 
   margin: 0;
 }
-    .noise-key{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-        .noise-keypressed{
-          display: none;
-        }
-        .noise-keypressed.active{
-          display: block;
-        }
+
+      .key{
+        font-family: sohne;
+        font-size: 12.2rem;
+        letter-spacing: -0.025em;
+        line-height: 0.76;
+        color: #ff1e00;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        mix-blend-mode: difference;
+        height: 13rem;
+        width: 100vw;
+        position: fixed;
+        top: 40vh;
+        /* background-color: white;
+        mix-blend-mode: difference; */
+      }
+
         .show-pressed{
           display: none;
+          /* width: 10%;
+          height: 100%; */
+          position: relative;
+          z-index: -10;
         }
           .show-pressed.press{
             display: block;
+            position: relative;
+            z-index: -10;
 
     	-webkit-animation: bye 0.4s ease-out both;
     	        animation: bye 0.4s ease-out both;
