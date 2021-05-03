@@ -128,6 +128,30 @@ let elements = {
      'audio': 'sandraking.mp3',
      'video': 'img/sandraking.mp4',
     },
+    '5': {
+     'audio': 'siren.mp3',
+     'video': 'img/siren.mp4',
+    },
+    '6': {
+     'audio': 'honduras.mov',
+     'video': 'img/honduras.mp4',
+    },
+    '7': {
+     'audio': 'singingbowl.wav',
+     'video': 'img/singingbowl.mp4',
+    },
+    '8': {
+     'audio': 'honeycomb.mov',
+     'video': 'img/honeycomb.mp4',
+    },
+    '9': {
+     'audio': 'stirmacaroni.wav',
+     'video': 'img/stirmacaroni.mp4',
+    },
+    '0': {
+     'audio': 'indonesia.mp3',
+     'video': 'img/indonesia.mp4',
+    },
 
 };
 
