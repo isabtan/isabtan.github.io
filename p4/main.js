@@ -112,6 +112,22 @@ let elements = {
      'audio': 'woodtap.m4a',
      'video': 'img/woodtap.mp4',
     },
+    '1': {
+     'audio': 'burp.m4a',
+     'video': 'img/burp.mp4',
+    },
+    '2': {
+     'audio': 'ghana.mp3',
+     'video': 'img/ghana.mp4',
+    },
+    '3': {
+     'audio': 'treeswind.mp3',
+     'video': 'img/treewind.mp4',
+    },
+    '4': {
+     'audio': 'sandraking.mp3',
+     'video': 'img/sandraking.mp4',
+    },
 
 };
 
@@ -222,7 +238,7 @@ function keyEvent(event) {
     video.classList.add("active");
 
     document.querySelector(".category").classList.add("cactive");
-    document.querySelector(".category").innerHTML = `<h3>elements.name</h3>`;
+    document.querySelector(".category").innerHTML = elements[name];
     // category = data.category;
     // category.innerTextr = category;
 
