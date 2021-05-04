@@ -202,12 +202,27 @@ let elements = {
      'video': 'img/japan.mp4',
      name: 'japan national anthem',
     },
+    ';': {
+     'audio': 'wipefabric.mp3',
+     'video': 'img/wipfabric.mp4',
+     name: 'cleaning fabric couch',
+    },
+    ',': {
+     'audio': 'babycry.mp3',
+     'video': 'img/babycry.mp4',
+     name: 'baby crying',
+    },
+    '.': {
+     'audio': 'train.mp3',
+     'video': 'img/train.mp4',
+     name: 'choo choo train',
+    },
 
 };
 
 console.log(elements[0]);
 
-//MARK
+//MARK:
 let videoContainer = document.querySelector('.video-container');
 // this will loop through each `key` of your elements object e.g. a, b, c
     //const just means you can reassign the variable, which you wouldn’t want to do in a loop anyway
@@ -228,24 +243,36 @@ for(let key in elements) {
 
 let input = document.querySelector('input');
 let audio = document.querySelector('audio');
-let video = document.querySelector('video');
+// let video = document.querySelector('video');
+let videos = Array.from(document.querySelectorAll('video'));
 let name = document.querySelector('.category');
 // let category = document.querySelector('.category');
 
-
+//MARK, 2:
 function keyEvent(event) {
+  // see if the key typed is one of the keys in our `elements` object above
   if (event.key in elements) {
     audio.pause();
-    video.play();
-    video.classList.remove("active");
+        // video.play();
+        // video.classList.remove("active");
+  // first see if there's an active video, pause it and remove active class
+    let activeVideo = videos.find(v => v.classList.contains('active'));
+      if (activeVideo) {
+        activeVideo.pause();
+        activeVideo.classList.remove('active');
+      }
+
+      let video = videos.find(v => v.dataset.key == event.key);
+        video.classList.add('active');
+        video.play();
 
     let data = elements[event.key];
     audio.src = data.audio;
     audio.play();
 
-    video.src = data.video;
-    video.play();
-    video.classList.add("active");
+        // video.src = data.video;
+        // video.play();
+        // video.classList.add("active");
 
     document.querySelector(".category").classList.add("cactive");
     document.querySelector(".category").innerHTML = elements['name'];
