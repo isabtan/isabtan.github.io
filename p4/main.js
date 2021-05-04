@@ -35,125 +35,177 @@ let elements = {
     'g': {
      'audio': 'dogbarking.mp3',
      'video': 'img/dogbarking.mp4',
+     name: 'dogs barking',
    },
    'h': {
     'audio': 'brunei.mp3',
     'video': 'img/brunei.mp4',
+    name: 'brunei national anthem',
   },
     'i': {
      'audio': 'ocean.mp3',
      'video': 'img/ocean.mp4',
+     name: 'ocean waves',
    },
      'j': {
       'audio': 'whispers.mp3',
       'video': 'img/whispers.mp4',
+      name: 'inaudible whispers',
     },
     'k': {
      'audio': 'crowdscream.mp3',
      'video': 'img/crowdscream.mp4',
+     name: 'loud crowd screaming',
     },
     'l': {
      'audio': 'china.mp3',
      'video': 'img/china.mp4',
+     name: 'china national anthem',
     },
     'm': {
      'audio': 'waterfall.mp3',
      'video': 'img/waterfall.mp4',
+     name: 'waterfall',
     },
     'n': {
      'audio': 'brushhair.mp4',
      'video': 'img/brushhair-vid.mp4',
+     name: 'brushing through long hair',
     },
     'o': {
      'audio': 'alarm.mov',
      'video': 'img/alarm.mp4',
+     name: 'apple alarm',
     },
     'p': {
      'audio': 'dominicanrep.mov',
      'video': 'img/dominicanrep.mp4',
+     name: 'dominican republic national anthem',
     },
     'q': {
      'audio': 'boil.mp3',
      'video': 'img/boil.mp4',
+     name: 'boiling water',
     },
     'r': {
      'audio': 'typing.mp3',
      'video': 'img/typing.mp4',
+     name: 'typing on mechanical keyboard',
     },
     's': {
      'audio': 'forkscrape.mp3',
      'video': 'img/forkscrape.mp4',
+     name: 'fork scraping on plate',
     },
     't': {
      'audio': 'egypt.mov',
      'video': 'img/egypt.mp4',
+     name: 'egypt national anthem',
     },
     'u': {
      'audio': 'wind.wav',
      'video': 'img/wind.mp4',
+     name: 'strong wind blowing',
     },
     'v': {
      'audio': 'poprocks.mp3',
      'video': 'img/poprocks.mp4',
+     name: 'popping candy',
     },
     'w': {
      'audio': 'spoonbite.mp3',
      'video': 'img/spoonbite.mp4',
+     name: 'spoon biting',
     },
     'x': {
      'audio': 'fiji.mp3',
      'video': 'img/fiji.mp4',
+     name: 'fiji national anthem',
     },
     'y': {
      'audio': 'treerustle.mov',
      'video': 'img/treerustle.mp4',
+     name: 'bamboo trees rustling',
     },
     'z': {
      'audio': 'woodtap.m4a',
      'video': 'img/woodtap.mp4',
+     name: 'wood tapping',
     },
     '1': {
      'audio': 'burp.m4a',
      'video': 'img/burp.mp4',
+     name: 'man burping loud',
     },
     '2': {
      'audio': 'ghana.mp3',
      'video': 'img/ghana.mp4',
+     name: 'ghana national anthem',
     },
     '3': {
      'audio': 'treeswind.mp3',
      'video': 'img/treewind.mp4',
+     name: 'trees blowing in wind',
     },
     '4': {
      'audio': 'sandraking.mp3',
      'video': 'img/sandraking.mp4',
+     name: 'zen sand raking',
     },
     '5': {
      'audio': 'siren.mp3',
      'video': 'img/siren.mp4',
+     name: 'hongkong police siren',
     },
     '6': {
      'audio': 'honduras.mov',
      'video': 'img/honduras.mp4',
+     name: 'honduras national anthem',
     },
     '7': {
      'audio': 'singingbowl.wav',
      'video': 'img/singingbowl.mp4',
+     name: 'tibetan singing bowl',
     },
     '8': {
      'audio': 'honeycomb.mov',
      'video': 'img/honeycomb.mp4',
+     name: 'person chewing honeycomb',
     },
     '9': {
      'audio': 'stirmacaroni.wav',
      'video': 'img/stirmacaroni.mp4',
+     name: 'stirring macaroni & cheese',
     },
     '0': {
      'audio': 'indonesia.mp3',
      'video': 'img/indonesia.mp4',
+     name: 'indonesia national anthem',
+    },
+    '-': {
+     'audio': 'droplet.mp3',
+     'video': 'img/droplets.mp4',
+     name: 'water droplets',
+    },
+    '=': {
+     'audio': 'vibration.mp3',
+     'video': 'img/vibration.mp4',
+     name: 'large vibrations',
+    },
+    '[': {
+     'audio': 'droputensils.mp3',
+     'video': 'img/droputensils.mp4',
+     name: 'dropping metal utensils',
+    },
+    ']': {
+     'audio': 'japan.mp3',
+     'video': 'img/japan.mp4',
+     name: 'japan national anthem',
     },
 
 };
+
+console.log(elements[0]);
 
 //MARK
 let videoContainer = document.querySelector('.video-container');
@@ -169,6 +221,8 @@ for(let key in elements) {
   // maybe assign the key as a data attribute so that later you can
   // filter your videos and find the video that represents each key (to add a class to expand it)
   vid.dataset.key = key;
+    // elements[event.key].dataset.key = key;
+    // key.dataset.key = event.key;
   videoContainer.append(vid);
 }
 
@@ -178,74 +232,6 @@ let video = document.querySelector('video');
 let name = document.querySelector('.category');
 // let category = document.querySelector('.category');
 
-
-
-
-                    // document.addEventListener("mouseup", function(event){
-                    //   let data = elements;
-                    //   video.src = data.video;
-                    //   video.play();
-                    // })
-                    //
-                    // var videos = [];
-                    //
-                    // function showNoises() {
-                    //   console.log("showNoises()");
-                    //   videos.forEach(video => {
-                    //
-                    //
-                    //     var noiseContainer = document.createElement("div");
-                    //     noiseContainer.classList.add("noise-container");
-                    //     document.querySelector(".videos").append(noiseContainer);
-                    //
-                    //       var noiseVideos = document.createElement("video");
-                    //       noiseVideos.classList.add("noise-video");
-                    //       noiseVideos.src = data.video;
-                    //       noiseContainer.append(noiseVideos);
-                    //
-                    //       noiseVideos.play();
-                    //   });
-                    // }
-
-
-
-
-// console.log(Object.getOwnPropertyNames(video));
-//
-// Object.getOwnPropertyNames(video));
-
-    // const noiseVideos = elements['video'];
-    // console.log(elements['video']);
-
-            //JUST TO TEST, PROPERTY ACCESSOR?
-  // document.querySelector(".videos").src = elements['video'];
-
-
-
-// elements.display = "block";
-// document.querySelectorAll(video in elements);
-
-
-        //TEST1 ???
-  document.addEventListener('click', () => {
-  console.log('display videos');
-
-    video.play();
-})
-
-
-        // function showNoises() {
-        //   videos.forEach(video => {
-        //
-        //     noiseVideos = document.createElement("video");
-        //     noiseVideos.classList.add("noise-videos");
-        //     document.querySelector(".videos").append(noiseVideos);
-        //
-        //     window.addEventListener("click", function(event) {
-        //       video.play();
-        //     });
-        //   })
-        // }
 
 function keyEvent(event) {
   if (event.key in elements) {
@@ -262,9 +248,9 @@ function keyEvent(event) {
     video.classList.add("active");
 
     document.querySelector(".category").classList.add("cactive");
-    document.querySelector(".category").innerHTML = elements[name];
+    document.querySelector(".category").innerHTML = elements['name'];
     // category = data.category;
-    // category.innerTextr = category;
+    // category.innerHTML = category;
 
     // category.src = data.category;
     // category.innerText = category;
@@ -275,10 +261,13 @@ function keyEvent(event) {
 document.addEventListener('keyup', keyEvent);
 
 document.addEventListener("keyup", function(event){
+// showPressed.classList.remove("press");
 
   if (event.key){
     showPressed.textContent = event.key;
     showPressed.classList.toggle("press");
-  }
+  } // else {
+  //   showPressed.classList.add("press");
+  // }
 
 })
