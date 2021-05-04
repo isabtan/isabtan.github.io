@@ -217,6 +217,11 @@ let elements = {
      'video': 'img/train.mp4',
      name: 'choo choo train',
     },
+    '/': {
+     'audio': 'footsteps.wav',
+     'video': 'img/footsteps.mp4',
+     name: 'footsteps',
+    },
 
 };
 
@@ -284,17 +289,9 @@ function keyEvent(event) {
     // cateogry.classList.add("cactive");
 
   }
-}
-document.addEventListener('keyup', keyEvent);
-
-document.addEventListener("keyup", function(event){
-// showPressed.classList.remove("press");
-
   if (event.key){
     showPressed.textContent = event.key;
     showPressed.classList.toggle("press");
-  } // else {
-  //   showPressed.classList.add("press");
-  // }
-
-})
+  }
+}
+document.addEventListener('keyup', keyEvent);

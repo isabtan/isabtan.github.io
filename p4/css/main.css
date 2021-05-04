@@ -1,7 +1,8 @@
 body{
   height: 100%;
   margin: 0;
-  /* overflow: hidden; */
+  background-color: #eaeaea;
+  overflow: auto;
 }
 html {
     height: 100%;
@@ -49,24 +50,25 @@ text::selection {
   position: fixed;
   padding: 0;
   height: 100vh;
-  width: 200vw;
-  overflow: auto;
+  width: 100%;
+  overflow-x: scroll;
   z-index: -10;
 }
 .video-container{
   margin: 0;
   top: 0;
-  position: fixed;
-  display: grid;
-            /* width: 100%;
-            height: 100vh; */
-  grid-template-columns: repeat(60, auto);
+  /* position: fixed; */
+  display: flex;
+            /* width: 100%; */
+            /* height: 100vh; */
+  /* grid-template-columns: repeat(60, auto); */
             /* grid-auto-rows: 1; */
-            /* align-items: flex-start;
-            justify-content: flex-start; */
+            align-items: flex-start;
+            justify-content: flex-start;
   z-index: -10;
+  /* overflow: scroll; */
             /* overflow-x: auto; */
-            /* min-width: 150vw; */
+  min-width: 100vw;
 }
 
 video{
@@ -82,18 +84,7 @@ video{
     width: 100%;
     /* transition: 0.1s ease-out; */
   }
-                      /* .vid-rain.full{
-                        width: 100%;
-                      }
-                      .vid-slurp.full-s{
-                        width: 100%;
-                      } */
-                  /* #audio{
-                    volume: 0;
-                  }
-                      #audio.play{
-                        volume: 1;
-                      } */
+
 
 /* TEXTTTTTTTTTTTTTTTTTTTTTTTTTTTT */
 h1{
@@ -111,16 +102,6 @@ h1{
       margin-bottom: 0;
   z-index: -5;
   position: fixed;
-
-
-  /* display: table; */
-  /* background-color: #fff;
-  mix-blend-mode: difference; */
-  /* margin: auto; */
-  /* padding-top: 0px;
-  padding-left: 4px;
-  padding-right: 12px;
-  padding-bottom: 12px; */
 }
 
 h3{
@@ -136,16 +117,13 @@ h3{
       margin-bottom: 0;
   position: fixed;
 
-  /* display: table; */
-  /* background-color: #fff; */
+
   mix-blend-mode: difference;
   padding-top: 3px;
   padding-left: 8px;
   padding-right: 5px;
   padding-bottom: 4px;
 }
-
-
     .des{
       position: fixed;
       mix-blend-mode: difference;
@@ -190,9 +168,6 @@ h2{
   text-align: center;
   /* text-transform: uppercase; */
 
-  /* display: table;
-  background-color: #fff;
-  mix-blend-mode: difference; */
   padding-top: 20px;
   padding-left: 30px;
   padding-right: 30px;
@@ -216,8 +191,6 @@ h2{
         width: 100vw;
         position: fixed;
         top: 40vh;
-        /* background-color: white;
-        mix-blend-mode: difference; */
       }
 
         .show-pressed{
@@ -234,7 +207,7 @@ h2{
 
     	-webkit-animation: bye 0.4s ease-out both;
     	        animation: bye 0.4s ease-out both;
-              animation-delay: 1.3s;
+              animation-delay: 3s;
           }
 
 @-webkit-keyframes bye {
