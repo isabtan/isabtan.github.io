@@ -193,12 +193,12 @@ let elements = {
      name: 'large vibrations',
     },
     '[': {
-     'audio': 'droputensils.mp3',
-     'video': 'img/droputensils.mp4',
-     name: 'dropping metal utensils',
+     'audio': 'dishdrop.mp3',
+     'video': 'img/dishdrop.mp4',
+     name: 'dropping utensils',
     },
     ']': {
-     'audio': 'japan.mp3',
+     'audio': 'japan.mov',
      'video': 'img/japan.mp4',
      name: 'japan national anthem',
     },
