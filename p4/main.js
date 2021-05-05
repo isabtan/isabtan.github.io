@@ -250,7 +250,7 @@ let input = document.querySelector('input');
 let audio = document.querySelector('audio');
 // let video = document.querySelector('video');
 let videos = Array.from(document.querySelectorAll('video'));
-let name = document.querySelector('.category');
+let nameDisplay = document.querySelector('.category');
 // let category = document.querySelector('.category');
 
 //MARK, 2:
@@ -275,12 +275,14 @@ function keyEvent(event) {
     audio.src = data.audio;
     audio.play();
 
+    nameDisplay.innerText = data.name;
+
         // video.src = data.video;
         // video.play();
         // video.classList.add("active");
 
-    document.querySelector(".category").classList.add("cactive");
-    document.querySelector(".category").innerHTML = elements['name'];
+    // document.querySelector(".category").classList.add("cactive");
+    // document.querySelector(".category").innerHTML = elements['name'];
     // category = data.category;
     // category.innerHTML = category;
 
