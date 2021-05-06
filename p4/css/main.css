@@ -4,6 +4,7 @@ body{
   background-color: #FF00FF;
   overflow: scroll;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 html {
     height: 100%;
