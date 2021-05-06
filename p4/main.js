@@ -1,226 +1,485 @@
-let showPressed = document.querySelector(".show-pressed");
-
 let elements = {
   'a': {
    'audio': 'rainfall.mp3',
    'video': 'img/rainfall.mp4',
     name: 'rainfall',
+    category: 'white noise',
    // 'category': white nose,
  },
    'b': {
     'audio': 'slurping.mov',
     'video': 'img/slurping.mp4',
     name: 'woman slurping ramen',
+    category: 'asmr',
   },
   'c': {
    'audio': 'schoolbell.mp3',
    'video': 'img/schoolbell.mp4',
    name: 'school bell ringing',
+   category: 'unpleasant',
+
  },
    'd': {
     'audio': 'afghanistan.mp3',
     'video': 'img/afghanistan.mp4',
-    name: 'afghanistan national anthem',
+    name: 'afghanistan',
+    category: 'national anthem',
   },
     'e': {
      'audio': 'fireplace.mov',
      'video': 'img/fireplace.mp4',
      name: 'fireplace',
+     category: 'white noise',
    },
    'f': {
     'audio': 'cooking.mov',
     'video': 'img/cooking.mp4',
     name: 'frying eggs',
+    category: 'asmr',
   },
     'g': {
      'audio': 'dogbarking.mp3',
      'video': 'img/dogbarking.mp4',
      name: 'dogs barking',
+     category: 'unpleasant',
    },
    'h': {
     'audio': 'brunei.mp3',
     'video': 'img/brunei.mp4',
-    name: 'brunei national anthem',
+    name: 'brunei',
+    category: 'national anthem',
   },
     'i': {
      'audio': 'ocean.mp3',
      'video': 'img/ocean.mp4',
      name: 'ocean waves',
+     category: 'white noise',
    },
      'j': {
       'audio': 'whispers.mp3',
       'video': 'img/whispers.mp4',
-      name: 'inaudible whispers',
+      name: 'tired whispers',
+      category: 'asmr',
     },
     'k': {
      'audio': 'crowdscream.mp3',
      'video': 'img/crowdscream.mp4',
      name: 'loud crowd screaming',
+     category: 'unpleasant',
     },
     'l': {
      'audio': 'china.mp3',
      'video': 'img/china.mp4',
-     name: 'china national anthem',
+     name: 'china',
+     category: 'national anthem',
     },
     'm': {
      'audio': 'waterfall.mp3',
      'video': 'img/waterfall.mp4',
      name: 'waterfall',
+     category: 'white noise',
     },
     'n': {
      'audio': 'brushhair.mp4',
      'video': 'img/brushhair-vid.mp4',
      name: 'brushing through long hair',
+     category: 'asmr',
     },
     'o': {
      'audio': 'alarm.mov',
      'video': 'img/alarm.mp4',
      name: 'apple alarm',
+     category: 'unpleasant',
     },
     'p': {
      'audio': 'dominicanrep.mov',
      'video': 'img/dominicanrep.mp4',
-     name: 'dominican republic national anthem',
+     name: 'dominican republic',
+     category: 'dominican republic',
     },
     'q': {
      'audio': 'boil.mp3',
      'video': 'img/boil.mp4',
      name: 'boiling water',
+     category: 'white noise',
     },
     'r': {
      'audio': 'typing.mp3',
      'video': 'img/typing.mp4',
      name: 'typing on mechanical keyboard',
+     category: 'asmr',
     },
     's': {
      'audio': 'forkscrape.mp3',
      'video': 'img/forkscrape.mp4',
      name: 'fork scraping on plate',
+     category: 'unpleasant',
     },
     't': {
      'audio': 'egypt.mov',
      'video': 'img/egypt.mp4',
-     name: 'egypt national anthem',
+     name: 'egypt',
+     category: 'national anthem',
     },
     'u': {
      'audio': 'wind.wav',
      'video': 'img/wind.mp4',
      name: 'strong wind blowing',
+     category: 'white noise',
     },
     'v': {
      'audio': 'poprocks.mp3',
      'video': 'img/poprocks.mp4',
      name: 'popping candy',
+     category: 'asmr',
     },
     'w': {
      'audio': 'spoonbite.mp3',
      'video': 'img/spoonbite.mp4',
-     name: 'spoon biting',
+     name: 'person biting spoon',
+     category: 'unpleasant',
     },
     'x': {
      'audio': 'fiji.mp3',
      'video': 'img/fiji.mp4',
-     name: 'fiji national anthem',
+     name: 'fiji',
+     category: 'national anthem',
     },
     'y': {
      'audio': 'treerustle.mov',
      'video': 'img/treerustle.mp4',
      name: 'bamboo trees rustling',
+     category: 'white noise',
     },
     'z': {
      'audio': 'woodtap.m4a',
      'video': 'img/woodtap.mp4',
      name: 'wood tapping',
+     category: 'asmr',
     },
     '1': {
      'audio': 'burp.m4a',
      'video': 'img/burp.mp4',
      name: 'man burping loud',
+     category: 'unpleasant',
     },
     '2': {
      'audio': 'ghana.mp3',
      'video': 'img/ghana.mp4',
-     name: 'ghana national anthem',
+     name: 'ghana',
+     category: 'national anthem',
     },
     '3': {
      'audio': 'treeswind.mp3',
      'video': 'img/treewind.mp4',
      name: 'trees blowing in wind',
+     category: 'white noise',
     },
     '4': {
      'audio': 'sandraking.mp3',
      'video': 'img/sandraking.mp4',
      name: 'zen sand raking',
+     category: 'asmr',
     },
     '5': {
      'audio': 'siren.mp3',
      'video': 'img/siren.mp4',
      name: 'hongkong police siren',
+     category: 'unpleasant',
     },
     '6': {
      'audio': 'honduras.mov',
      'video': 'img/honduras.mp4',
-     name: 'honduras national anthem',
+     name: 'honduras',
+     category: 'national anthem',
     },
     '7': {
      'audio': 'singingbowl.wav',
      'video': 'img/singingbowl.mp4',
      name: 'tibetan singing bowl',
+     category: 'asmr',
     },
     '8': {
      'audio': 'honeycomb.mov',
      'video': 'img/honeycomb.mp4',
      name: 'person chewing honeycomb',
+     category: 'asmr',
     },
     '9': {
      'audio': 'stirmacaroni.wav',
      'video': 'img/stirmacaroni.mp4',
      name: 'stirring macaroni & cheese',
+     category: 'unpleasant',
     },
     '0': {
      'audio': 'indonesia.mp3',
      'video': 'img/indonesia.mp4',
-     name: 'indonesia national anthem',
+     name: 'indonesia',
+     category: 'national anthem',
     },
     '-': {
      'audio': 'droplet.mp3',
      'video': 'img/droplets.mp4',
      name: 'water droplets',
+     category: 'white noise',
     },
     '=': {
      'audio': 'vibration.mp3',
      'video': 'img/vibration.mp4',
      name: 'large vibrations',
+     category: 'white noise',
     },
     '[': {
      'audio': 'dishdrop.mp3',
      'video': 'img/dishdrop.mp4',
      name: 'dropping utensils',
+     category: 'unpleasant',
     },
     ']': {
      'audio': 'japan.mov',
      'video': 'img/japan.mp4',
-     name: 'japan national anthem',
+     name: 'japan',
+     category: 'national anthem',
     },
     ';': {
      'audio': 'wipefabric.mp3',
      'video': 'img/wipfabric.mp4',
      name: 'cleaning fabric couch',
+     category: 'asmr',
     },
     ',': {
      'audio': 'babycry.mp3',
      'video': 'img/babycry.mp4',
      name: 'baby crying',
+     category: 'unpleasant',
     },
     '.': {
      'audio': 'train.mp3',
      'video': 'img/train.mp4',
      name: 'choo choo train',
+     category: 'white noise',
     },
     '/': {
      'audio': 'footsteps.wav',
      'video': 'img/footsteps.mp4',
      name: 'footsteps',
+     category: 'white noise',
+    },
+    'A': {
+     'audio': 'crickets.mp3',
+     'video': 'img/crickets.mp4',
+     name: 'crickets chirping',
+     category: 'white noise',
+    },
+    'B': {
+     'audio': 'mixing.mp3',
+     'video': 'img/mixing.mp4',
+     name: 'mixing paint',
+     category: 'white noise',
+    },
+    'C': {
+     'audio': 'lawnmower.mp3',
+     'video': 'img/lawnmower.mp4',
+     name: 'lawnmower cutitng grass',
+     category: 'unpleasant',
+    },
+    'D': {
+     'audio': 'russia.mp3',
+     'video': 'img/russia.mp4',
+     name: 'russia',
+     category: 'national anthem',
+    },
+    'E': {
+     'audio': 'catpur.mp3',
+     'video': 'img/catpur.mp4',
+     name: 'cat purring',
+     category: 'asmr',
+    },
+    'F': {
+     'audio': 'tat.mp3',
+     'video': 'img/tat.mp4',
+     name: 'tattoo machine',
+     category: 'unpleasant',
+    },
+    'G': {
+     'audio': 'madlib.mp3',
+     'video': 'img/madlib.mp4',
+     name: 'Two for 2 - madlib',
+     category: 'song',
+    },
+    'H': {
+     'audio': 'senegal.mp3',
+     'video': 'img/senegal.mp4',
+     name: 'senagal',
+     category: 'national anthem',
+    },
+    'I': {
+     'audio': 'daft.mp3',
+     'video': 'img/daft.mp4',
+     name: 'instant crush - daft punk ft. julian casablancas',
+     category: 'song',
+    },
+    'J': {
+     'audio': 'leaves.mp3',
+     'video': 'img/leaves.mp4',
+     name: 'walking on leaves',
+     category: 'asmr',
+    },
+    'K': {
+     'audio': 'chew.mp3',
+     'video': 'img/chew.mp4',
+     name: 'obnoxious chewing',
+     category: 'unpleasant',
+    },
+    'L': {
+     'audio': 'thailand.mp3',
+     'video': 'img/thailand.mp4',
+     name: 'thailand',
+     category: 'national anthem',
+    },
+    'M': {
+     'audio': 'fanchun.mp3',
+     'video': 'img/fanchin.mp4',
+     name: 'Ruk Keu Fun Bpai - sao sao sao',
+     category: 'song',
+    },
+    'N': {
+     'audio': 'knockmeoffmyfeet.mp3',
+     'video': 'img/knockmeoffmyfeet.mp4',
+     name: 'Knocks me off my feet - stevie wonder',
+     category: 'song',
+    },
+    'O': {
+     'audio': 'zimbabwe.mp3',
+     'video': 'img/zimbabwe.mp4',
+     name: 'zimbabwe',
+     category: 'national anthem',
+    },
+    'P': {
+     'audio': 'chs.mp3',
+     'video': 'img/chs.mp4',
+     name: 'too much sunshine - chs',
+     category: 'song',
+    },
+    'Q': {
+     'audio': 'westernsaharahs.mp3',
+     'video': 'img/westernsahara.mp4',
+     name: 'western sahara',
+     category: 'national anthem',
+    },
+    'R': {
+     'audio': 'timemovesslow.mp3',
+     'video': 'img/timemovesslow.mp4',
+     name: 'BADBADNOTGOOD ft. Sam Herring',
+     category: 'song',
+    },
+    'S': {
+     'audio': 'byyourside.mp3',
+     'video': 'img/byyourside.mp4',
+     name: 'By your side - sade',
+     category: 'song',
+    },
+    'T': {
+     'audio': 'yemen.mp3',
+     'video': 'img/yemen.mp4',
+     name: 'yemen',
+     category: 'national anthem',
+    },
+    'U': {
+     'audio': 'whereisthelove.mp3',
+     'video': 'img/whereisthelove.mp4',
+     name: 'where is the love - the equatics',
+     category: 'song',
+    },
+    'V': {
+     'audio': 'vietnam.mp3',
+     'video': 'img/vietnam.mp4',
+     name: 'vietnam',
+     category: 'national anthem',
+    },
+    'W': {
+     'audio': 'fayewong.mp3',
+     'video': 'img/fayewong.mp4',
+     name: 'dream person - faye wong',
+     category: 'song',
+    },
+    'X': {
+     'audio': 'anything.mp3',
+     'video': 'img/anything.mp4',
+     name: 'anything - budgie',
+     category: 'song',
+    },
+    'Y': {
+     'audio': 'sinceileftu.mp3',
+     'video': 'img/sinceileftu.mp4',
+     name: 'since i left you - the avalanches',
+     category: 'song',
+    },
+    'Z': {
+     'audio': 'zionsville.mp3',
+     'video': 'img/zionsville.mp4',
+     name: 'zionsville - khruangbin',
+     category: 'song',
+    },
+    '!': {
+     'audio': 'birds.mp3',
+     'video': 'img/birds.mp4',
+     name: 'birds chirping',
+     category: 'white noise',
+    },
+    '@': {
+     'audio': 'snipfabric.mp3',
+     'video': 'img/snipfabric.mp4',
+     name: 'snipping fabric',
+     category: 'asmr',
+    },
+    '#': {
+     'audio': 'stab.mp3',
+     'video': 'img/stab.mp4',
+     name: 'person getting stabbed',
+     category: 'unpleasant',
+    },
+    '$': {
+     'audio': 'monaco.mp3',
+     'video': 'img/monaco.mp4',
+     name: 'monaco',
+     category: 'national anthem',
+    },
+    '%': {
+     'audio': 'planecabin.mp3',
+     'video': 'img/planecabin.mp4',
+     name: 'airplane cabin',
+     category: 'white noise',
+    },
+    '^': {
+     'audio': 'write.mp3',
+     'video': 'img/write.mp4',
+     name: 'writing on paper',
+     category: 'asmr',
+    },
+    '&': {
+     'audio': 'concert.mp3',
+     'video': 'img/concert.mp4',
+     name: 'person singing in a concert',
+     category: 'asmr',
+    },
+    '*': {
+     'audio': 'newzealand.mp3',
+     'video': 'img/newzealand.mp4',
+     name: 'new zealand',
+     category: 'national anthem',
+    },
+    '(': {
+     'audio': 'thunder.mp3',
+     'video': 'img/thunder.mp4',
+     name: 'loud thunder',
+     category: 'white noise',
+    },
+    ')': {
+     'audio': 'nailtapping.mp3',
+     'video': 'img/nailtapping.mp4',
+     name: 'nail tapping',
+     category: 'asmr',
     },
 
 };
@@ -250,7 +509,9 @@ let input = document.querySelector('input');
 let audio = document.querySelector('audio');
 // let video = document.querySelector('video');
 let videos = Array.from(document.querySelectorAll('video'));
-let nameDisplay = document.querySelector('.category');
+let nameDisplay = document.querySelector('.des');
+let pressDisplay = document.querySelector('.show-pressed');
+let catDisplay = document.querySelector('.category');
 // let category = document.querySelector('.category');
 
 //MARK, 2:
@@ -276,24 +537,10 @@ function keyEvent(event) {
     audio.play();
 
     nameDisplay.innerText = data.name;
+    catDisplay.innerText = data.category;
+    pressDisplay.innerText = event.key;
+      // pressDisplay.classList.add("press");
 
-        // video.src = data.video;
-        // video.play();
-        // video.classList.add("active");
-
-    // document.querySelector(".category").classList.add("cactive");
-    // document.querySelector(".category").innerHTML = elements['name'];
-    // category = data.category;
-    // category.innerHTML = category;
-
-    // category.src = data.category;
-    // category.innerText = category;
-    // cateogry.classList.add("cactive");
-
-  }
-  if (event.key){
-    showPressed.textContent = event.key;
-    showPressed.classList.toggle("press");
   }
 }
 document.addEventListener('keyup', keyEvent);
