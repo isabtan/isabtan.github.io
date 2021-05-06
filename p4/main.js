@@ -544,3 +544,36 @@ function keyEvent(event) {
   }
 }
 document.addEventListener('keyup', keyEvent);
+
+let mobClick = window.matchMedia('(max-width: 1025px)');
+
+if (mobClick.matches) {
+  document.removeEventListener('keyup', keyEvent);
+	document.addEventListener('touchstart', clickForVids);
+
+  function clickForVids(){
+    console.log("click mobile pls")
+    audio.pause();
+
+    let activeVideo = videos.find(v => v.classList.contains('active'));
+      if (activeVideo) {
+        activeVideo.play();
+        audio.play();
+        activeVideo.classList.toggle('active');
+
+        nameDisplay.innerText = data.name;
+        catDisplay.innerText = data.category;
+      }
+
+
+    //   let video = videos.find(v => v.dataset.key == event.key);
+    //     video.classList.add('active-mob');
+    //     video.play();
+    //
+    // let data = elements[event.key];
+    // audio.src = data.audio;
+    // audio.play();
+
+
+  }
+}

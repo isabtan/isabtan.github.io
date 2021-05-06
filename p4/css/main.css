@@ -114,7 +114,7 @@ h1{
       margin-right: 0;
       margin-bottom: 0;
   z-index: -5;
-  position: fixed;
+  position: relative;
 }
 
 h3{
@@ -138,13 +138,16 @@ h3{
   padding-bottom: 4px;
 }
     .des{
-      position: fixed;
+      /* position: fixed; */
       mix-blend-mode: difference;
       z-index: -5;
       margin-top: 11.8%;
     }
+      #des-mobile{
+        display: none;
+      }
     .category{
-      position: fixed;
+      /* position: fixed; */
       margin: 0;
       left: 0.8%;
       bottom: 0.8%;
@@ -240,3 +243,39 @@ h2{
     opacity: 0;
   }
 }
+
+
+/* MEDIA QUERIES PLS WORK PLS */
+  @media (max-width: 1025px){
+    h1{
+      font-size: 5rem;
+      margin-top: 3%;
+    }
+    #des-mobile{
+      font-size: 1rem;
+      display: block;
+      margin-top: 0%;
+    }
+    #des-desktop{
+      display: none;
+    }
+    .video-container{
+      margin: 0;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      grid-template-columns: none;
+      grid-template-rows: repeat(80, auto);
+    }
+    video{
+      height: 100%;
+      width: 100vw;
+      min-height: 0%;
+      max-height: 100%;
+    }
+      video.active-mob{
+        width: 100vw;
+        height: 40vh;
+        /* transition: 0.1s ease-out; */
+      }
+  }
