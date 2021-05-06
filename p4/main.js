@@ -424,7 +424,7 @@ let elements = {
     '!': {
      'audio': 'birds.mp3',
      'video': 'img/birds.mp4',
-     name: 'birds chirping',
+     name: 'birds calling',
      category: 'white noise',
     },
     '@': {
@@ -446,9 +446,9 @@ let elements = {
      category: 'national anthem',
     },
     '%': {
-     'audio': 'planecabin.mp3',
+     'audio': 'plane.mp3',
      'video': 'img/planecabin.mp4',
-     name: 'airplane cabin',
+     name: 'airplane cabin internal ambience',
      category: 'white noise',
     },
     '^': {
@@ -460,8 +460,8 @@ let elements = {
     '&': {
      'audio': 'concert.mp3',
      'video': 'img/concert.mp4',
-     name: 'person singing in a concert',
-     category: 'asmr',
+     name: 'crowd screaming at a concert',
+     category: 'unpleasant',
     },
     '*': {
      'audio': 'newzealand.mp3',
@@ -472,13 +472,13 @@ let elements = {
     '(': {
      'audio': 'thunder.mp3',
      'video': 'img/thunder.mp4',
-     name: 'loud thunder',
+     name: 'approaching thunder',
      category: 'white noise',
     },
     ')': {
      'audio': 'nailtapping.mp3',
      'video': 'img/nailtapping.mp4',
-     name: 'nail tapping',
+     name: 'nail tapping on book',
      category: 'asmr',
     },
 
