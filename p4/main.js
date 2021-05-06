@@ -429,8 +429,8 @@ let elements = {
     },
     '@': {
      'audio': 'snipfabric.mp3',
-     'video': 'img/snipfabric.mp4',
-     name: 'snipping fabric',
+     'video': 'img/snip.mp4',
+     name: 'cutting through denim',
      category: 'asmr',
     },
     '#': {
@@ -447,7 +447,7 @@ let elements = {
     },
     '%': {
      'audio': 'plane.mp3',
-     'video': 'img/planecabin.mp4',
+     'video': 'img/plane.mp4',
      name: 'airplane cabin internal ambience',
      category: 'white noise',
     },
