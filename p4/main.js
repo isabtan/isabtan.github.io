@@ -304,7 +304,7 @@ let elements = {
     'G': {
      'audio': 'madlib.mp3',
      'video': 'img/madlib.mp4',
-     name: 'Two for 2 - madlib',
+     name: 'Two for 2 - For dilla • madlib',
      category: 'song',
     },
     'H': {
@@ -316,11 +316,11 @@ let elements = {
     'I': {
      'audio': 'daft.mp3',
      'video': 'img/daft.mp4',
-     name: 'instant crush - daft punk ft. julian casablancas',
+     name: 'instant crush • daft punk ft. julian casablancas',
      category: 'song',
     },
     'J': {
-     'audio': 'leaves.mp3',
+     'audio': 'leaves.m4a',
      'video': 'img/leaves.mp4',
      name: 'walking on leaves',
      category: 'asmr',
@@ -338,45 +338,45 @@ let elements = {
      category: 'national anthem',
     },
     'M': {
-     'audio': 'fanchun.mp3',
-     'video': 'img/fanchin.mp4',
-     name: 'Ruk Keu Fun Bpai - sao sao sao',
+     'audio': 'saosaosao.mp3',
+     'video': 'img/saosaosao.mp4',
+     name: 'Ruk Keu Fun Bpai • sao sao sao',
      category: 'song',
     },
     'N': {
-     'audio': 'knockmeoffmyfeet.mp3',
+     'audio': 'knocksmeoffmyfeet.mp3',
      'video': 'img/knockmeoffmyfeet.mp4',
-     name: 'Knocks me off my feet - stevie wonder',
+     name: 'Knocks me off my feet • stevie wonder',
      category: 'song',
     },
     'O': {
-     'audio': 'zimbabwe.mp3',
-     'video': 'img/zimbabwe.mp4',
-     name: 'zimbabwe',
-     category: 'national anthem',
+     'audio': 'laugh.mov',
+     'video': 'img/laughing.mp4',
+     name: 'man laughing loud',
+     category: 'unpleasant',
     },
     'P': {
      'audio': 'chs.mp3',
      'video': 'img/chs.mp4',
-     name: 'too much sunshine - chs',
+     name: 'too much sunshine • chs',
      category: 'song',
     },
     'Q': {
-     'audio': 'westernsaharahs.mp3',
-     'video': 'img/westernsahara.mp4',
-     name: 'western sahara',
-     category: 'national anthem',
+     'audio': 'gd.mp3',
+     'video': 'img/gd.mp4',
+     name: 'CROOKED • g-dragon',
+     category: 'song',
     },
     'R': {
      'audio': 'timemovesslow.mp3',
      'video': 'img/timemovesslow.mp4',
-     name: 'BADBADNOTGOOD ft. Sam Herring',
+     name: 'time moves slow • BADBADNOTGOOD ft. Sam Herring',
      category: 'song',
     },
     'S': {
      'audio': 'byyourside.mp3',
      'video': 'img/byyourside.mp4',
-     name: 'By your side - sade',
+     name: 'By your side (neptunes remix) • sade',
      category: 'song',
     },
     'T': {
@@ -388,7 +388,7 @@ let elements = {
     'U': {
      'audio': 'whereisthelove.mp3',
      'video': 'img/whereisthelove.mp4',
-     name: 'where is the love - the equatics',
+     name: 'where is the love • the equatics',
      category: 'song',
     },
     'V': {
@@ -400,25 +400,25 @@ let elements = {
     'W': {
      'audio': 'fayewong.mp3',
      'video': 'img/fayewong.mp4',
-     name: 'dream person - faye wong',
+     name: 'dream person • faye wong',
      category: 'song',
     },
     'X': {
      'audio': 'anything.mp3',
      'video': 'img/anything.mp4',
-     name: 'anything - budgie',
+     name: 'anything • budgie',
      category: 'song',
     },
     'Y': {
      'audio': 'sinceileftu.mp3',
      'video': 'img/sinceileftu.mp4',
-     name: 'since i left you - the avalanches',
+     name: 'since i left you • the avalanches',
      category: 'song',
     },
     'Z': {
      'audio': 'zionsville.mp3',
      'video': 'img/zionsville.mp4',
-     name: 'zionsville - khruangbin',
+     name: 'zionsville • khruangbin',
      category: 'song',
     },
     '!': {
@@ -434,10 +434,10 @@ let elements = {
      category: 'asmr',
     },
     '#': {
-     'audio': 'stab.mp3',
-     'video': 'img/stab.mp4',
-     name: 'person getting stabbed',
-     category: 'unpleasant',
+     'audio': 'sault.mp3',
+     'video': 'img/sault.mp4',
+     name: 'wildfires • sault',
+     category: 'song',
     },
     '$': {
      'audio': 'monaco.mp3',
