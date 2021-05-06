@@ -114,7 +114,7 @@ h1{
       margin-right: 0;
       margin-bottom: 0;
   z-index: -5;
-  position: relative;
+  position: fixed;
 }
 
 h3{
@@ -250,6 +250,7 @@ h2{
     h1{
       font-size: 5rem;
       margin-top: 3%;
+      position: relative;
     }
     #des-mobile{
       font-size: 1rem;
@@ -266,6 +267,7 @@ h2{
       width: 100vw;
       grid-template-columns: none;
       grid-template-rows: repeat(80, auto);
+      position: fixed;
     }
     video{
       height: 100%;
