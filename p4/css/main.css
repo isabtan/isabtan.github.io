@@ -246,6 +246,15 @@ h2{
 
 
 /* MEDIA QUERIES PLS WORK PLS */
+@media (max-width: 1299px){
+  .des{
+    margin-top: 27%;
+  }
+  h1{
+    line-height: 0.79;
+  }
+}
+
   @media (max-width: 1025px){
     h1{
       font-size: 5rem;
