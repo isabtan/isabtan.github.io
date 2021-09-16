@@ -1,5 +1,5 @@
 body{
-  background: #ffffff;
+  background-color: #ffffff;
   display: grid;
   /* grid-template-columns: repeat(6, 1fr);
   column-gap: 15px; */
@@ -15,9 +15,9 @@ html {
 img{
   position: relative;
   width: 100%;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   /* margin-top: 15px; */
-   mix-blend-mode: difference;
+   /* mix-blend-mode: difference; */
    grid-column: 1/7;
 }
 
@@ -45,53 +45,64 @@ h1{
   text-transform: uppercase;
   color: #ffffff;
 
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 
   padding: 0;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
-  #menu{
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin-left: 0px; */
-    /* margin-top: 15px; */
-    margin: 0;
-    padding: 0;
-    mix-blend-mode: difference;
-    z-index: 10;
-  }
-    #fall{
-      /* margin-left: 15px; */
-    }
-    #class{
-      display: flex;
-      margin-left: 582.85px;
-    }
-    #school{
-      margin-left: 473px;
-      right: 15px;
-    }
 
   #projects{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     column-gap: 15px;
-    mix-blend-mode: difference;
-    z-index: 10;
+    /* mix-blend-mode: difference; */
+    /* z-index: 10; */
   }
+  #menu{
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 15px;
+    width: 98%;
+    z-index: 10;
+    mix-blend-mode: difference;
+  }
+    .menu{
+      display: grid;
+
+
+      margin-top: 15px;
+      margin-bottom: 15px;
+      padding: 0;
+
+    }
+      #fall{
+        grid-column: 1/1;
+      }
+      #class{
+        grid-column: 3/5;
+        text-align: center;
+      }
+      #school{
+        grid-column: 6/7;
+        text-align: right;
+      }
+      #p1{
+        margin-top: 45px;
+      }
   .proj{
     display: grid;
     margin-top: 15px;
     margin-bottom: 15px;
-    color: #000000;
+    color: #ffffff;
+    z-index: 12;
+    mix-blend-mode: difference;
+    /* background-color: #ffffff; */
   }
 
   .titles{
     grid-column: 1/1;
-    /* mix-blend-mode: difference; */
   }
   .dates{
     grid-column: 2/2;
@@ -106,20 +117,64 @@ h1{
 
   }
       .links:hover{
-        color: cyan;
+        color: red;
         transition: 0.5s;
         cursor: pointer;
       }
-  #p1{
-    /* margin-top: 15px;
-     mix-blend-mode: difference;
-     grid-column: 1/7; */
-  }
+
 
   #bye{
     color: #000000;
     grid-column: 3/5;
     text-align: center;
 
-    margin-bottom: 15px: 
+    margin-bottom: 15px:
   }
+.name{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 98%;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  mix-blend-mode: difference;
+  margin: 0;
+}
+  #name{
+    color: #ffffff;
+    grid-column: 3/5;
+    text-align: center;
+    /* mix-blend-mode: difference; */
+
+    margin-bottom: 15px:
+  }
+
+  /* Chrome version 29 and above */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+and (min-resolution:.001dpcm) {
+selector{ property:value; }
+h1{
+  color: #ffffff;
+}
+.proj{
+  color: #000;
+  mix-blend-mode: difference;
+  /* z-index: 0; */
+}
+.links:hover{
+  color: cyan;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#name{
+  color: #ffffff;
+}
+img{
+  mix-blend-mode: difference;
+  z-index: 0;
+}
+#p1{
+  margin-top: 0;
+}
+}
