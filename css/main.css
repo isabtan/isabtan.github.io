@@ -115,6 +115,14 @@ h1{
     text-align: right;
     right: 0;
 
+    font-family: "tex", helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.8125rem;
+  line-height: 145.4%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+
   }
       .links:hover{
         color: red;
