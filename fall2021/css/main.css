@@ -1,0 +1,182 @@
+body{
+    background: #ffffff;
+    height: 100%;
+    margin: 0;
+    /* overflow: hidden; */
+  }
+  
+  /* RICKY XIE SENT shout out*/
+  /* dont scale svg in media query */
+  html {
+      height: 100%;
+  }
+
+  a{
+    font-family: 'Arial Narrow';
+    color: #FF710B;
+    text-decoration: none;
+  }
+  a:hover{
+    color: #FAFF0B;
+    transition: 0.4s ease-out;
+  }
+  a:active{
+    color: #FAFF0B;
+  }
+  q {
+    quotes: "“" "”" "‘" "’";
+  }
+  q::before {
+      content: open-quote;
+  }
+  q::after {
+      content: close-quote;
+  }
+  ::selection {
+    color: #000000;
+    /* text-shadow: none; */
+    background: #E9E9E9;
+}
+text::selection {
+    fill: #000000;
+    text-shadow: none;
+    background: #e9e9e9;
+}
+
+.centersvg {
+    /* position: fixed; */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    
+    
+    height: 100%;
+    
+}
+.centersvg > svg {
+    padding-top: 796px;
+    height: 100%;
+}
+  .name{
+    position: fixed;
+    width: 1570px;
+    height: 801px;
+    left: 13px;
+    top: 2px;
+
+    font-size: 360px;
+    line-height: 75%;
+    letter-spacing: -0.13em;
+
+    color: rgba(25, 36, 0, 0.04);
+
+    z-index: -9999;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+  }
+
+  h1{
+    font-family: 'Arial Narrow';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    
+    color: #E9E9E9;
+
+    margin: 0;
+  }
+  span{
+    font-style: italic;
+  }
+
+  .text{
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
+  }
+
+  .course{
+      position: fixed;
+      width: 135px;
+      left: 16px;
+      bottom: 16px;
+      padding-left: 3.6px;
+      padding-right: 0;
+
+      text-transform: uppercase;
+      color: #E9E9E9;
+  }
+  #course{
+    color: #E9E9E9;
+  }
+  #course:hover{
+    color: #FAFF0B;
+    transition: 0.4s ease-out;
+  }
+
+  .content{
+      width: 832px;
+      position: relative;
+  }
+  .print{
+    left: 246px;
+  }
+  .web{
+      left: 484px;
+  }
+
+  .work{
+    position: relative;
+    margin-top: 13px;
+    padding-left: 3px;
+    padding-bottom: 2px;
+    padding-top: 1px;
+  }
+
+  #momaps1{
+      /* margin-top: 13px; */
+  }
+  .momaps1-title{
+      margin-left: 52px;
+      width: 286px;
+  }
+  .momaps1-desc{
+      width: 420px;
+  }
+
+  /* #coin{
+    margin-top: 100vh;
+} */
+.coin-title{
+    margin-left: 52px;
+    width: 275px;
+}
+.coin-desc{
+    width: 424px;
+}
+.wikibook-title{
+    margin-left: 52px;
+    width: 274px;
+}
+.wikibook-desc{
+    width: 422px;
+}
+
+#noise{
+    padding-bottom: 16px;
+}
+.noise-title{
+    margin-left: 52px;
+    width: 190px;
+}
+.noise-desc{
+    width: 408px;
+}
+
+

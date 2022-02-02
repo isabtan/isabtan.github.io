@@ -1,0 +1,25 @@
+body{
+    background: #F1F5F5;
+    height: 100%;
+    margin: 0;
+    /* overflow: hidden; */
+  }
+
+html {
+    height: 100%;
+}
+
+.container{
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dots{
+    background-color: #000000;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    z-index: 111;
+}
