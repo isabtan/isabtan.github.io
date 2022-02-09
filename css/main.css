@@ -43,20 +43,27 @@ text::selection {
     background: #e9e9e9;
 }
 
-.centersvg {
-    /* position: fixed; */
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    
-    
-    height: 100%;
-    
+details, summary {
+    /* text-align: center; */
+    height: 16px;
+    padding-left: 3.6px;
+    padding-right: 0;
+    padding-top: 2px;
 }
-.centersvg > svg {
-    padding-top: 796px;
-    height: 100%;
+details{
+ color: #e9e9e9;
+ cursor: pointer;
+ width: 66px;
+ /*  */
+ 
+ margin: 0 auto; 
+ bottom: 16px;
+ margin-top: 787px;
+ padding-left: 3.6px;
+ padding-right: 0;
+ padding-top: 2px;
 }
+
   .name{
     position: fixed;
     width: 1570px;
@@ -78,7 +85,7 @@ text::selection {
     user-select: none; /* Standard */
   }
 
-  h1{
+  h1, summary{
     font-family: 'Arial Narrow';
     font-style: normal;
     font-weight: normal;
@@ -91,15 +98,62 @@ text::selection {
 
     margin: 0;
   }
+  h2{ 
+    font-family: 'Arial Narrow';
+    font-style: italic;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 40px;
+    letter-spacing: -0.045em;
+    text-align: left;
+    text-transform: uppercase;
+    
+    color: #E9E9E9;
+
+    margin: 0;
+   
+    /* transform: skew(24deg); */
+  }
   span{
     font-style: italic;
+   
   }
+  .quote{
+    font-family: Apple Chancery;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 48px;
+    letter-spacing: -0.045em;
 
+    color: #000;
+  }
+.open{
+  position: relative;
+  margin: 0;
+  height: 20px;
+  margin-left: -386px;
+  margin-top: 77px;
+}
+.close{
+  position: relative;
+  margin: 0;
+  height: 20px;
+  margin-left: 513px;
+  margin-top: -15px;
+}
   .text{
     background-color: #000000;
     padding: 0;
     margin: 0;
   }
+  /* .text2{
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
+
+    transform: skew(0);
+  } */
 
   .course{
       position: fixed;
@@ -125,11 +179,19 @@ text::selection {
       position: relative;
   }
   .print{
-    left: 246px;
+    left: -428px;
   }
   .web{
-      left: 484px;
+      left: -190px;
   }
+  .words{
+    left: -309px;
+    
+  }
+  #handmade{
+    margin-top: -41px;
+  }
+
 
   .work{
     position: relative;
@@ -139,9 +201,7 @@ text::selection {
     padding-top: 1px;
   }
 
-  #momaps1{
-      /* margin-top: 13px; */
-  }
+ 
   .momaps1-title{
       margin-left: 52px;
       width: 286px;
@@ -150,9 +210,9 @@ text::selection {
       width: 420px;
   }
 
-  /* #coin{
-    margin-top: 100vh;
-} */
+#momaps1{
+  margin-top: 16px;
+}
 .coin-title{
     margin-left: 52px;
     width: 275px;
@@ -178,5 +238,24 @@ text::selection {
 .noise-desc{
     width: 408px;
 }
+.handmade-title{
+  margin-top: 10px;
+  margin-left: 52px;
+    width: 331px;
+}
+.handmade-desc{
+  width: 832px;
+}
+/* .handmade{
+  background-color: #000000;
+  padding: 0;
+  margin: 0;
+  width: 832px;
+  margin-left:-309px;
+
+    transform: skew(0);
+} */
+
+
 
 
