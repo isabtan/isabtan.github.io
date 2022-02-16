@@ -51,14 +51,14 @@ details, summary {
     padding-top: 2px;
 }
 details{
+  
  color: #e9e9e9;
  cursor: pointer;
  width: 66px;
  height: 100vh;
- /*  */
+
  
  margin: 0 auto; 
- /* margin-bottom: 16px; */
  margin-top: 16px;
  padding-left: 3.6px;
  padding-right: 0;
@@ -247,6 +247,14 @@ details{
 .handmade-desc{
   width: 832px;
 }
+.holodec-title{
+  margin-left: 52px;
+  width: 375px;
+}
+.holodec-desc{
+  width: 408px;
+}
+
 /* .handmade{
   background-color: #000000;
   padding: 0;
