@@ -1,0 +1,80 @@
+body{
+    background: #000000;
+    cursor: crosshair;
+    width: 100vw;
+    height: 100vh;
+}
+
+@font-face {
+    font-family: bembo;
+    src: url(BemboStd.otf);
+   }
+
+#cont{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    color: #000000;
+}
+.blk{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(50% 153.9% at 50% 50%, rgba(0, 0, 0, 0) 32.88%, #000000 100%);
+}
+.clockk{
+    position: absolute;
+    font-family: Helvetica;
+    font-kerning: normal;
+    font-style: normal;
+    font-weight: bold;
+    /* font-size: 28px; */
+    line-height: 32px;
+    letter-spacing: -0.05em;
+    mix-blend-mode: screen;
+
+    color: #222222;
+    animation-iteration-count: 0;
+    animation: 8s goaway;
+    margin-left: -26px;
+}
+.circle{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    /* margin-left: 28px; */
+    margin-top: -20px;
+
+border-radius: 100%;
+    background: #BED34E;
+}
+.rectangle{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+ 
+
+        background: red;
+        animation-iteration-count: 0;
+    animation: 8s goaway;
+}
+.clockkgr{
+    position: absolute;
+    font-family: bembo;
+    font-style: normal;
+    font-weight: normal;
+    /* font-size: 28px; */
+    line-height: 32px;
+    letter-spacing: -0.05em;
+
+    color: #BED34E;
+    margin-left: -26px;
+}
+@keyframes goaway {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
