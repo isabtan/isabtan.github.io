@@ -33,14 +33,14 @@ function setup(){
     // osc2.connect(tremolo);
 
     osc.type = 'sawtooth';
-    osc2.type = 'square';
+    osc2.type = 'triangle';
 
     // lfo = new Tone.LFO("0.9hz", 30, Math.floor(Math.random() * 10));
     // lfo.connect( osc.frequency ); 
     // console.log(lfo.frequency.value);
 
-    osc2.frequency.value = Math.floor(Math.random() * 880);
-    osc.frequency.value = Math.floor(Math.random() * 20);
+    osc2.frequency.value = Math.floor(Math.random() * 700);
+    osc.frequency.value = Math.floor(Math.random() * 30);
         console.log(osc.frequency.value);
         console.log(osc2.frequency.value);
 
