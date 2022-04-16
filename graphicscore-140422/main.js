@@ -91,9 +91,9 @@ function draw() {
     if (ready) {
        
         //setting white stroke for waveform
-        stroke("#A198E9");
+        stroke("#A298EF");
         strokeWeight(Math.floor(Math.random() * 180));
-        // blendMode(DIFFERENCE);
+        blendMode(DIFFERENCE);
         //inorder to access waveform we would need buffer
         let buffer = wave.getValue(0); //an array of points along soundwave
         
@@ -123,9 +123,9 @@ function draw() {
             // elipse(x1, y1, x2, y2);
         }
 
-        stroke("#D5383A");
+        stroke("#E81E31");
         strokeWeight(Math.floor(Math.random() * 80));
-        // blendMode(DIFFERENCE);
+        blendMode(DIFFERENCE);
 
         let buffer2 = wave2.getValue(1);
 
@@ -153,7 +153,7 @@ function draw() {
             // // elipse(x1, y1, x2, y2);
         }
 
-        stroke("#E4C347");
+        stroke("#EBC21A");
         strokeWeight(Math.floor(Math.random() * 30));
         blendMode(DIFFERENCE);
 
@@ -183,7 +183,7 @@ function draw() {
             // // elipse(x1, y1, x2, y2);
         }
 
-        stroke("#5B2AC3");
+        stroke("#6321D6");
         strokeWeight(Math.floor(Math.random() * 10));
         blendMode(DIFFERENCE);
 
