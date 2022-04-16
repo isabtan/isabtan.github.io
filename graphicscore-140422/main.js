@@ -1,4 +1,3 @@
-//because browsers cant just start blasting sound at user
 let ready = false;
 
 let osc;
@@ -92,7 +91,7 @@ function draw() {
     if (ready) {
        
         //setting white stroke for waveform
-        stroke("#AD96DC");
+        stroke("#A198E9");
         strokeWeight(Math.floor(Math.random() * 180));
         // blendMode(DIFFERENCE);
         //inorder to access waveform we would need buffer
@@ -124,7 +123,7 @@ function draw() {
             // elipse(x1, y1, x2, y2);
         }
 
-        stroke("#F93822");
+        stroke("#D5383A");
         strokeWeight(Math.floor(Math.random() * 80));
         // blendMode(DIFFERENCE);
 
@@ -154,7 +153,7 @@ function draw() {
             // // elipse(x1, y1, x2, y2);
         }
 
-        stroke("#FFC72C");
+        stroke("#E4C347");
         strokeWeight(Math.floor(Math.random() * 30));
         blendMode(DIFFERENCE);
 
@@ -184,7 +183,7 @@ function draw() {
             // // elipse(x1, y1, x2, y2);
         }
 
-        stroke("#6321D6");
+        stroke("#5B2AC3");
         strokeWeight(Math.floor(Math.random() * 10));
         blendMode(DIFFERENCE);
 
