@@ -7,6 +7,7 @@ let lfo; // low frequency oscillator
 // let metal; //metal synth
 
 let wave;
+let wave2;
 
 // let g2Erika;
 
@@ -21,25 +22,34 @@ function setup(){
             //tone.master is basically speakers/output of sketch
                 // osc.connect(Tone.Master);
                 // osc.toDestination(); //shorthand/synonnym for tone.master, last step in the chain
-    // osc.frequency.value = 220;  //220hz --> A3
+    osc.frequency.value = random(10, 90);  //220hz --> A3
 
     osc2 = new Tone.Oscillator().toDestination();
     osc.type = 'sawtooth';
     osc2.type = 'square';
-    osc2.frequency.value = random(90, 220);
+    // osc2.frequency.value = random(90, 220);
 
     lfo = new Tone.LFO("0.9hz", 30, 90);
     lfo.connect( osc.frequency ); 
 
+    osc2.frequency.value = Math.floor(Math.random() * 130);
+    osc.frequency.value = Math.floor(Math.random() * 50);
+    console.log(osc.frequency.value);
+    console.log(osc2.frequency.value);
     // metal = new Tone.MetalSynth().toDestination();
     // metal.frequency.value = 800;
+    //add reverb, 
     
 
 
     wave = new Tone.Waveform();
+    wave2 = new Tone.Waveform();
+    console.log(wave);
+    console.log(wave2);
     // osc.connect(wave);
     // osc2.connect(wave);
     Tone.Master.connect(wave); //conecct object to drive wave, connecting output of oscilator to inputof wave object
+    Tone.Master.connect(wave2);
 
     Tone.Master.volume.rampTo(-2, 8); //change volume over 8 seconds
 
@@ -63,14 +73,10 @@ function draw() {
     background(0);
 
     if (ready) {
-        //if we are ready we will be able to doo audio stuff
-        osc2.frequency.value = map(mouseX, 0, width, 5, 880); //map frequency to between 110to880hz
-        osc.frequency.value = random(100, 700);
-        //osc2.frequency.value = random(10, 90); // i just dk how to set time
-        
+       
         //setting white stroke for waveform
         stroke(255);
-        strokeWeight(2);
+        strokeWeight(3);
         //inorder to access waveform we would need buffer
         let buffer = wave.getValue(0); //an array of points along soundwave
 
@@ -106,10 +112,11 @@ function draw() {
         noStroke();
         textAlign(CENTER, CENTER);
         // textFont('g2Erika');
-        text("RANDOM OSCILLATOR TEST", width/2, height/2);
+        text("OSCILLATOR TEST 2", width/2, height/2);
         
     }
 }
+
 
 //important thing to know abt audio in the browser
 //is that audio libraies r not gna start generating sounds
@@ -120,10 +127,15 @@ function mousePressed() {
         // can start audio objects here cus clicked/is ready on text (else)
         osc.start();
         osc2.start();
-        lfo.start();
+        // lfo.start();
         // metal.start();
         ready = true;
-
     }
+    else {
+        ready = false;
+        osc.stop();
+        osc2.stop();
+        Tone.Transport.stop();
+      }
 }
 
