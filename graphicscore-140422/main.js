@@ -1,5 +1,6 @@
 let ready = false;
 
+    // let progress
 let osc;
 let osc2;
 let lfo; // low frequency oscillator
@@ -13,15 +14,35 @@ let wave2;
 let wave3;
 let wave4;
 
+// let osc2Kinds;
+// let osc2Kind = ["triangle", "sine"];
+
+let colorPalleteXL;
+let colorsXL = ["#A298EF", "#E1FFFF", "#FEEF97", "#FFC7D7", "#D1EC86", "#FF6363"];
+
+let colorPalleteL;
+let colorsL = ["#31187B", "#0013C1", "#FF9900", "#E21C57", "#034C03", "#C11100"];
+
+let colorPalleteM;
+let colorsM = ["#4200FF", "#0072EC", "#FFD12C", "#BF045E", "#BEEF00", "#F0844E"];
+
+let colorPalleteS;
+let colorsS = ["#7C21D6", "#95B3CD", "#FFFF00", "#FF65A5", "#00C901", "#F93822"];
+
+let randCol;
+
+// maybe use object for random color
 
 // creates canvas to match browser size
 function setup(){
     createCanvas(windowWidth, windowHeight);
+        // progress = map(osc.currentTime(), 0, osc.duration(), 255, 0);
     frameRate(fr);
     // filter(BLUR, 3);
    
     // tremolo = new Tone.Tremolo(10, 1);
     // tremolo.toMaster(); 
+
 
     osc = new Tone.Oscillator().toDestination(); //by default frequency tuned to 440hz --> A4
     // osc.connect(reverb);
@@ -32,8 +53,11 @@ function setup(){
     // osc2.connect(eq);
     // osc2.connect(tremolo);
 
-    osc.type = 'sawtooth';
-    osc2.type = 'triangle';
+    // let osc2Kind = floor(random(0, 1));
+    
+
+    osc.type = 'sine';
+    osc2.type = 'sine';
 
     // lfo = new Tone.LFO("0.9hz", 30, Math.floor(Math.random() * 10));
     // lfo.connect( osc.frequency ); 
@@ -44,12 +68,16 @@ function setup(){
         console.log(osc.frequency.value);
         console.log(osc2.frequency.value);
 
-    // reverb = new Tone.Reverb(6).toDestination();
+    reverb = new Tone.Reverb(6).toDestination();
     //  eq3 = new Tone.EQ3(-50, -100, -100).toDestination();
     //  eq3.lowFrequency = 10;
     //  eq3.highFrequency = 50;
     //  osc2.connect(eq3);
     //  osc.connect(eq3);
+    // Tone.Transport.scheduleRepeat((time) => {
+    //     // use the callback time to schedule events
+    //     osc.start(time).stop(time + 0.5);
+    // }, "8n");
 
 
     wave = new Tone.Waveform();
@@ -71,8 +99,13 @@ function setup(){
     // osc.connect(wave); //conecct object to drive wave, connecting output of oscilator to inputof wave object
     // osc2.connect(wave2);
     // lfo.connect(wave3);
-
+    // Tone.Transport.start();
     Tone.Master.volume.value = -40 //change volume over 8 seconds
+    // stroke(colorPallete[int(random(0, colorPallete.length))]);
+    colorPalleteXL = floor(random(0, 5));
+    colorPalleteL = floor(random(0, 5));
+    colorPalleteM = floor(random(0, 5));
+    colorPalleteS = floor(random(0, 5));
 
 }
 
@@ -82,16 +115,28 @@ function windowResized(){
 }
 
 
+    // if (osc.currentTime() > 1 && osc.currentTime() < 10) {
+    //     draw()
+    // }
+var counter = 0;
 //main render loop
 function draw() {
+    // background('#f6f6f6');
     background(0);
+    // randCol=random(colorPallete.length);
+    // randCol=floor(randCol);
     // filter(ERODE);
-
+    
 
     if (ready) {
-       
+        counter+=1;
+
         //setting white stroke for waveform
-        stroke("#A298EF");
+        // stroke(colorPallete[Math.floor(Math.random() * colorPallete.length)]);
+        stroke(colorsXL[colorPalleteXL]);
+        console.log(colorsXL[colorPalleteXL]);
+        // noLoop();
+
         strokeWeight(Math.floor(Math.random() * 180));
         blendMode(DIFFERENCE);
         //inorder to access waveform we would need buffer
@@ -123,7 +168,8 @@ function draw() {
             // elipse(x1, y1, x2, y2);
         }
 
-        stroke("#E81E31");
+        stroke(colorsL[colorPalleteL]);
+        console.log(colorsL[colorPalleteL]);
         strokeWeight(Math.floor(Math.random() * 80));
         blendMode(DIFFERENCE);
 
@@ -153,7 +199,10 @@ function draw() {
             // // elipse(x1, y1, x2, y2);
         }
 
-        stroke("#EBC21A");
+        // console.log(buffer2);
+
+        stroke(colorsM[colorPalleteM]);
+        console.log(colorsM[colorPalleteM]);
         strokeWeight(Math.floor(Math.random() * 30));
         blendMode(DIFFERENCE);
 
@@ -211,6 +260,7 @@ function draw() {
             // line(x1, y1, x2, y2);
             point(x1, y1, x2, y2); //dots
             // // elipse(x1, y1, x2, y2);
+            // noLoop();
         }
 
     }
@@ -224,8 +274,30 @@ function draw() {
         
         
     }
+    console.log(counter)
+if(counter >= 10){
+    ready = false;
+    osc.stop();
+    osc2.stop();
+    Tone.Transport.stop();
+    noLoop();
+    // console.log(counter)
+    // if(counter >= Math.floor(Math.random() * 10) + 1){
+    //     ready = false;
+    //     osc.stop();
+    //     osc2.stop();
+    //     Tone.Transport.stop();
+    //     noLoop();
+    }
 }
-console.log(fr);
+
+    
+
+//console.log(fr);
+
+//delay draw counter draw 5-10 frames for example
+
+
 
 function mousePressed() {
     if (!ready) { // ! means not
@@ -235,7 +307,11 @@ function mousePressed() {
         osc2.start();
         //eq3.start();
         // lfo.start();
-        ready = true;
+        setTimeout(function(){
+            ready = true;
+
+
+        },150)
     }
     else {
         ready = false;
@@ -245,4 +321,5 @@ function mousePressed() {
         noLoop();
       }
 }
+console.log(mousePressed);
 
