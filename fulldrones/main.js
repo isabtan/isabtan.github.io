@@ -65,11 +65,11 @@ function setup(){
     osc2.type = waves2[waveType2];
     osc3.type = waves3[waveType3];
 
-    lfo = new Tone.LFO(Math.floor(Math.random() * 15) + "hz", 30, 90);
+    lfo = new Tone.LFO(Math.floor(Math.random() * 15) + "hz", 0, 100);
     lfo.connect( osc.frequency );
     lfo.connect( osc3.frequency ); 
 
-    lfo2 = new Tone.LFO(Math.floor(Math.random() * 80) + "hz", 10, 400);
+    lfo2 = new Tone.LFO(Math.floor(Math.random() * 80) + "hz", 0, 900);
     lfo2.connect( osc3.frequency ); 
     // console.log(lfo.frequency.value);
 
@@ -325,11 +325,9 @@ console.log(strokeWeight);
         fill(255);
         noStroke();
         textAlign(LEFT, TOP);
-        // text("osc1: " + osc.frequency.value + "hz", 30, 25);
         text("osc1: " + lfo.frequency.value + "hz", 30, 25);
         text("osc2: " + osc2.frequency.value + "hz", 30, 50);
         text("osc3: " + lfo2.frequency.value + "hz", 30, 75);
-        // text("osc3: " + osc3.frequency.value + "hz", 30, 75);
         
 
     }
