@@ -120,13 +120,15 @@ function draw() {
     if (ready) {
         counter+=1;
 
+
+console.log(strokeWeight);
         stroke(colorsXL[colorPalleteXL]);
         console.log(colorsXL[colorPalleteXL]);
-        fill('#000000');
         // noLoop();
 
         strokeWeight(Math.floor(Math.random() * 210));
         blendMode(DIFFERENCE);
+        
         //inorder to access waveform we would need buffer
         let buffer = wave.getValue(0); //an array of points along soundwave
         
@@ -160,6 +162,7 @@ function draw() {
         stroke(colorsL[colorPalleteL]);
         console.log(colorsL[colorPalleteL]);
         strokeWeight(Math.floor(Math.random() * 80));
+        
         blendMode(DIFFERENCE);
 
         let buffer2 = wave2.getValue(1);
@@ -191,6 +194,7 @@ function draw() {
         stroke(colorsM[colorPalleteM]);
         console.log(colorsM[colorPalleteM]);
         strokeWeight(Math.floor(Math.random() * 80));
+        
         blendMode(DIFFERENCE);
 
         let buffer3 = wave3.getValue(1);
@@ -223,6 +227,7 @@ function draw() {
         console.log(colorsS[colorPalleteS]);
         strokeWeight(Math.floor(Math.random() * 50));
         blendMode(DIFFERENCE);
+       
 
         let buffer4 = wave4.getValue(1);
 
@@ -252,7 +257,8 @@ function draw() {
         stroke(colorsXS[colorPalleteXS]);
         console.log(colorsXS[colorPalleteXS]);
         strokeWeight(Math.floor(Math.random() * 8));
-        // blendMode(DIFFERENCE);
+        
+        blendMode(DIFFERENCE);
 
         let buffer5 = wave5.getValue(1);
 
@@ -283,7 +289,8 @@ function draw() {
         stroke(colorsXXS[colorPalleteXXS]);
         console.log(colorsXXS[colorPalleteXXS]);
         strokeWeight(Math.floor(Math.random() * 8));
-        // blendMode(DIFFERENCE);
+        // console.log(strokeWeight);
+        blendMode(DIFFERENCE);
 
         let buffer6 = wave6.getValue(1);
 
@@ -332,6 +339,7 @@ if(counter >= 3){
     noLoop();
     }
 }
+
 
 function mousePressed() {
     if (!ready) { // ! means not
