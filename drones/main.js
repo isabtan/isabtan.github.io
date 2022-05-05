@@ -317,7 +317,7 @@ function draw() {
         noStroke();
         textAlign(CENTER, CENTER);
         // textFont('g2Erika');
-        text("FLY DRONES", width/2, height/2);
+        text("CLICK TO START DRONES", width/2, height/2);
         
         
     }
