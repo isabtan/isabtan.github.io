@@ -65,13 +65,13 @@ function setup(){
     osc2.type = waves2[waveType2];
     osc3.type = waves3[waveType3];
 
-    lfo = new Tone.LFO(Math.floor(Math.random() * 15) + "hz", 0, 100);
+    lfo = new Tone.LFO(Math.floor(Math.random() * 30) + "hz", 0, 90);
     lfo.connect( osc.frequency );
     lfo.connect( osc3.frequency ); 
 
-    lfo2 = new Tone.LFO(Math.floor(Math.random() * 80) + "hz", 0, 900);
+    lfo2 = new Tone.LFO(Math.floor(Math.random() * 80) + "hz", -500, 2000);
     lfo2.connect( osc3.frequency ); 
-    // console.log(lfo.frequency.value);
+    console.log(lfo2.getValue);
 
     osc2.frequency.value = Math.floor(Math.random() * 800);
     osc.frequency.value = Math.floor(Math.random() * 40);
@@ -95,8 +95,18 @@ function setup(){
     osc3.connect(wave5);
     osc3.connect(wave6);
 
+    // new Tone.Envelope ( [ attack ] , [ decay ] , [ sustain ] , [ release ] )
+//     env = new Tone.Envelope({
+// 		attack: 0.1,
+// 		decay: 0.2,
+// 		sustain: 0.5,
+// 		release: 0.8,
+// 	}).toDestination();
+// 	env.triggerAttackRelease(0.5);
+// }, 1.5, 1);
+   
     // Tone.Master.volume.value = -40 //change volume over 8 seconds rampTo(-2, 8);
-    Tone.Master.volume.rampTo(-40, 2);
+    Tone.Master.volume.rampTo(-40, 3);
 
     colorPalleteXL = floor(random(0, 9));
     colorPalleteL = floor(random(0, 8));
@@ -322,12 +332,7 @@ console.log(strokeWeight);
             // // elipse(x1, y1, x2, y2);
         }
 
-        fill(255);
-        noStroke();
-        textAlign(LEFT, TOP);
-        text("osc1: " + lfo.frequency.value + "hz", 30, 25);
-        text("osc2: " + osc2.frequency.value + "hz", 30, 50);
-        text("osc3: " + lfo2.frequency.value + "hz", 30, 75);
+        
         
 
     }
@@ -337,12 +342,22 @@ console.log(strokeWeight);
         textAlign(CENTER, CENTER);
         // textFont('g2Erika');
         text("CLICK TO START DRONES", width/2, height/2);
-        
+      
+        textAlign(LEFT, TOP);
+        text("osc1: " + lfo.frequency.value + "hz", 30, 25);
+        text("osc2: " + osc2.frequency.value + "hz", 30, 50);
+        text("osc3: " + lfo2.frequency.value + "hz", 30, 75);
+        text("xl: " + colorsXL[colorPalleteXL], 30, 100);
+        text("l: " + colorsL[colorPalleteL], 30, 125);
+        text("m: " + colorsM[colorPalleteM], 30, 150);
+        text("s: " + colorsS[colorPalleteS], 30, 175);
+        text("xs: " + colorsXS[colorPalleteXS], 30, 200);
+        text("xxs: " + colorsXXS[colorPalleteXXS], 30, 225);
         
         
     }
     console.log(counter)
-if(counter >= 3){
+if(counter >= 4){
     ready = false;
     osc.stop();
     osc2.stop();
