@@ -1,0 +1,142 @@
+ /* A GENERATIVE WEB - TAUGHT BY JOHN PROVENCHER - SPRING 2022 */
+
+body{
+    background: #000000;
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* dont scale svg in media query */
+
+  html {
+      height: 100%;
+  }
+  svg{
+      /* width: 97.15vw; */
+      width: 97.2%;
+      margin-left: 1.388%;
+      margin-top: 11%;
+      margin-bottom: 6%;
+  }
+  .logo:hover{
+      opacity: 100%;
+  }
+            /* svg:hover{
+                -webkit-animation: fade 0.15s ease-in;
+                        animation: fade 0.15s ease-in;
+                        /* animation-delay: 1s; */
+            /* }
+            @-webkit-keyframes fade {
+                0% {
+                    opacity: 100%;
+                }
+                100% {
+                    opacity: 15%;
+                }
+            }  */
+  a{
+    color: #e8e6e7;
+    text-decoration: none;
+  }
+  a:hover{
+    opacity: 15%;
+
+  }
+  a:active{
+    opacity: 5%;
+  }
+
+  /* TYPE */
+@font-face {
+    font-family: "reg";
+    src: url(regular.woff);
+   }
+   @font-face {
+    font-family: ital;
+    src: url(italic.woff);
+   }
+   q {
+     quotes: "“" "”" "‘" "’";
+   }
+   q::before {
+       content: open-quote;
+   }
+   q::after {
+       content: close-quote;
+   }
+   
+   ::selection {
+       color: #CFDB2F;
+       text-shadow: none;
+       background: transparent;
+   }
+   text::selection {
+       fill: #CFDB2F;
+       text-shadow: none;
+       background: transparent;
+   }
+
+  .line{
+      position: fixed;
+      height: 100%;
+      width: 1px;
+      margin-left: 50%;
+      /* margin-top: -1%; */
+      background-color: #e8e6e7;
+  }
+
+.title{
+    position: fixed;
+    width: 97.2%;
+    margin-left: 1.388%;
+    
+  }
+
+h1 {
+    font-family: "reg", 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 114%;
+    letter-spacing: -0.02em;
+    /* text-transform: uppercase; */
+    color: #e8e6e7;
+ }
+
+
+.name {
+    font-family: "ital";
+ }
+
+ .select{
+     display: flex;
+     /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+
+ }
+
+ .idbig{
+     margin-left: 51.388%;
+     margin-bottom: 1.388%;
+     height: 2%;
+     
+ }
+
+ .vid{
+     width: 75.97%;
+     align-self: center;
+     /* margin-top: 1.38%; */
+     z-index: 999;
+     box-shadow: 0px 0px 12px 4px rgba(232, 230, 231, 0.25);
+     margin-bottom: 1%;
+ }
+
+ .metadata {
+     /* text-transform: uppercase; */
+     align-self: center;
+     letter-spacing: 0.02em;
+ }
+ .metadata-title{
+opacity: 15%;
+ }

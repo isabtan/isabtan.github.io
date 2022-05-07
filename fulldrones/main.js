@@ -67,17 +67,26 @@ function setup(){
 
     lfo = new Tone.LFO(Math.floor(Math.random() * 30) + "hz", 0, 90);
     lfo.connect( osc.frequency );
-    lfo.connect( osc3.frequency ); 
+    lfo.connect( osc3.frequency );
 
-    lfo2 = new Tone.LFO(Math.floor(Math.random() * 80) + "hz", -500, 2000);
-    lfo2.connect( osc3.frequency ); 
-    console.log(lfo2.getValue);
+    lfo2 = new Tone.LFO(Math.floor(Math.random() * 80) + "hz", -500, 500);
+    lfo2.connect( osc3.frequency );
+    console.log(lfo2.min);
+    console.log(lfo.output);
 
     osc2.frequency.value = Math.floor(Math.random() * 800);
     osc.frequency.value = Math.floor(Math.random() * 40);
     osc3.frequency.value = Math.floor(Math.random() * 900);
         console.log(osc.frequency.value);
         console.log(osc2.frequency.value);
+
+   env = new Tone.Envelope({
+		attack: 1.0,
+		decay: 0.2,
+		sustain: 0.5,
+		release: 0.8,
+	}).toDestination();
+
 
     wave = new Tone.Waveform();
     wave2 = new Tone.Waveform();
@@ -95,16 +104,6 @@ function setup(){
     osc3.connect(wave5);
     osc3.connect(wave6);
 
-    // new Tone.Envelope ( [ attack ] , [ decay ] , [ sustain ] , [ release ] )
-//     env = new Tone.Envelope({
-// 		attack: 0.1,
-// 		decay: 0.2,
-// 		sustain: 0.5,
-// 		release: 0.8,
-// 	}).toDestination();
-// 	env.triggerAttackRelease(0.5);
-// }, 1.5, 1);
-   
     // Tone.Master.volume.value = -40 //change volume over 8 seconds rampTo(-2, 8);
     Tone.Master.volume.rampTo(-40, 3);
 
@@ -115,10 +114,7 @@ function setup(){
     colorPalleteXS = floor(random(0, 8));
     colorPalleteXXS = floor(random(0, 8));
 
-    // fill('#fefefe');
-    // noStroke();
-    // text("osc1" + osc, 25, 25);
-
+    env.connect(Tone.Master);
 }
 
 
@@ -142,10 +138,10 @@ console.log(strokeWeight);
 
         strokeWeight(Math.floor(Math.random() * 210));
         blendMode(DIFFERENCE);
-        
+
         //inorder to access waveform we would need buffer
         let buffer = wave.getValue(0); //an array of points along soundwave
-        
+
 
         let start = 0;
         for (let i=1; i < buffer.length; i++) {
@@ -161,13 +157,13 @@ console.log(strokeWeight);
         for (let i=start; i < end; i++) {
 
             //
-            let x1 = map(i-1, start, end, 0, width); 
+            let x1 = map(i-1, start, end, 0, width);
             // let y1 = map(buffer[i-1], -1, 1, 0, height);
-            let y1 = map(buffer[i-1], -1, 1, 110, 690); 
+            let y1 = map(buffer[i-1], -1, 1, 110, 690);
 
             let x2 = map(i, start, end, 0, width); //mapping counter from left to right, from 0 and buffer.length and mapping it to 0 in width
             let y2 = map(buffer[i], -1, 1, 0, height); //going to be a value between -1 and 1, and them mapping those to a number btwn 0 and height
-            
+
             //line(x1, y1, x2, y2)
             point(x1, y1, x2, y2); //dots
             // elipse(x1, y1, x2, y2);
@@ -176,7 +172,7 @@ console.log(strokeWeight);
         stroke(colorsL[colorPalleteL]);
         console.log(colorsL[colorPalleteL]);
         strokeWeight(Math.floor(Math.random() * 80));
-        
+
         blendMode(DIFFERENCE);
 
         let buffer2 = wave2.getValue(1);
@@ -194,12 +190,12 @@ console.log(strokeWeight);
         for (let i=start; i < end; i++) {
 
             //
-            let x1 = map(i-1, start, end2, 4, width); 
-            let y1 = map(buffer2[i-1], -1, 1, 95, 710); 
+            let x1 = map(i-1, start, end2, 4, width);
+            let y1 = map(buffer2[i-1], -1, 1, 95, 710);
 
             let x2 = map(i, start, end2, 4, width); //mapping counter from left to right, from 0 and buffer2.length and mapping it to 0 in width
             let y2 = map(buffer2[i], -1, 1, 4, height); //going to be a value between -1 and 1, and them mapping those to a number btwn 0 and height
-            
+
             point(x1, y1, x2, y2); //dots
         }
 
@@ -208,7 +204,7 @@ console.log(strokeWeight);
         stroke(colorsM[colorPalleteM]);
         console.log(colorsM[colorPalleteM]);
         strokeWeight(Math.floor(Math.random() * 80));
-        
+
         blendMode(DIFFERENCE);
 
         let buffer3 = wave3.getValue(1);
@@ -226,12 +222,12 @@ console.log(strokeWeight);
         for (let i=start; i < end; i++) {
 
             //
-            let x1 = map(i-1, start, end3, 8, width); 
-            let y1 = map(buffer3[i-1], -1, 1, 80, 740); 
+            let x1 = map(i-1, start, end3, 8, width);
+            let y1 = map(buffer3[i-1], -1, 1, 80, 740);
 
             let x2 = map(i, start, end3, 8, width); //mapping counter from left to right, from 0 and buffer3.length and mapping it to 0 in width
             let y2 = map(buffer3[i], -1, 1, 8, height); //going to be a value between -1 and 1, and them mapping those to a number btwn 0 and height
-            
+
             // line(x1, y1, x2, y2);
             point(x1, y1, x2, y2); //dots
             // // elipse(x1, y1, x2, y2);
@@ -241,7 +237,7 @@ console.log(strokeWeight);
         console.log(colorsS[colorPalleteS]);
         strokeWeight(Math.floor(Math.random() * 50));
         blendMode(DIFFERENCE);
-       
+
 
         let buffer4 = wave4.getValue(1);
 
@@ -258,20 +254,20 @@ console.log(strokeWeight);
         for (let i=start; i < end; i++) {
 
             //
-            let x1 = map(i-1, start, end4, 24, width); 
-            let y1 = map(buffer4[i-1], -1, 1, 100, 720); 
+            let x1 = map(i-1, start, end4, 24, width);
+            let y1 = map(buffer4[i-1], -1, 1, 100, 720);
 
             let x2 = map(i, start, end4, 24, width); //mapping counter from left to right, from 0 and buffer4.length and mapping it to 0 in width
             let y2 = map(buffer4[i], -1, 1, 24, height); //going to be a value between -1 and 1, and them mapping those to a number btwn 0 and height
-            
-            point(x1, y1, x2, y2); //dots 
-         
+
+            point(x1, y1, x2, y2); //dots
+
         }
 
         stroke(colorsXS[colorPalleteXS]);
         console.log(colorsXS[colorPalleteXS]);
-        strokeWeight(Math.floor(Math.random() * 8));
-        
+        strokeWeight(Math.floor(Math.random() * 6));
+
         blendMode(DIFFERENCE);
 
         let buffer5 = wave5.getValue(1);
@@ -289,12 +285,12 @@ console.log(strokeWeight);
         for (let i=start; i < end; i++) {
 
             //
-            let x1 = map(i-1, start, end5, 8, width); 
-            let y1 = map(buffer5[i-1], -1, 1, 0, height); 
+            let x1 = map(i-1, start, end5, -10, width);
+            let y1 = map(buffer5[i-1], -1, 1, 0, height);
 
             let x2 = map(i, start, end5, 8, width); //mapping counter from left to right, from 0 and buffer5.length and mapping it to 0 in width
             let y2 = map(buffer5[i], -1, 1, 0, height); //going to be a value between -1 and 1, and them mapping those to a number btwn 0 and height
-            
+
             // line(x1, y1, x2, y2);
             point(x1, y1, x2, y2); //dots
             // // elipse(x1, y1, x2, y2);
@@ -302,7 +298,7 @@ console.log(strokeWeight);
 
         stroke(colorsXXS[colorPalleteXXS]);
         console.log(colorsXXS[colorPalleteXXS]);
-        strokeWeight(Math.floor(Math.random() * 8));
+        strokeWeight(Math.floor(Math.random() * 6));
         // console.log(strokeWeight);
         blendMode(DIFFERENCE);
 
@@ -321,19 +317,19 @@ console.log(strokeWeight);
         for (let i=start; i < end; i++) {
 
             //
-            let x1 = map(i-1, start, end6, 8, width); 
-            let y1 = map(buffer6[i-1], -1, 1, 90, 680); 
+            let x1 = map(i-1, start, end6, -10, width);
+            let y1 = map(buffer6[i-1], -1, 1, 90, 680);
 
             let x2 = map(i, start, end6, 8, width); //mapping counter from left to right, from 0 and buffer6.length and mapping it to 0 in width
             let y2 = map(buffer6[i], -1, 1, 0, height); //going to be a value between -1 and 1, and them mapping those to a number btwn 0 and height
-            
+
             // line(x1, y1, x2, y2);
             point(x1, y1, x2, y2); //dots
             // // elipse(x1, y1, x2, y2);
         }
 
-        
-        
+
+
 
     }
     else {
@@ -342,19 +338,19 @@ console.log(strokeWeight);
         textAlign(CENTER, CENTER);
         // textFont('g2Erika');
         text("CLICK TO START DRONES", width/2, height/2);
-      
+
         textAlign(LEFT, TOP);
-        text("osc1: " + lfo.frequency.value + "hz", 30, 25);
-        text("osc2: " + osc2.frequency.value + "hz", 30, 50);
-        text("osc3: " + lfo2.frequency.value + "hz", 30, 75);
-        text("xl: " + colorsXL[colorPalleteXL], 30, 100);
-        text("l: " + colorsL[colorPalleteL], 30, 125);
-        text("m: " + colorsM[colorPalleteM], 30, 150);
-        text("s: " + colorsS[colorPalleteS], 30, 175);
-        text("xs: " + colorsXS[colorPalleteXS], 30, 200);
-        text("xxs: " + colorsXXS[colorPalleteXXS], 30, 225);
-        
-        
+        text("osc1: " + lfo.frequency.value + "hz" + ", " + osc.type, 30, 25);
+        text("osc2: " + osc2.frequency.value + "hz" + ", " + osc2.type, 30, 50);
+        text("osc3: " + lfo2.frequency.value + "hz" + ", " + osc3.type, 30, 75);
+        // text("lfo2: " + lfo2.value, 30, 100);
+        // text("xl: " + colorsXL[colorPalleteXL], 30, 100);
+        // text("l: " + colorsL[colorPalleteL], 30, 125);
+        // text("m: " + colorsM[colorPalleteM], 30, 150);
+        // text("s: " + colorsS[colorPalleteS], 30, 175);
+        // text("xs: " + colorsXS[colorPalleteXS], 30, 200);
+        // text("xxs: " + colorsXXS[colorPalleteXXS], 30, 225);
+
     }
     console.log(counter)
 if(counter >= 4){
@@ -369,9 +365,10 @@ if(counter >= 4){
 }
 
 
+
 function mousePressed() {
     if (!ready) { // ! means not
-        
+
         // tremolo.start();
         osc.start();
         osc2.start();
@@ -397,4 +394,3 @@ function mousePressed() {
       }
 }
 console.log(mousePressed);
-
