@@ -35,13 +35,13 @@ let colorPalleteXXS;
 let colorsXXS = ["#FFFFFF", "#EEE7DD", "#FFFAC0", "#FEDEF3", "#D1EC86", "#FCD8D8", "#E5F2F3", "#ACB399", "#FFFAE8"];
 
 let waveType;
-let waves = ["sine", "sawtooth"];
+let waves = ["sine", "triangle", "sawtooth", "sine"];
 
 let waveType2;
 let waves2 = ["sine", "triangle", "sawtooth"];
 
 let waveType3;
-let waves3 = ["sine", "triangle", "sawtooth"];
+let waves3 = ["sine", "triangle", "sawtooth", "square"];
 
 let randCol;
 
@@ -55,7 +55,7 @@ function setup(){
     osc2 = new Tone.Oscillator().toDestination();
     osc3 = new Tone.Oscillator().toDestination();
 
-    waveType = floor(random(0, 1));
+    waveType = floor(random(0, 3));
     waveType2 = floor(random(0, 2));
     waveType3 = floor(random(0, 3));
 
@@ -65,18 +65,18 @@ function setup(){
     osc2.type = waves2[waveType2];
     osc3.type = waves3[waveType3];
 
-    lfo = new Tone.LFO(Math.floor(Math.random() * 30) + "hz", 0, 90);
+    lfo = new Tone.LFO(Math.floor(Math.random() * 300) + "hz", 0, 90);
     lfo.connect( osc.frequency );
     lfo.connect( osc3.frequency );
 
-    lfo2 = new Tone.LFO(Math.floor(Math.random() * 80) + "hz", -500, 500);
+    lfo2 = new Tone.LFO(Math.floor(Math.random() * 30) + "hz", 30, 90);
     lfo2.connect( osc3.frequency );
     console.log(lfo2.min);
     console.log(lfo.output);
 
-    osc2.frequency.value = Math.floor(Math.random() * 800);
-    osc.frequency.value = Math.floor(Math.random() * 40);
-    osc3.frequency.value = Math.floor(Math.random() * 900);
+    osc2.frequency.value = Math.floor(Math.random() * 900);
+    osc.frequency.value = Math.floor(Math.random() * 100);
+    osc3.frequency.value = Math.floor(Math.random() * 350);
         console.log(osc.frequency.value);
         console.log(osc2.frequency.value);
 
@@ -133,6 +133,7 @@ function draw() {
 
 console.log(strokeWeight);
         stroke(colorsXL[colorPalleteXL]);
+        // stroke("#2C2F23");
         console.log(colorsXL[colorPalleteXL]);
         // noLoop();
 
@@ -170,6 +171,7 @@ console.log(strokeWeight);
         }
 
         stroke(colorsL[colorPalleteL]);
+        // stroke("#F8FFDB");
         console.log(colorsL[colorPalleteL]);
         strokeWeight(Math.floor(Math.random() * 80));
 
@@ -202,6 +204,7 @@ console.log(strokeWeight);
         // console.log(buffer2);
 
         stroke(colorsM[colorPalleteM]);
+        // stroke("#FFFAD2");
         console.log(colorsM[colorPalleteM]);
         strokeWeight(Math.floor(Math.random() * 80));
 
@@ -234,6 +237,7 @@ console.log(strokeWeight);
         }
 
         stroke(colorsS[colorPalleteS]);
+        // stroke("#FFF9CC");
         console.log(colorsS[colorPalleteS]);
         strokeWeight(Math.floor(Math.random() * 50));
         blendMode(DIFFERENCE);
@@ -265,8 +269,9 @@ console.log(strokeWeight);
         }
 
         stroke(colorsXS[colorPalleteXS]);
+        // stroke("#FFFBDB");
         console.log(colorsXS[colorPalleteXS]);
-        strokeWeight(Math.floor(Math.random() * 6));
+        strokeWeight(Math.floor(Math.random() * 10));
 
         blendMode(DIFFERENCE);
 
@@ -297,8 +302,9 @@ console.log(strokeWeight);
         }
 
         stroke(colorsXXS[colorPalleteXXS]);
+        // stroke("#FFFAE8");
         console.log(colorsXXS[colorPalleteXXS]);
-        strokeWeight(Math.floor(Math.random() * 6));
+        strokeWeight(Math.floor(Math.random() * 10));
         // console.log(strokeWeight);
         blendMode(DIFFERENCE);
 
@@ -340,17 +346,16 @@ console.log(strokeWeight);
         text("CLICK TO START DRONES", width/2, height/2);
 
         textAlign(LEFT, TOP);
-        text("osc1: " + lfo.frequency.value + "hz" + ", " + osc.type, 30, 25);
+        text("osc1: " + osc.frequency.value + "hz" + ", " + osc.type, 30, 25);
         text("osc2: " + osc2.frequency.value + "hz" + ", " + osc2.type, 30, 50);
-        text("osc3: " + lfo2.frequency.value + "hz" + ", " + osc3.type, 30, 75);
+        text("osc3: " + osc3.frequency.value + "hz" + ", " + osc3.type, 30, 75);
         // text("lfo2: " + lfo2.value, 30, 100);
-        // text("xl: " + colorsXL[colorPalleteXL], 30, 100);
-        // text("l: " + colorsL[colorPalleteL], 30, 125);
-        // text("m: " + colorsM[colorPalleteM], 30, 150);
-        // text("s: " + colorsS[colorPalleteS], 30, 175);
-        // text("xs: " + colorsXS[colorPalleteXS], 30, 200);
-        // text("xxs: " + colorsXXS[colorPalleteXXS], 30, 225);
-
+        text("xl: " + colorsXL[colorPalleteXL], 30, 100);
+        text("l: " + colorsL[colorPalleteL], 30, 125);
+        text("m: " + colorsM[colorPalleteM], 30, 150);
+        text("s: " + colorsS[colorPalleteS], 30, 175);
+        text("xs: " + colorsXS[colorPalleteXS], 30, 200);
+        text("xxs: " + colorsXXS[colorPalleteXXS], 30, 225);
     }
     console.log(counter)
 if(counter >= 4){
