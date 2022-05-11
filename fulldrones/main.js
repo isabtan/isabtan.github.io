@@ -45,6 +45,8 @@ let waves3 = ["sine", "triangle", "sawtooth", "square"];
 
 let randCol;
 
+
+
 // creates canvas to match browser size
 function setup(){
     createCanvas(windowWidth, windowHeight);
@@ -342,20 +344,21 @@ console.log(strokeWeight);
         fill(255);
         noStroke();
         textAlign(CENTER, CENTER);
-        // textFont('g2Erika');
+        // textFont('regular');
         text("CLICK TO START DRONES", width/2, height/2);
 
-        textAlign(LEFT, TOP);
-        text("osc1: " + osc.frequency.value + "hz" + ", " + osc.type, 30, 25);
-        text("osc2: " + osc2.frequency.value + "hz" + ", " + osc2.type, 30, 50);
-        text("osc3: " + osc3.frequency.value + "hz" + ", " + osc3.type, 30, 75);
+        textAlign(LEFT);
+        // text("osc1: " + osc.frequency.value + "hz" + ", " + osc.type, 30, 25);
+        // text("osc2: " + osc2.frequency.value + "hz" + ", " + osc2.type, 30, 50);
+        // text("osc3: " + osc3.frequency.value + "hz" + ", " + osc3.type, 30, 75);
         // text("lfo2: " + lfo2.value, 30, 100);
-        text("xl: " + colorsXL[colorPalleteXL], 30, 100);
-        text("l: " + colorsL[colorPalleteL], 30, 125);
-        text("m: " + colorsM[colorPalleteM], 30, 150);
-        text("s: " + colorsS[colorPalleteS], 30, 175);
-        text("xs: " + colorsXS[colorPalleteXS], 30, 200);
-        text("xxs: " + colorsXXS[colorPalleteXXS], 30, 225);
+        text("OSC1: " + osc.frequency.value + "hz" + "    OSC2: " + osc2.frequency.value + "hz" + "    OSC3: " + osc3.frequency.value + "hz" + "    XL: " + colorsXL[colorPalleteXL] + "    L: " + colorsL[colorPalleteL] + "   M: " + colorsM[colorPalleteM] + "    S: " + colorsS[colorPalleteS] + "    XS: " + colorsXS[colorPalleteXS] + "    XXS: " + colorsXXS[colorPalleteXXS], width/60, height/1.03);
+    
+        // text(" l: " + colorsL[colorPalleteL], 30, 125);
+        // text("   m: " + colorsM[colorPalleteM], 30, 150);
+        // text("   s: " + colorsS[colorPalleteS], 30, 175);
+        // text("   xs: " + colorsXS[colorPalleteXS], 30, 200);
+        // text("  xxs: " + colorsXXS[colorPalleteXXS], 30, 225);
     }
     console.log(counter)
 if(counter >= 4){
