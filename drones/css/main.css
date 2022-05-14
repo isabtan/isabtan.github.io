@@ -142,17 +142,16 @@ h1 {
      /* align-items: center; */
   justify-content: center;
   flex-direction: column;
-
  }
 
  .idbig{
      margin-left: 51.388%;
-     margin-bottom: 1.388%;
+     margin-bottom: 2.388%;
      height: 2%;   
  }
 
  .vid{
-     width: 76%;
+     width: 70%;
      align-self: center;
      /* margin-top: 1.38%; */
     
@@ -216,3 +215,58 @@ margin-top: 0;
      margin-left: 15%;
      margin-bottom: 6%;
  }
+
+ /* make media query for phone + when hovered, gallery videos play */
+
+
+@media only screen and (max-width: 700px) {
+    svg{
+        top: 1.5%;
+        /* margin-top: % */
+        position: sticky;
+        /* height: 50; */
+        /* z-index: 999; */
+        /* background: linear-gradient(180deg, #000000 43.1%, rgba(0, 0, 0, 0.362319) 65.52%, rgba(0, 0, 0, 0) 94.68%); */
+    }
+    .logo{
+        /* margin-top: -20%; */
+        /* top: -500%; */
+        /* position: sticky; */
+    }
+    .title{
+        /* top: -50%; */
+        /* height: 0; */
+        position: relative; 
+        margin-bottom: 0;
+
+    }
+    /* .hide{
+        display: none;
+    } */
+
+    .spread{
+        width: 95%;
+        margin-left: 2.6%;
+    }
+
+    .vid{
+        width: 95%;
+        margin-bottom: 6%;
+    }
+
+    .line{
+        z-index: -99;
+    }
+
+    .metadata{
+        display: none;
+    }
+
+    .gradient{
+        display: none;
+       
+    }
+    .gallery{
+        row-gap: 32px;
+    }
+  }
