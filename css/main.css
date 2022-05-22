@@ -134,7 +134,7 @@ details{
   margin: 0;
   height: 20px;
   margin-left: -386px;
-  margin-top: 77px;
+  margin-top: 93px;
 }
 .close{
   position: relative;
@@ -212,7 +212,7 @@ details{
   }
 
 #momaps1{
-  margin-top: 16px;
+  margin-top: 32px;
 }
 .coin-title{
     margin-left: 52px;
@@ -254,6 +254,62 @@ details{
 .holodec-desc{
   width: 408px;
 }
+
+.instructions1-title{
+  margin-left: 52px;
+    width: 208px;
+}
+.instructions1-desc{
+  /* margin-left: 52px; */
+    width: 408px;
+    margin-bottom: 32px;
+}
+
+.ono-title{
+  margin-top: 10px;
+  margin-left: 52px;
+    width: 247px;
+}
+.ono-desc1{
+  margin-top: -41px;
+
+  width: 832px;
+}
+
+.gamedes-title{
+  margin-top: 10px;
+  margin-left: 52px;
+    width: 347px;
+}
+.gamedes-desc1{
+  margin-top: -41px;
+  width: 832px;
+}
+.gamedes1-desc{
+  width: 408px;
+}
+
+.moniker-title{
+  margin-left: 52px;
+  width: 364px;
+}
+.moniker-desc{
+  width: 408px;
+}
+
+#instructions1{
+  margin-top: 32px;
+}
+#coin{
+  margin-top:32px;
+}
+#wikibook{
+  margin-top:32px;
+}
+#noise{
+  margin-top:32px;
+}
+
 
 /* .handmade{
   background-color: #000000;
