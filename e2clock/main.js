@@ -1,21 +1,22 @@
 var clockDiv = document.querySelector('.clock')
-document.body.style.backgroundColor = 'black';
+document.body.style.backgroundColor = '#f1f1f1';
 
     
 document.onmousemove = function mousePosition(event) {
     let x = event.offsetX;
     let y = event.offsetY;
     let datex = new Date();
-	let hoursx = datex.getHours();
-	let minutesx = datex.getMinutes();
-	let secondsx = datex.getSeconds();
-	let clockk = hoursx + ':' + minutesx + ':' + secondsx;
+	let hoursx = ("00" + datex.getHours()).slice(-2);
+	let minutesx = ("00" + datex.getMinutes()).slice(-2); 
+	let secondsx = ("00" + datex.getSeconds()).slice(-2);
+	// let clockk = hoursx + ':' + minutesx + ':' + secondsx;
+    let clockk = hoursx + ':' + minutesx + ':' + secondsx;
 
 
     document.querySelector('#cont').insertAdjacentHTML('afterbegin', ` 
     
     <div class="clockk" style= "
-    font-size: ${18}px;
+    font-size: ${25}px;
     left:${x}px;  
     top:${y}px;
     ">${clockk}
@@ -25,20 +26,9 @@ document.onmousemove = function mousePosition(event) {
 document.onclick = function mousePosition(event) {
     let x = event.offsetX;
     let y = event.offsetY;
-    let datex = new Date();
-	let hoursx = datex.getHours();
-	let minutesx = datex.getMinutes();
-	let secondsx = datex.getSeconds();
-	let clockkgr = hoursx + ':' + minutesx + ':' + secondsx;
 
 
-    document.querySelector('#cont').insertAdjacentHTML('afterend', ` 
+    document.querySelector('#cont').insertAdjacentHTML('afterbegin', ` 
     <div class="circle" style= "left:${x}px;  
-    top:${y}px;"></div>
-    <div class="clockkgr" style= "
-    font-size: ${20}px;
-    left:${x}px;  
-    top:${y}px;
-    ">  ${clockkgr}
-    </div>  `);
+    top:${y}px;"></div>`);
 }
