@@ -139,7 +139,7 @@ console.log(strokeWeight);
         console.log(colorsXL[colorPalleteXL]);
         // noLoop();
 
-        strokeWeight(Math.floor(Math.random() * 210));
+        strokeWeight(Math.floor(Math.random() * 230));
         blendMode(DIFFERENCE);
 
         //inorder to access waveform we would need buffer
@@ -162,7 +162,8 @@ console.log(strokeWeight);
             //
             let x1 = map(i-1, start, end, 0, width);
             // let y1 = map(buffer[i-1], -1, 1, 0, height);
-            let y1 = map(buffer[i-1], -1, 1, 110, 690);
+            // let y1 = map(buffer[i-1], -1, 1, 110, 690);
+            let y1 = map(buffer[i-1], -1, 1, 110, 890);
 
             let x2 = map(i, start, end, 0, width); //mapping counter from left to right, from 0 and buffer.length and mapping it to 0 in width
             let y2 = map(buffer[i], -1, 1, 0, height); //going to be a value between -1 and 1, and them mapping those to a number btwn 0 and height
@@ -195,7 +196,8 @@ console.log(strokeWeight);
 
             //
             let x1 = map(i-1, start, end2, 4, width);
-            let y1 = map(buffer2[i-1], -1, 1, 95, 710);
+            // let y1 = map(buffer2[i-1], -1, 1, 95, 710);\
+            let y1 = map(buffer2[i-1], -1, 1, 95, 910);
 
             let x2 = map(i, start, end2, 4, width); //mapping counter from left to right, from 0 and buffer2.length and mapping it to 0 in width
             let y2 = map(buffer2[i], -1, 1, 4, height); //going to be a value between -1 and 1, and them mapping those to a number btwn 0 and height
@@ -261,7 +263,8 @@ console.log(strokeWeight);
 
             //
             let x1 = map(i-1, start, end4, 24, width);
-            let y1 = map(buffer4[i-1], -1, 1, 100, 720);
+            // let y1 = map(buffer4[i-1], -1, 1, 100, 720);
+            let y1 = map(buffer4[i-1], -1, 1, 120, 1000);
 
             let x2 = map(i, start, end4, 24, width); //mapping counter from left to right, from 0 and buffer4.length and mapping it to 0 in width
             let y2 = map(buffer4[i], -1, 1, 24, height); //going to be a value between -1 and 1, and them mapping those to a number btwn 0 and height
